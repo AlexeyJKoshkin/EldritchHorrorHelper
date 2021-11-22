@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd08af109d941899aae24933651e9b6, type: 3}
+  m_Name: MythosCardTypesHolder
+  m_EditorClassIdentifier: 
+  _collection:
+  - {fileID: 4404939572119654479}
+  - {fileID: 5273411161306648462}
+  - {fileID: 6164757554623799574}
+--- !u!114 &4404939572119654479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91416fbc04cb49ca827a0ff950ebdadb, type: 3}
+  m_Name: Blue
+  m_EditorClassIdentifier: 
+  Back: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}
+  InfluenceTypeSos:
+  - {fileID: 8774475409286304089, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+--- !u!114 &5273411161306648462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91416fbc04cb49ca827a0ff950ebdadb, type: 3}
+  m_Name: Yellow
+  m_EditorClassIdentifier: 
+  Back: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}
+  InfluenceTypeSos:
+  - {fileID: 1960680845305491600, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+  - {fileID: 3433585344792817885, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+  - {fileID: 202317536499774566, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+--- !u!114 &6164757554623799574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91416fbc04cb49ca827a0ff950ebdadb, type: 3}
+  m_Name: Green
+  m_EditorClassIdentifier: 
+  Back: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}
+  InfluenceTypeSos:
+  - {fileID: 1960680845305491600, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+  - {fileID: 840320314057395008, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+  - {fileID: 8774475409286304089, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f99f53a7fd43b7b407f2e1304ac219, type: 3}
+  m_Name: ScriptableProvidersStorage
+  m_EditorClassIdentifier: 
+  _items:
+  - {fileID: 11400000, guid: 4079b2d9ba6816b4491c2f110e5b68b0, type: 2}
+  - {fileID: 11400000, guid: 067401b9cfb233b4abd48b278203ded3, type: 2}
+  - {fileID: 11400000, guid: 75060e8022f61194b897e1ba9bd6b352, type: 2}
+  - {fileID: 11400000, guid: 0ebfbc1dbc0c66344af5fc2c733013a0, type: 2}
+  - {fileID: 11400000, guid: 82be9afb8c3233245b68f22c4ce7969a, type: 2}
+  _path: Assets/GameResources/Data/EdlritchData
+  CreateNewIfMissed: 1

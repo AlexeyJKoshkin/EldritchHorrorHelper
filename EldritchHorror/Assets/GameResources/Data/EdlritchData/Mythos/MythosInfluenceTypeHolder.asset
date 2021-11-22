@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3263643561847307564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: PlaceRumorToken
+  m_EditorClassIdentifier: 
+  InfluenceType: 12
+  Icon: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02773a2499840b5bf14c89b676cd675, type: 3}
+  m_Name: MythosInfluenceTypeHolder
+  m_EditorClassIdentifier: 
+  _collection:
+  - {fileID: 1960680845305491600}
+  - {fileID: 202317536499774566}
+  - {fileID: 840320314057395008}
+  - {fileID: 3433585344792817885}
+  - {fileID: 8774475409286304089}
+  - {fileID: -3263643561847307564}
+  - {fileID: 6738061706588689455}
+--- !u!114 &202317536499774566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: SpawnGates
+  m_EditorClassIdentifier: 
+  InfluenceType: 4
+  Icon: {fileID: 0}
+--- !u!114 &840320314057395008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: MonsterSurge
+  m_EditorClassIdentifier: 
+  InfluenceType: 6
+  Icon: {fileID: 0}
+--- !u!114 &1960680845305491600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: AdvanceOmen
+  m_EditorClassIdentifier: 
+  InfluenceType: 2
+  Icon: {fileID: 0}
+--- !u!114 &3433585344792817885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: Reckoning
+  m_EditorClassIdentifier: 
+  InfluenceType: 8
+  Icon: {fileID: 0}
+--- !u!114 &6738061706588689455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: PlaceEldritchTokens
+  m_EditorClassIdentifier: 
+  InfluenceType: 14
+  Icon: {fileID: 0}
+--- !u!114 &8774475409286304089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cdb430da1d40489cc91fd4b753f4e1, type: 3}
+  m_Name: SpawnClues
+  m_EditorClassIdentifier: 
+  InfluenceType: 10
+  Icon: {fileID: 0}

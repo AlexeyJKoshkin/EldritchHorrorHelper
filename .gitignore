@@ -1,0 +1,51 @@
+# =============== #
+# Unity generated #
+# =============== #
+/EldritchHorror/Library
+/EldritchHorror/obj
+/EldritchHorror/Temp
+/MEldritchHorror/Logs
+/EldritchHorror/UnityGenerated
+
+
+# =========================== #
+# Resharper / Rider generated #
+# =========================== #
+/EldritchHorror/.idea
+/EldritchHorror/.vs
+/EldritchHorror/*.apk
+/EldritchHorror/*.sln
+
+/EldritchHorror/Assets/Plugins/Editor/JetBrains
+
+/EldritchHorror/Assets/Plugins/Editor/JetBrains.*
+
+/EldritchHorror/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+/EldritchHorror/ExportedObj
+/EldritchHorror/*.csproj
+/EldritchHorror/*.userprefs
+/EldritchHorror/*.unityproj
+/EldritchHorror/*.svd
+/EldritchHorror/*.pidb
+/EldritchHorror/*.suo
+/EldritchHorror/*.user
+/EldritchHorror/*.booproj
+/EldritchHorror/*.htm
+# ===================================== #
+# Koskins #
+# ===================================== #
+EldritchHorror/Assets/Temp/*
+EldritchHorror/Assets/Temp
+EldritchHorror/Assets/Temp.meta
+EldritchHorror/Assets/Logs/
+EldritchHorror/Assets/Logs.meta
+
+# ===================== #
+# Bundles and Server Data #
+# ===================== #
+/EldritchHorror/ServerData
+EldritchHorror/EldritchHorror.sln.DotSettings

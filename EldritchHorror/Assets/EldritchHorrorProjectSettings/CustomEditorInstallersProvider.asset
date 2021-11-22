@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73581082102e4beb8c45a952e2ab1900, type: 3}
+  m_Name: CustomEditorInstallersProvider
+  m_EditorClassIdentifier: 
+  _allAvailableInstallers:
+  - {fileID: 114258687135797794}
+--- !u!114 &114258687135797794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f1e270d61144f38b582907e4248aa5, type: 3}
+  m_Name: EcoSystemSettingsInstaller
+  m_EditorClassIdentifier: 
+  _settings: {fileID: 11400000, guid: 4d5ccb80ec900e749b2d29f25d2377c1, type: 2}
+  _dataStorage: {fileID: 11400000, guid: f147e28a48cf1534eb99e443ae55885f, type: 2}

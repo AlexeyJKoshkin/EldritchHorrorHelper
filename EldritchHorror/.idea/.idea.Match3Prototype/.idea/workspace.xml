@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dddcb724-375c-4ddb-a45a-17d42ca3691d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/Components/FieldItemsCurrentTouchComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/Components/FieldItemsCurrentTouchComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/Components/FieldItemsTouchableComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/Components/FieldItemsTouchableComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/ChangePositionItemSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/ChangePositionItemSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/LevelTouchSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/LevelTouchSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/InitiateMainFieldSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3dPackages/DesperateDevs/Editor/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Apple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Apple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Carrot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Carrot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Grapes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Grapes.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Orange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Pear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/Pear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/StrawBerry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FieldItems/StrawBerry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luncher.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luncher.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/MonoBehaviour/FieldItemViewHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/MonoBehaviour/FieldItemViewHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/Component/ItemTypeComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Component/ItemTypeComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/FillFieldSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/FillFieldSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/FillFieldSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/FillFieldSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/FieldItemsComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/FieldItemsComponentsLookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/InitiateFieldSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/InitiateMainFieldSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/InitiateFieldSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/InstantiateCellSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/InstantiateCellSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entitas/InstantiateCellSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/InstantiateCellSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Luncher/Installers/EntitasSystemScriptableInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Luncher/Installers/EntitasSystemScriptableInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Luncher/MainLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Luncher/MainLauncher.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/fd/892ea879/IAllOfMatcher`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Component/ItemTypeComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/5a/c16ffce9/IContext`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/9e/7882f0dc/Matcher`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Component/FieldRootComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/CustomPropertyDrawerExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Scripts/LeanTouch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/IEnumerableExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/GuiUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/MemoryPoolMonitor/Editor/MpmSettingsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/InstantiateCellSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/ArraysSizeObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/NullableObjectExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/SerializedPropertyExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Utils/SerializedPropertyReflectionExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/d0/60dffb94/IContexts.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanFingerTap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/SeparatorAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6312B0C4-D854-4C04-BF65-F0A668BFA3EE/fc/7e19f9ff/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Unity/ReflectionBakingBuildObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Common/Documentation/LeanGuide.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/EModules/Hierarchy/RightClickObjectLeftMenu_Example.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanScreenDepth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Unity/ReflectionBakingMenuItems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanSelectable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Unity/AssemblyPathRegistry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanSwipeBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/ExpandableAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Unity/ZenjectReflectionBakingSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/OneLinePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/68/819b82e2/Context`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanSelect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanFingerSwipe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Unity/ZenjectReflectionBakingSettingsEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/MonoBehaviour/FieldItemViewHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanFingerDown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Unity/ReflectionBakingInternalUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanFingerFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/EModules/Hierarchy/HierarchyPro TopMenuItems And Hotkeys.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanSelectBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Scripts/Installers/GameSettingsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Cells/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/EModules/Hierarchy/CustomModule_Example.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IFieldItemProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/FillFieldSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanTwistRotate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Touch/Extras/LeanFingerUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Internal/LinqExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/TestFramework/SceneTestFixtureSceneReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Internal/Assert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Benchmark/Scripts/ArrayBenchmark.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Internal/TypeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Benchmark/Scripts/SeparateFieldsBenchmark.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Attributes/CanGenerateAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/MainField/Components/MainFieldFieldComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Overview/Scripts/StandartTypesOverview.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/MainField/Components/MainFieldLevelBuildComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Scripts/Misc/TilingBackground.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Overview/Scripts/ComplexExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SceneViewWindow/SceneViewWindowManagerInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Overview/Scripts/Overview.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/ObjectSelectionWindow/CustomSelectionWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/FieldItemProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SectionsHelper/EditorSectionHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SceneViewWindow/SceneViewWindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/d2/b00f9e8d/IGroup`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/OnOffSelection/OnOffSelection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SelectorGUI/SelectionGUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/ChangePositionItemSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/5f/dd89049d/Group`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Luncher/MainLauncher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/Nested/NestedArrayExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SelectorGUI/GridSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SelectorGUI/SeveralGridSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/Editor/OneLineDrawerExampleEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/MainField/MainFieldSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/ArrayOfArraysExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/HideLabelExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SelectorGUI/SearchSelectEnumDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/WidthExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SelectorGUI/PopUpSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Luncher/Installers/EntitasSystemScriptableInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SelectorGUI/ValueNameBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DCE77A77-29AD-44C6-8F2B-BD26C7B3DD18/94/21ecf3d7/ContextAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Luncher/Installers/CoreScriptableInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/NestedArrayExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Binding/BindingUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/HideButtonsExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/CustomPropertyDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/Components/FieldItemsTouchableComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/FixedLengthExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/WeightExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/SceneParentLoading/SceneParentAutomaticLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/HighlightExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Common/Extras/LeanSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/Lean/Common/Extras/LeanRoll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/EditorWindow/ZenjectEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/SceneParentLoading/DefaultSceneContractConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/Editors/GameObjectContextEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/Context.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/OneLineDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/GameInput/GameInputContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/Editors/ProjectContextEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/ExpandableExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/Editors/RunnableContextEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/SeparatorExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/Editors/SceneDecoratorContextEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/GameInput/GameInputMatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/Editors/SceneContextEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Details/Scripts/RootArrayExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/GameKitExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/ProjectContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/ZenUnityEditorUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Feature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/GameObjectContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Contexts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/MainField/MainFieldContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Editor/ZenMenuItems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/MonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/InitiateMainFieldSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/FieldItemsContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Scripts/Installers/GameSettingsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/ScriptableObjectInstallerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Tests/Scripts/ExtendedGenericTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Tests/Scripts/SlicesTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Cells/CellSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Example/Tests/Scripts/ExtendedClassTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/FieldItemType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Cells.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C0083973-04F8-4E50-A333-74C87AE48947/7f/8171180c/DebugSystems.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/EditorUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Settings/Tools/PreprocessorDirectives/PreprocessorDirectives.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SerializedPropertyExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Settings/Tools/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/SpriteAtlasBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/LightReordableList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Settings/SettingsEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/ReadOnlyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Settings/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/CollapseAll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/Editor/CustomReordableList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Settings/LocalSettingsLayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/80/dc342f89/ISystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Drawers/CustomDrawer/TypeForDrawing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/OneLine/OneLine/Editor/Drawers/CustomDrawer/CustomPropertyTypesCache.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/GameKit/ColoredStyles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/99/06285677/IExecuteSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/LevelTouchSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFFF7C0B-1952-412C-B811-8DDDD204A124/6e/da42a986/ReactiveSystem`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3dPackages/EModules/Hierarchy/SharedFolder/DescriptionRegistrator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Luncher/EntitaslLuncher.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/MainLuncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/EntitasSystemScriptableInstallers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/EntitasSystemScriptableInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Match3PrototypeContext.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Prototype/PrototypeContext.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/CoreScriptableInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainField/MainFieldSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainField/LevelSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainField/MaiFieldBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainField/Settings/LevelSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainField/IMainFieldBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/PrototypeContext.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Contexts.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/EntitaslLuncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/3dPackages/GameKit/ColoredStyles.cs" />
+        <option value="$PROJECT_DIR$/Assets/3dPackages/GameKit/GameKitExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Cells/CellSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Cells/FieldItemProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/MonoBehaviour/FielItemViewHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Cells/CellType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/FieldItemType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/FieldItemProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Prototype/Components/PrototypeViewComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/PrototypeComponents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/FieldRootComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Component/PrototypeComponents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Prototype/Components/PrototypeFieldRootComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/Prototype/PrototypeComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainField/CellFieldBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainField/MaiFieldBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/Installers/CoreScriptableInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/IMainFieldBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/IFieldItemProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/InitiateFieldSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/FillFieldSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Component/FieldRootComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/InstantiateCellSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/InitiateMainFieldSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/MainLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/LevelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/InitiateMainFieldSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/ChangePositionItemSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Luncher/Installers/EntitasSystemScriptableInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/LevelTouchSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/FieldItems/MonoBehaviour/FieldItemViewHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/MainFieldSystems/FillFieldSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/InstantiateCellSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Generated/FieldItems/Components/FieldItemsTouchableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entitas/Component/ItemTypeComponent.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qYyynVDnPRLaj051ZO3loiPnoq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="601" y="322" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1617282607434">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="601" y="322" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617282607434" />
+    <state x="707" y="401" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1617821859329">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="707" y="401" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617821859329" />
+    <state width="938" height="342" key="GridCell.Tab.0.bottom" timestamp="1617832072404">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.0.bottom/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832072404" />
+    <state width="938" height="342" key="GridCell.Tab.0.center" timestamp="1617832072404">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.0.center/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832072404" />
+    <state width="938" height="342" key="GridCell.Tab.0.left" timestamp="1617832072403">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.0.left/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832072403" />
+    <state width="938" height="342" key="GridCell.Tab.0.right" timestamp="1617832072404">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.0.right/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832072404" />
+    <state width="938" height="342" key="GridCell.Tab.1.bottom" timestamp="1617832090268">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.bottom/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832090268" />
+    <state width="938" height="342" key="GridCell.Tab.1.center" timestamp="1617832090268">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.center/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832090268" />
+    <state width="938" height="342" key="GridCell.Tab.1.left" timestamp="1617832090268">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.left/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832090268" />
+    <state width="938" height="342" key="GridCell.Tab.1.right" timestamp="1617832090268">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.right/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617832090268" />
+    <state x="630" y="373" key="LayersDialog" timestamp="1617823199046">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="630" y="373" key="LayersDialog/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617823199046" />
+    <state x="694" y="270" key="RiderGenerateDialog" timestamp="1617914055716">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="694" y="270" key="RiderGenerateDialog/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617914055716" />
+    <state x="461" y="197" key="SettingsEditor" timestamp="1617823306533">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="461" y="197" key="SettingsEditor/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617823306533" />
+    <state x="617" y="259" key="VCS.ChangeListViewerDialog" timestamp="1617909273538">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="617" y="259" key="VCS.ChangeListViewerDialog/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617909273538" />
+    <state x="715" y="399" key="cloudConfig.SelfSettingsDialog" timestamp="1617823258687">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="715" y="399" key="cloudConfig.SelfSettingsDialog/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617823258687" />
+    <state x="607" y="287" width="705" height="536" key="find.popup" timestamp="1617820329466">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="607" y="287" width="705" height="536" key="find.popup/1920.77.1280.994/0.30.1920.1050@0.30.1920.1050" timestamp="1617820329466" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entitas/Systems/FieldItemSystem/InstantiateCellSystem.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Entitas/InstantiateCellSystem.cs" initialLine="32">
+            <startOffsets>
+              <option value="1223" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1255" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
