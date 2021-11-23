@@ -4,6 +4,5 @@ namespace EldritchHorrorEditorEcosystem
 {
     public interface IEldritchHorrorEditorEcosystem : ICustomGameEditor
     {
-        void CreateInfrastructure();
     }
 }

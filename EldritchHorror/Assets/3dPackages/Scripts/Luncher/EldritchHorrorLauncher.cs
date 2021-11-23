@@ -5,13 +5,13 @@ namespace EldritchHorror
 {
     public interface IEldritchHorrorlLuncher
     {
-       // Feature BuildUpdate(List<ISystem> updateSystem);
+        Feature BuildUpdate(List<ISystem> updateSystem);
     }
 
 
-    public class EldritchHorrorLuncher : IEldritchHorrorlLuncher
+    public class EldritchHorrorLauncher : IEldritchHorrorlLuncher
     {
-        /*public Feature BuildUpdate(List<ISystem> systems)
+        public Feature BuildUpdate(List<ISystem> systems)
         {
             var result = new Feature("CoreSystems");
             foreach (var system in systems)
@@ -20,6 +20,6 @@ namespace EldritchHorror
             }
             result.Initialize();
             return result;
-        }*/
+        }
     }
 }

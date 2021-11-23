@@ -10,7 +10,7 @@ namespace Editor.EldrtichHorrorEditorEcosystem.EldritchCards
         [Button,ShowIf("Count",0)]
         void CreateAll()
         {
-            foreach (MythosDifficultType influenceName in GameKit.Editor.EnumExtension.GetAllEnumElements(MythosDifficultType.Mixed))
+            foreach (MythosDifficultType influenceName in GameKit.Editor.EnumExtension.GetAllEnumElements<MythosDifficultType>())
             {
                 var item = GameKit.Editor.EditorUtils.CreateSubAsset<DifficultTypeSO>(influenceName.ToString(), this);
                 item.DifficultType = influenceName;
@@ -21,11 +21,11 @@ namespace Editor.EldrtichHorrorEditorEcosystem.EldritchCards
 #endif
     }
     
+    [Flags]
     public enum MythosDifficultType
     {
         Simple = 0,
-        Easy = 1,
-        Hard = 2,
-        Mixed = 3
+        Easy = 1 <<1,
+        Hard = 2 <<2,
     }
 }

@@ -27,12 +27,12 @@ namespace Editor.EldrtichHorrorEditorEcosystem.EldritchCards
     public enum MythosInfluenceType
     {
         None = 0,
-        AdvanceOmen = 1<<0,
-        SpawnGates = 1<<1,
-        MonsterSurge = 1<<2,
-        Reckoning = 1 << 3,
-        SpawnClues= 1 <<4,
-        PlaceRumorToken =1 <<5,
-        PlaceEldritchTokens=1<<6,
+        AdvanceOmen = 1<<1,
+        SpawnGates = 1<<2,
+        MonsterSurge = 1<<3,
+        Reckoning = 1 << 4,
+        SpawnClues= 1 <<5,
+        PlaceRumorToken =1 <<6,
+        PlaceEldritchTokens=1<<7,
     }
 }

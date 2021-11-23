@@ -25,8 +25,7 @@ namespace GameKit.EditorContext
         {
             foreach (var installer in _editorInstallers.Where(o => o != null))
             {
-                installer.Initialize();
-                diContainer.Inject(installer);
+                installer.Initialize(diContainer);
                 installer.InstallBindings();
             }
         }

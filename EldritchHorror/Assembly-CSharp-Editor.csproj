@@ -61,6 +61,7 @@
      <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorPathProvider.cs" />
      <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorProjectPathSettings.cs" />
      <Compile Include="Assets\3dPackages\Scripts\Editor\Eldritch\CustomInspectors\BaseDataBoxInspectorEditor.cs" />
+     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\UserSaveProfileStorageTest.cs" />
      <Compile Include="Assets\3dPackages\Scripts\Editor\Eldritch\CustomInspectors\MythosCardTypesHolderEditor.cs" />
      <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystem.cs" />
      <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\IDataProvider.cs" />

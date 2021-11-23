@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using Zenject;
 
 namespace GameKit.EditorContext
@@ -6,7 +5,10 @@ namespace GameKit.EditorContext
    // [HideMonoScript]
     public abstract class BaseCustomEditorInstaller : ScriptableObjectInstaller
     {
-        public virtual void Initialize() { }
+        public virtual void Initialize(DiContainer diContainer)
+        {
+            diContainer.Inject(this);
+        }
     }
 }
 

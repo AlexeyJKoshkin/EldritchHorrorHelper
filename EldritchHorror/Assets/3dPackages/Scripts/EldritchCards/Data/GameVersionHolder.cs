@@ -11,7 +11,7 @@ namespace Editor.EldrtichHorrorEditorEcosystem.EldritchCards
     public enum GameVersion
     {
         None = 0,
-        BaseBox = 1<<0,
-        Forgotten = 1<<1
+        BaseBox = 1<<1,
+        Forgotten = 1<<2
     }
 }

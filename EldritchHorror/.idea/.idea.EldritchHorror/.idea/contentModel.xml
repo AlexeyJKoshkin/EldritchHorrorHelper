@@ -339,6 +339,7 @@
                   <e p="EditorProjectPathSettings.cs" t="Include" />
                   <e p="SingletonSettings.cs" t="Include" />
                 </e>
+                <e p="UserSaveProfileStorageTest.cs" t="Include" />
               </e>
             </e>
             <e p="EldritchCards" t="Include">
@@ -394,16 +395,31 @@
               </e>
             </e>
             <e p="Luncher" t="Include">
-              <e p="EldritchHorrorLuncher.cs" t="Include" />
+              <e p="EldritchHorrorLauncher.cs" t="Include" />
               <e p="Installers" t="Include">
                 <e p="CoreScriptableInstaller.cs" t="Include" />
                 <e p="EldritchHorrorCoreSystemSOInstaller.cs" t="Include" />
+                <e p="UserProfileScriptableInstaller.cs" t="Include" />
               </e>
               <e p="MainLauncher.cs" t="Include" />
             </e>
             <e p="MapEntityScriptable.cs" t="Include" />
             <e p="UserProfile" t="Include">
+              <e p="EHJsonConverter.cs" t="Include" />
+              <e p="EnumToIntKeyContractResolver.cs" t="Include" />
+              <e p="HLogger.cs" t="Include" />
+              <e p="IDataFromJsonBuilder.cs" t="Include" />
+              <e p="IJsonConverter.cs" t="Include" />
+              <e p="IJsonFileOperation.cs" t="Include" />
+              <e p="IProfileBuilder.cs" t="Include" />
               <e p="MythosCardSaveSettings.cs" t="Include" />
+              <e p="UserProfileData.cs" t="Include" />
+              <e p="UserProfileDataCompositeBuilder.cs" t="Include" />
+              <e p="UserProfilePartBuilder.cs" t="Include" />
+              <e p="UserProfileSave.cs" t="Include" />
+              <e p="UserProfileSaveFactory.cs" t="Include" />
+              <e p="UserSavePathSettings.cs" t="Include" />
+              <e p="UserSaveProfileStorage.cs" t="Include" />
             </e>
           </e>
         </e>

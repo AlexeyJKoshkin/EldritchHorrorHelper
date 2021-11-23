@@ -1,6 +1,5 @@
 using GameKit.Editor;
 using GameKit.EditorContext;
-using Sirenix.OdinInspector;
 using UnityEditor;
 
 
@@ -13,13 +12,8 @@ namespace EldritchHorrorEditorEcosystem
         [InitializeOnLoadMethod]
         static void LunchAtStart()
         {
+            if(EditorApplication.isPlaying) return;
             EditorUtils.FindAsset<EldritchHorrorEditorEcosystemLauncher>().Lunch();
-        }
-
-        [Button, ShowIf("IsWork")]
-        void CreateInfrastructure()
-        {
-            Current.CreateInfrastructure();
         }
     }
 }

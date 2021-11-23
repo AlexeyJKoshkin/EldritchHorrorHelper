@@ -28,3 +28,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settings: {fileID: 11400000, guid: 4d5ccb80ec900e749b2d29f25d2377c1, type: 2}
   _dataStorage: {fileID: 11400000, guid: f147e28a48cf1534eb99e443ae55885f, type: 2}
+  _installers:
+  - {fileID: 11400000, guid: 52d8193813691494f89b728467907582, type: 2}
+  - {fileID: 11400000, guid: 4846d53955742c943be7c12a322b11d8, type: 2}

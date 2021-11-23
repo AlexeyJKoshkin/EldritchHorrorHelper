@@ -1,3 +1,5 @@
+using EldrtichHorror;
+using EldrtichHorror.UserProfile;
 using UnityEngine;
 using Zenject;
 
@@ -11,7 +13,9 @@ namespace EldritchHorror
     {
         public override void InstallBindings()
         {
-            Debug.LogError("Bind Core");
+            HLogger.Log("Core Binding");
+            this.Container.BindInterfacesTo<EHJsonConverter>().AsSingle();
+            this.Container.BindInterfacesTo<JsonFileOperation>().AsSingle();
         }
     }
 }

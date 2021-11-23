@@ -5,7 +5,6 @@ using Zenject;
 
 namespace EldritchHorror
 {
-
     public class MainLauncher : SceneContext
     {
         [SerializeField] private EldritchHorrorCoreSystemSOInstaller eldritchHorrorCoreSystemSoInstaller;
@@ -16,8 +15,8 @@ namespace EldritchHorror
             base.RunInternal();
         }
 
-        /*private Feature _updateExecute;
-        private Feature _fixedUpdateExecute;*/
+        private Feature _updateExecute;
+        private Feature _fixedUpdateExecute;
 
         private void OnPostResolveHandler()
         {
@@ -37,12 +36,12 @@ namespace EldritchHorror
                 updateSystem.Add(system);
             }
 
-        ///   _updateExecute = launcher.BuildUpdate(updateSystem);
+            _updateExecute = launcher.BuildUpdate(updateSystem);
         }
 
         private void Update()
         {
-          //  _updateExecute.Execute();
+            _updateExecute.Execute();
         }
 
         /*private void FixedUpdate()

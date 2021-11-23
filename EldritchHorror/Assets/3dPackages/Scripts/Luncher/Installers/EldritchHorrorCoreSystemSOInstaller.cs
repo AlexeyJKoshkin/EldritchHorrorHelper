@@ -13,17 +13,18 @@ namespace EldritchHorror
     {
         public IEnumerable<Type> UpdateSystem => _updateSystems;
 
-        private List<Type> _updateSystems = new List<Type>() { };
+        private List<Type> _updateSystems = new List<Type>()
+                                            {
+                                                
+                                            };
         
         public override void InstallBindings()
         {
-            /*var shared = Contexts.sharedInstance;
+            var shared = Contexts.sharedInstance;
             BindContexts(shared);
             BindSystems();
-            Container.BindInterfacesTo<EntitaslLuncher>().AsSingle();*/
+            Container.BindInterfacesTo<EldritchHorrorLauncher>().AsSingle();
             
-            
-            Debug.LogError("Bind Entitas");
         }
 
         private void BindSystems()
@@ -35,14 +36,14 @@ namespace EldritchHorror
           
         }
 
-        /*private void BindContexts(Contexts shared)
+        private void BindContexts(Contexts shared)
         {
             Container.BindInstance(shared).AsSingle();
             
-            Container.Bind(typeof(MainFieldContext), typeof(IContext<MainFieldEntity>)).FromInstance(shared.mainField).AsSingle();
+            /*Container.Bind(typeof(MainFieldContext), typeof(IContext<MainFieldEntity>)).FromInstance(shared.mainField).AsSingle();
             Container.Bind(typeof(FieldItemsContext), typeof(IContext<FieldItemsEntity>)).FromInstance(shared.fieldItems).AsSingle();
             
-            Container.BindInterfacesTo<GameInputContext>().FromInstance(shared.gameInput).AsSingle();
-        }*/
+            Container.BindInterfacesTo<GameInputContext>().FromInstance(shared.gameInput).AsSingle();*/
+        }
     }
 }
