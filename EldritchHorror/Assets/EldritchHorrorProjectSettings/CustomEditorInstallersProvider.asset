@@ -31,3 +31,4 @@ MonoBehaviour:
   _installers:
   - {fileID: 11400000, guid: 52d8193813691494f89b728467907582, type: 2}
   - {fileID: 11400000, guid: 4846d53955742c943be7c12a322b11d8, type: 2}
+  - {fileID: 11400000, guid: 50e133dd2c7a0704d977defc08624f6a, type: 2}

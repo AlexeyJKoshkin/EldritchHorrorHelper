@@ -53,5 +53,18 @@ namespace CodeGenerator
             File.WriteAllText(filePath, generator.Generate());
             AssetDatabase.Refresh();
         }
+        
+        /// <summary>
+        ///     Записать код в файл скрипта(класса, енума и т.п.) по его типу
+        /// </summary>
+        /// <param name="gType"></param>
+        /// <param name="generator"></param>
+        public static void WriteCode<T>(ICodeGenerator generator)
+        {
+            var filePath = FindFileByType<T>();
+            File.WriteAllText(filePath, generator.Generate());
+            AssetDatabase.Refresh();
+        }
+
     }
 }

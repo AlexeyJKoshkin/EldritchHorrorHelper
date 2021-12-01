@@ -1,0 +1,33 @@
+using System;
+using UnityEngine;
+
+namespace EldritchHorror
+{
+    public class HLogger
+    {
+        public static void Log(string message)
+        {
+            Debug.Log(message);
+        }
+
+        public static void LogWarning(string message)
+        {
+            Debug.LogWarning(message);
+        }
+
+        public static void LogError(string message)
+        {
+            Debug.LogError(message);
+        }
+
+        public static void LogInfo(object message)
+        {
+            Debug.Log($"[INFO] {message}");
+        }
+
+        public static void TempLog(object message)
+        {
+            Debug.Log($"[TempLog] {message}");
+        }
+    }
+}

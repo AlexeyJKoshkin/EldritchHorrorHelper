@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632615946caa435296ff6e45390c831f, type: 3}
   m_Name: Hard
   m_EditorClassIdentifier: 
-  DifficultType: 2
+  FrontSprite: {fileID: 0}
+  DifficultType: 8
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,7 +42,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632615946caa435296ff6e45390c831f, type: 3}
   m_Name: Easy
   m_EditorClassIdentifier: 
-  DifficultType: 1
+  FrontSprite: {fileID: 0}
+  DifficultType: 4
 --- !u!114 &3205367486653324890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,4 +56,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632615946caa435296ff6e45390c831f, type: 3}
   m_Name: Simple
   m_EditorClassIdentifier: 
-  DifficultType: 0
+  FrontSprite: {fileID: 0}
+  DifficultType: 2

@@ -52,23 +52,33 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorEcosystem.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorEcosystemInfrastructure.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\EcoSystemSettingsInstaller.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystemLauncher.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchMenu.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGeneratorUnityMenu.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorPathProvider.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorProjectPathSettings.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\Eldritch\CustomInspectors\BaseDataBoxInspectorEditor.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\UserSaveProfileStorageTest.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\Eldritch\CustomInspectors\MythosCardTypesHolderEditor.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystem.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\IDataProvider.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\Eldritch\CustomInspectors\MytosCardDataSOEditor.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\Eldritch\CustomInspectors\CardTypesHolderEditor.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\SingletonSettings.cs" />
-     <Compile Include="Assets\3dPackages\Scripts\Editor\EldritchHorrorEditorEcosystem\Helpers\MythosCardGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\IEldritchHorrorCodeGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorEcosystem.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\StateMachineTypesProviderCodeGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorEcosystemInfrastructure.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\EcoSystemSettingsInstaller.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystemLauncher.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchMenu.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGeneratorUnityMenu.cs" />
+     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\BehaviorExecutorScriptableEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorPathProvider.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\AncientCardGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorProjectPathSettings.cs" />
+     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\BaseDataBoxInspectorEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\EldritchHorrorEditorEcosystemLauncherEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystemGuiDrawer.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\UserSaveProfileStorageTest.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorGUI\IEldritchHorrorEditorEcosystemGUI.cs" />
+     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\MythosCardTypesHolderEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystem.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IDataProvider.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\CardGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\MytosCardDataSOEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\CardTypesHolderEditor.cs" />
+     <Compile Include="Assets\BehaviorBricks\Editor\BehaviorExecutorEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\SingletonSettings.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\MythosCardGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\AllCodeGeneratorWindow.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -324,6 +334,9 @@
  <Reference Include="Sirenix.Serialization.Config">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
+ <Reference Include="BBEditor">
+ <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/BehaviorBricks/Editor/Bin/BBEditor.dll</HintPath>
+ </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
@@ -363,6 +376,9 @@
  <Reference Include="Sirenix.Serialization">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
  </Reference>
+ <Reference Include="BehaviorBricks">
+ <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/BehaviorBricks/Runtime/BehaviorBricks.dll</HintPath>
+ </Reference>
  <Reference Include="DesperateDevs.CodeGeneration">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/DesperateDevs/Editor/DesperateDevs.CodeGeneration.dll</HintPath>
  </Reference>
@@ -372,14 +388,14 @@
  <Reference Include="ConsolePro.Editor">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/ConsolePro/Editor/ConsolePro.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="DesperateDevs.CodeGeneration.CodeGenerator">
+ <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/DesperateDevs/Editor/DesperateDevs.CodeGeneration.CodeGenerator.dll</HintPath>
+ </Reference>
  <Reference Include="Entitas.VisualDebugging.CodeGeneration.Plugins">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/Entitas/Editor/Plugins/Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
  </Reference>
  <Reference Include="Hierarchy (MAYA outliner) Plugin">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/EModules/Hierarchy/SharedFolder/Hierarchy (MAYA outliner) Plugin.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.CodeGeneration.CodeGenerator">
- <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/DesperateDevs/Editor/DesperateDevs.CodeGeneration.CodeGenerator.dll</HintPath>
  </Reference>
  <Reference Include="DesperateDevs.Networking">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/DesperateDevs/DesperateDevs.Networking.dll</HintPath>

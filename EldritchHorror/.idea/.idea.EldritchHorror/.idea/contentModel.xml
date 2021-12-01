@@ -71,6 +71,7 @@
           </e>
           <e p="GameKit" t="Include">
             <e p="Attributes" t="Include">
+              <e p="AllowMultiItemsAttribute.cs" t="Include" />
               <e p="CanGenerateAttribute.cs" t="Include" />
               <e p="CustomEnumNameAttribute.cs" t="Include" />
               <e p="CustomGUIContentAttribute.cs" t="Include" />
@@ -166,7 +167,6 @@
               <e p="SerializedPropertyExtensions.cs" t="Include" />
               <e p="SpriteAtlasBuilder.cs" t="Include" />
               <e p="SubConfigDrawer" t="Include">
-                <e p="AllowMultiItemsAttribute.cs" t="Include" />
                 <e p="DefaultPossibleSubTypesProvider.cs" t="Include" />
                 <e p="EnumDataBoxAttribute.cs" t="Include" />
                 <e p="IPossibleSubTypesProvider.cs" t="Include" />
@@ -301,125 +301,92 @@
               </e>
             </e>
           </e>
-          <e p="Scripts" t="Include">
-            <e p="Core" t="Include">
-              <e p="DataStorage" t="Include">
-                <e p="DataBox.cs" t="Include" />
-                <e p="EldritchHorrorScriptableProviderStorage.cs" t="Include" />
-                <e p="IDataBox.cs" t="Include" />
-                <e p="IDataStorage.cs" t="Include" />
-                <e p="LocalDataBoxStorage.cs" t="Include" />
+        </e>
+        <e p="BehaviorBricks" t="Include">
+          <e p="Actions" t="Include">
+            <e p="system" t="Include">
+              <e p="Animation" t="Include">
+                <e p="PlayAnimation.cs" t="Include" />
               </e>
-              <e p="EldritchEnumExtension.cs" t="Include" />
-              <e p="SOHolderProvider.cs" t="Include" />
-            </e>
-            <e p="Editor" t="Include">
-              <e p="Eldritch" t="Include">
-                <e p="CustomInspectors" t="Include">
-                  <e p="BaseDataBoxInspectorEditor.cs" t="Include" />
-                  <e p="CardTypesHolderEditor.cs" t="Include" />
-                  <e p="MythosCardTypesHolderEditor.cs" t="Include" />
-                  <e p="MytosCardDataSOEditor.cs" t="Include" />
-                </e>
+              <e p="Audio" t="Include">
+                <e p="PlaySound.cs" t="Include" />
               </e>
-              <e p="EldritchHorrorEditorEcosystem" t="Include">
-                <e p="CodeGeneratorUnityMenu.cs" t="Include" />
-                <e p="EcoSystemSettingsInstaller.cs" t="Include" />
-                <e p="EldritchHorrorEditorEcosystem.cs" t="Include" />
-                <e p="EldritchHorrorEditorEcosystemLauncher.cs" t="Include" />
-                <e p="EldritchMenu.cs" t="Include" />
-                <e p="Helpers" t="Include">
-                  <e p="MythosCardGenerator.cs" t="Include" />
-                </e>
-                <e p="IDataProvider.cs" t="Include" />
-                <e p="IEldritchHorrorEditorEcosystem.cs" t="Include" />
-                <e p="IEldritchHorrorEditorPathProvider.cs" t="Include" />
-                <e p="Settings" t="Include">
-                  <e p="EditorEcosystemInfrastructure.cs" t="Include" />
-                  <e p="EditorProjectPathSettings.cs" t="Include" />
-                  <e p="SingletonSettings.cs" t="Include" />
-                </e>
-                <e p="UserSaveProfileStorageTest.cs" t="Include" />
+              <e p="Basic" t="Include">
+                <e p="SetBool.cs" t="Include" />
+                <e p="SetFloat.cs" t="Include" />
+                <e p="SetInt.cs" t="Include" />
+                <e p="SetVector3.cs" t="Include" />
+                <e p="toggleBool.cs" t="Include" />
+                <e p="WaitForSeconds.cs" t="Include" />
               </e>
-            </e>
-            <e p="EldritchCards" t="Include">
-              <e p="Data" t="Include">
-                <e p="CardTypesHolder.cs" t="Include" />
-                <e p="ClassTypes" t="Include">
-                  <e p="BaseCardData.cs" t="Include" />
-                  <e p="BaseGameCartSO.cs" t="Include" />
-                  <e p="CardSettings" t="Include">
-                    <e p="ICardGenerateSettings.cs" t="Include" />
-                    <e p="set.cs" t="Include" />
-                  </e>
-                  <e p="CardTypeSO.cs" t="Include" />
-                  <e p="DifficultTypeSO.cs" t="Include" />
-                  <e p="GamePartSO.cs" t="Include" />
-                  <e p="MythosTypeSO.cs" t="Include" />
-                </e>
-                <e p="DifficultTypesHolder.cs" t="Include" />
-                <e p="GameCardsData" t="Include">
-                  <e p="MythosCardTypeSo.cs" t="Include" />
-                  <e p="MythosInfluenceTypeSO.cs" t="Include" />
-                  <e p="MytosCardDataSO.cs" t="Include" />
-                </e>
-                <e p="GameVersionHolder.cs" t="Include" />
-                <e p="MythosCardTypesHolder.cs" t="Include" />
-                <e p="MythosInfluenceTypeHolder.cs" t="Include" />
+              <e p="GameObject" t="Include">
+                <e p="AddComponent.cs" t="Include" />
+                <e p="ClosestGameObjectFromList.cs" t="Include" />
+                <e p="ClosestGameObjectWithTag.cs" t="Include" />
+                <e p="Destroy.cs" t="Include" />
+                <e p="FindGameObjectByName.cs" t="Include" />
+                <e p="FindGameObjectByTag.cs" t="Include" />
+                <e p="GetComponent.cs" t="Include" />
+                <e p="Instantiate.cs" t="Include" />
+                <e p="LookAt.cs" t="Include" />
+                <e p="SendMessage.cs" t="Include" />
+                <e p="SetActive.cs" t="Include" />
+              </e>
+              <e p="Navigation" t="Include">
+                <e p="MoveToGameObject.cs" t="Include" />
+                <e p="MoveToPosition.cs" t="Include" />
+                <e p="MoveToRandomPosition.cs" t="Include" />
+              </e>
+              <e p="Physics" t="Include">
+                <e p="ApplyForce.cs" t="Include" />
+                <e p="FromMouseToWorld.cs" t="Include" />
+                <e p="SetVelocity.cs" t="Include" />
+              </e>
+              <e p="Vector3" t="Include">
+                <e p="GetRandomInArea.cs" t="Include" />
               </e>
             </e>
-            <e p="Entitas" t="Include">
-              <e p="Component" t="Include">
-                <e p="SpriteHolderComponent.cs" t="Include" />
+          </e>
+          <e p="BehaviorExecutor.cs" t="Include" />
+          <e p="BehaviorExecutorScriptable.cs" t="Include" />
+          <e p="BrickAsset.cs" t="Include" />
+          <e p="Conditions" t="Include">
+            <e p="system" t="Include">
+              <e p="Basic" t="Include">
+                <e p="CheckBool.cs" t="Include" />
+                <e p="CheckButton.cs" t="Include" />
+                <e p="CheckKey.cs" t="Include" />
+                <e p="CheckMouseButton.cs" t="Include" />
               </e>
-              <e p="Generated" t="Include">
-                <e p="Characters" t="Include">
-                  <e p="CharactersAttribute.cs" t="Include" />
-                  <e p="CharactersComponentsLookup.cs" t="Include" />
-                  <e p="CharactersContext.cs" t="Include" />
-                  <e p="CharactersEntity.cs" t="Include" />
-                  <e p="CharactersMatcher.cs" t="Include" />
-                </e>
-                <e p="Contexts.cs" t="Include" />
-                <e p="EldritchWorldMap" t="Include">
-                  <e p="Components" t="Include">
-                    <e p="EldritchWorldMapSpriteHolderComponent.cs" t="Include" />
-                  </e>
-                  <e p="EldritchWorldMapAttribute.cs" t="Include" />
-                  <e p="EldritchWorldMapComponentsLookup.cs" t="Include" />
-                  <e p="EldritchWorldMapContext.cs" t="Include" />
-                  <e p="EldritchWorldMapEntity.cs" t="Include" />
-                  <e p="EldritchWorldMapMatcher.cs" t="Include" />
-                </e>
-                <e p="Feature.cs" t="Include" />
+              <e p="Perception" t="Include">
+                <e p="IsTargetClose.cs" t="Include" />
+                <e p="IsTargetCloseAndInSight.cs" t="Include" />
+                <e p="IsTargetInSight.cs" t="Include" />
               </e>
             </e>
-            <e p="Luncher" t="Include">
-              <e p="EldritchHorrorLauncher.cs" t="Include" />
-              <e p="Installers" t="Include">
-                <e p="CoreScriptableInstaller.cs" t="Include" />
-                <e p="EldritchHorrorCoreSystemSOInstaller.cs" t="Include" />
-                <e p="UserProfileScriptableInstaller.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="BehaviorExecutorEditor.cs" t="Include" />
+          </e>
+          <e p="readme.txt" t="Include" />
+          <e p="Samples" t="Include">
+            <e p="ProgrammersQuickStartGuide" t="Include">
+              <e p="Done" t="Include">
+                <e p="DoneBulletScript.cs" t="Include" />
+                <e p="DoneDayNightCycle.cs" t="Include" />
+                <e p="DoneIsNight.cs" t="Include" />
+                <e p="DoneShoot.cs" t="Include" />
+                <e p="DoneShootOnce.cs" t="Include" />
+                <e p="DoneSleepForever.cs" t="Include" />
               </e>
-              <e p="MainLauncher.cs" t="Include" />
             </e>
-            <e p="MapEntityScriptable.cs" t="Include" />
-            <e p="UserProfile" t="Include">
-              <e p="EHJsonConverter.cs" t="Include" />
-              <e p="EnumToIntKeyContractResolver.cs" t="Include" />
-              <e p="HLogger.cs" t="Include" />
-              <e p="IDataFromJsonBuilder.cs" t="Include" />
-              <e p="IJsonConverter.cs" t="Include" />
-              <e p="IJsonFileOperation.cs" t="Include" />
-              <e p="IProfileBuilder.cs" t="Include" />
-              <e p="MythosCardSaveSettings.cs" t="Include" />
-              <e p="UserProfileData.cs" t="Include" />
-              <e p="UserProfileDataCompositeBuilder.cs" t="Include" />
-              <e p="UserProfilePartBuilder.cs" t="Include" />
-              <e p="UserProfileSave.cs" t="Include" />
-              <e p="UserProfileSaveFactory.cs" t="Include" />
-              <e p="UserSavePathSettings.cs" t="Include" />
-              <e p="UserSaveProfileStorage.cs" t="Include" />
+            <e p="QuickStartGuide" t="Include">
+              <e p="Done" t="Include">
+                <e p="Resources" t="Include">
+                  <e p="MassSpawner.cs" t="Include" />
+                  <e p="Spawner.cs" t="Include" />
+                </e>
+              </e>
             </e>
           </e>
         </e>
@@ -851,6 +818,246 @@
             </e>
             <e p="Version.txt" t="Include" />
             <e p="zenject.asmdef" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Core" t="Include">
+            <e p="CommonExtension.cs" t="Include" />
+            <e p="DataStorage" t="Include">
+              <e p="DataBox.cs" t="Include" />
+              <e p="EldritchHorrorDataStorage.cs" t="Include" />
+              <e p="IDataBox.cs" t="Include" />
+              <e p="IDataStorage.cs" t="Include" />
+              <e p="LocalDataBoxStorage.cs" t="Include" />
+            </e>
+            <e p="EldritchEnumExtension.cs" t="Include" />
+            <e p="SOHolderProvider.cs" t="Include" />
+            <e p="StateMachine" t="Include">
+              <e p="StateMachineExecutor" t="Include">
+                <e p="AbstractStateMachine.cs" t="Include" />
+                <e p="IStateMachine.cs" t="Include" />
+              </e>
+              <e p="StateMachineState" t="Include">
+                <e p="AbstractStateMachineState.cs" t="Include" />
+                <e p="IStateMachineState.cs" t="Include" />
+                <e p="StateExtension.cs" t="Include" />
+              </e>
+              <e p="StateTransition" t="Include">
+                <e p="IStateTransition.cs" t="Include" />
+                <e p="StateTransaction.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="Eldritch" t="Include">
+              <e p="CustomInspectors" t="Include">
+                <e p="BaseDataBoxInspectorEditor.cs" t="Include" />
+                <e p="BehaviorExecutorScriptableEditor.cs" t="Include" />
+                <e p="CardTypesHolderEditor.cs" t="Include" />
+                <e p="EldritchHorrorEditorEcosystemLauncherEditor.cs" t="Include" />
+                <e p="MythosCardTypesHolderEditor.cs" t="Include" />
+                <e p="MytosCardDataSOEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EldritchHorrorEditorEcosystem" t="Include">
+              <e p="CodeGenerator" t="Include">
+                <e p="AllCodeGeneratorWindow.cs" t="Include" />
+                <e p="IEldritchHorrorCodeGenerator.cs" t="Include" />
+                <e p="StateMachineTypesProviderCodeGenerator.cs" t="Include" />
+              </e>
+              <e p="CodeGeneratorUnityMenu.cs" t="Include" />
+              <e p="EditorGUI" t="Include">
+                <e p="IEldritchHorrorEditorEcosystemGUI.cs" t="Include" />
+              </e>
+              <e p="EditorInstallers" t="Include">
+                <e p="EcoSystemSettingsInstaller.cs" t="Include" />
+              </e>
+              <e p="EldritchHorrorEditorEcosystem.cs" t="Include" />
+              <e p="EldritchHorrorEditorEcosystemGuiDrawer.cs" t="Include" />
+              <e p="EldritchHorrorEditorEcosystemLauncher.cs" t="Include" />
+              <e p="EldritchMenu.cs" t="Include" />
+              <e p="GameBoxDefenitionGenerators" t="Include">
+                <e p="AncientCardGenerator.cs" t="Include" />
+                <e p="CardGenerator.cs" t="Include" />
+                <e p="MythosCardGenerator.cs" t="Include" />
+              </e>
+              <e p="IDataProvider.cs" t="Include" />
+              <e p="IEldritchHorrorEditorEcosystem.cs" t="Include" />
+              <e p="IEldritchHorrorEditorPathProvider.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="EditorEcosystemInfrastructure.cs" t="Include" />
+                <e p="EditorProjectPathSettings.cs" t="Include" />
+                <e p="SingletonSettings.cs" t="Include" />
+              </e>
+              <e p="UserSaveProfileStorageTest.cs" t="Include" />
+            </e>
+          </e>
+          <e p="EldritchCards" t="Include">
+            <e p="Data" t="Include">
+              <e p="CardTypesHolder.cs" t="Include" />
+              <e p="ClassTypes" t="Include">
+                <e p="AncientCardTypeSo.cs" t="Include" />
+                <e p="AncientTypeSO.cs" t="Include" />
+                <e p="BaseCardData.cs" t="Include" />
+                <e p="BaseGameCartSO.cs" t="Include" />
+                <e p="CardTypeSO.cs" t="Include" />
+                <e p="DifficultTypeSO.cs" t="Include" />
+                <e p="GameBoxDef.cs" t="Include" />
+                <e p="GamePartSO" t="Include">
+                  <e p="AncientCardGeneratorSettingsSettings.cs" t="Include" />
+                  <e p="ICardGeneratorSettings.cs" t="Include" />
+                  <e p="MythosCardGeneratorSettings.cs" t="Include" />
+                </e>
+                <e p="MythosTypeSO.cs" t="Include" />
+              </e>
+              <e p="DifficultTypesHolder.cs" t="Include" />
+              <e p="GameCardsData" t="Include">
+                <e p="AncientCardDataDefinition.cs" t="Include" />
+                <e p="MythosCardDataDefinition.cs" t="Include" />
+                <e p="MythosCardTypeSo.cs" t="Include" />
+                <e p="MythosInfluenceTypeSO.cs" t="Include" />
+              </e>
+              <e p="GameVersionHolder.cs" t="Include" />
+              <e p="MythosCardTypesHolder.cs" t="Include" />
+              <e p="MythosInfluenceTypeHolder.cs" t="Include" />
+            </e>
+            <e p="View" t="Include">
+              <e p="MythosCardBlankView.cs" t="Include" />
+            </e>
+          </e>
+          <e p="EldtitchMainLoop" t="Include">
+            <e p="GameLoopStateMachine.cs" t="Include" />
+            <e p="IGameLoopState.cs" t="Include" />
+            <e p="IGameLoopStateMachine.cs" t="Include" />
+            <e p="InitialState" t="Include">
+              <e p="InitialEldritchMainState.cs" t="Include" />
+            </e>
+            <e p="MainLoopState.cs" t="Include" />
+            <e p="PrepareGameState" t="Include">
+              <e p="IPrepareGameMachineState.cs" t="Include" />
+              <e p="PrepareGameCycleMachineStateMachineState.cs" t="Include" />
+              <e p="PrepareGameState.cs" t="Include" />
+              <e p="PrepareGameStateMachine.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Entitas" t="Include">
+            <e p="Component" t="Include">
+              <e p="GameLoopComponents.cs" t="Include" />
+              <e p="MainLoopStateComponent.cs" t="Include" />
+              <e p="MythosDefComponent.cs" t="Include" />
+              <e p="SpriteHolderComponent.cs" t="Include" />
+              <e p="UserProfileComponent.cs" t="Include" />
+            </e>
+            <e p="EldrithHorrorEntitasSystems" t="Include">
+              <e p="GameLoopInitializeSystem.cs" t="Include" />
+              <e p="HelperExtensions.cs" t="Include" />
+              <e p="MainLoopInitializeSystem.cs" t="Include" />
+              <e p="MainLoopSwitcherSystem.cs" t="Include" />
+              <e p="MythosCardEntityGenerator.cs" t="Include" />
+            </e>
+            <e p="Generated" t="Include">
+              <e p="Components" t="Include">
+                <e p="Interfaces" t="Include">
+                  <e p="IIsReadyEntity.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ContextExtension.cs" t="Include" />
+              <e p="Contexts.cs" t="Include" />
+              <e p="EldritchWorldMap" t="Include">
+                <e p="Components" t="Include">
+                  <e p="EldritchWorldMapSpriteHolderComponent.cs" t="Include" />
+                </e>
+                <e p="EldritchWorldMapAttribute.cs" t="Include" />
+                <e p="EldritchWorldMapComponentsLookup.cs" t="Include" />
+                <e p="EldritchWorldMapContext.cs" t="Include" />
+                <e p="EldritchWorldMapEntity.cs" t="Include" />
+                <e p="EldritchWorldMapMatcher.cs" t="Include" />
+              </e>
+              <e p="Feature.cs" t="Include" />
+              <e p="GameLoop" t="Include">
+                <e p="Components" t="Include">
+                  <e p="GameLoopInGameMythosCardsComponent.cs" t="Include" />
+                  <e p="GameLoopMasterEntityComponent.cs" t="Include" />
+                  <e p="GameLoopTurnCounterComponent.cs" t="Include" />
+                </e>
+                <e p="GameLoopAttribute.cs" t="Include" />
+                <e p="GameLoopComponentsLookup.cs" t="Include" />
+                <e p="GameLoopContext.cs" t="Include" />
+                <e p="GameLoopEntity.cs" t="Include" />
+                <e p="GameLoopMatcher.cs" t="Include" />
+              </e>
+              <e p="MainLoop" t="Include">
+                <e p="Components" t="Include">
+                  <e p="MainLoopIsReadyComponent.cs" t="Include" />
+                  <e p="MainLoopMainLoopStateComponent.cs" t="Include" />
+                  <e p="MainLoopUserProfileComponent.cs" t="Include" />
+                </e>
+                <e p="MainLoopAttribute.cs" t="Include" />
+                <e p="MainLoopComponentsLookup.cs" t="Include" />
+                <e p="MainLoopContext.cs" t="Include" />
+                <e p="MainLoopEntity.cs" t="Include" />
+                <e p="MainLoopMatcher.cs" t="Include" />
+              </e>
+              <e p="MythosCard" t="Include">
+                <e p="Components" t="Include">
+                  <e p="MythosCardIsActiveMythosComponent.cs" t="Include" />
+                  <e p="MythosCardIsDraftMythosComponent.cs" t="Include" />
+                  <e p="MythosCardIsReadyComponent.cs" t="Include" />
+                  <e p="MythosCardMythosDefComponent.cs" t="Include" />
+                  <e p="MythosCardMythosStateComponent.cs" t="Include" />
+                </e>
+                <e p="MythosCardAttribute.cs" t="Include" />
+                <e p="MythosCardComponentsLookup.cs" t="Include" />
+                <e p="MythosCardContext.cs" t="Include" />
+                <e p="MythosCardEntity.cs" t="Include" />
+                <e p="MythosCardMatcher.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Luncher" t="Include">
+            <e p="EldritchHorrorLauncher.cs" t="Include" />
+            <e p="Installers" t="Include">
+              <e p="MonoBehaviours" t="Include">
+                <e p="EldrtitchHorrorUIInstaller.cs" t="Include" />
+              </e>
+              <e p="ScriptableInstallers" t="Include">
+                <e p="CoreScriptableInstaller.cs" t="Include" />
+                <e p="EldritchDataInstaller.cs" t="Include" />
+                <e p="EldritchHorrorCoreSystemSOInstaller.cs" t="Include" />
+                <e p="GameLoopScriptableInstaller.cs" t="Include" />
+                <e p="StateMachineTypesProvider.cs" t="Include" />
+                <e p="UserProfileScriptableInstaller.cs" t="Include" />
+              </e>
+            </e>
+            <e p="MainLauncher.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="Window" t="Include">
+              <e p="EldritchWindow.cs" t="Include" />
+              <e p="EldritchWindowUIStorage.cs" t="Include" />
+              <e p="IEldritchWindow.cs" t="Include" />
+              <e p="IEldritchWindowUIStorage.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UserProfile" t="Include">
+            <e p="GameCardSetSettings.cs" t="Include" />
+            <e p="IProfileBuilder.cs" t="Include" />
+            <e p="MythosCardSaveSettings.cs" t="Include" />
+            <e p="UserProfileData.cs" t="Include" />
+            <e p="UserProfileDataCompositeBuilder.cs" t="Include" />
+            <e p="UserProfilePartBuilder.cs" t="Include" />
+            <e p="UserProfileSave.cs" t="Include" />
+            <e p="UserProfileSaveFactory.cs" t="Include" />
+            <e p="UserSavePathSettings.cs" t="Include" />
+            <e p="UserSaveProfileStorage.cs" t="Include" />
+            <e p="Utility" t="Include">
+              <e p="EHJsonConverter.cs" t="Include" />
+              <e p="EnumToIntKeyContractResolver.cs" t="Include" />
+              <e p="HLogger.cs" t="Include" />
+              <e p="IDataFromJsonBuilder.cs" t="Include" />
+              <e p="IJsonConverter.cs" t="Include" />
+              <e p="IJsonFileOperation.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

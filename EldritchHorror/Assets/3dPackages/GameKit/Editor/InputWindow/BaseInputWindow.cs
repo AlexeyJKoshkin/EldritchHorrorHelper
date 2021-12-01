@@ -33,6 +33,7 @@ namespace Kitchen.EditorUtilityHelpers
         private void OnLostFocus()
         {
             OnSelectChecker?.Invoke(string.IsNullOrEmpty(_errorMessage) ? _settings.DefautValue : GetResult(_enterText));
+            if(this == null) return;
             Close();
         }
 
