@@ -16,7 +16,8 @@ namespace EldritchHorror
                                             {
                                                 typeof(MainLoopInitializeSystem),
                                                 typeof(GameLoopInitializeSystem),
-
+                                                typeof(OmenChangeSystem),
+                                                
                                                 typeof(MainLoopSwitcherSystem)
                                             };
         public IEnumerable<Type> UpdateSystem => _updateSystems;
@@ -27,7 +28,7 @@ namespace EldritchHorror
             BindContexts(shared);
             BindSystems();
             BindDependencies();
-            Container.BindInterfacesTo<EldritchHorrorLauncher>().AsSingle();
+            Container.BindInterfacesTo<EldritchHorrorEntitasRuntimeSystemBuilder>().AsSingle();
         }
 
         private void BindDependencies()

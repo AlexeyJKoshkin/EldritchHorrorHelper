@@ -1,7 +1,5 @@
-using EldritchHorror;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace EldritchHorror.Core
 {
@@ -17,7 +15,7 @@ namespace EldritchHorror.Core
 
         public void Start()
         {
-            CheckTransition();
+            SetNewCurrent(this[0]);
         }
 
         public void Stop()
@@ -49,35 +47,16 @@ namespace EldritchHorror.Core
             _current?.Exit();
             _current = current;
             _current?.Enter();
-            IsWorking = _current != null;
+            IsWorking = true;
+            TryFinishWork();
+          
         }
 
-        private void CheckTransition()
+        private void TryFinishWork()
         {
-            IStateMachineState nextState = null;
-            if (_current == null)
-            {
-                nextState = this[0];
-            }
-            else
-            {
-                foreach (var transition in _current.AllTransitions())
-                {
-                    if (!transition.Check())
-                    {
-                        continue;
-                    }
-
-                    nextState = transition.GetState(this);
-                    break;
-                }
-            }
-
-            SetNewCurrent(nextState);
-            if (_current == null)
-            {
-                FinishWorkEvent?.Invoke();
-            }
+            if(_current!= null) return;
+            IsWorking = false;
+            FinishWorkEvent?.Invoke();
         }
     }
 }

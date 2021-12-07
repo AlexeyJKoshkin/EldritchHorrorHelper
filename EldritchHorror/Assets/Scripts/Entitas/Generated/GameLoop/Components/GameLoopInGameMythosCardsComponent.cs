@@ -12,22 +12,22 @@ public partial class GameLoopContext {
     public EldritchHorror.Entitas.Components.InGameMythosCardsComponent inGameMythosCards { get { return inGameMythosCardsEntity.inGameMythosCards; } }
     public bool hasInGameMythosCards { get { return inGameMythosCardsEntity != null; } }
 
-    public GameLoopEntity SetInGameMythosCards(System.Collections.Generic.Queue<MythosCardEntity> newList, System.Collections.Generic.List<MythosCardEntity> newDraft) {
+    public GameLoopEntity SetInGameMythosCards(System.Collections.Generic.List<MythosCardEntity> newDraft, System.Collections.Generic.Queue<MythosCardEntity> newList) {
         if (hasInGameMythosCards) {
             throw new Entitas.EntitasException("Could not set InGameMythosCards!\n" + this + " already has an entity with EldritchHorror.Entitas.Components.InGameMythosCardsComponent!",
                 "You should check if the context already has a inGameMythosCardsEntity before setting it or use context.ReplaceInGameMythosCards().");
         }
         var entity = CreateEntity();
-        entity.AddInGameMythosCards(newList, newDraft);
+        entity.AddInGameMythosCards(newDraft, newList);
         return entity;
     }
 
-    public void ReplaceInGameMythosCards(System.Collections.Generic.Queue<MythosCardEntity> newList, System.Collections.Generic.List<MythosCardEntity> newDraft) {
+    public void ReplaceInGameMythosCards(System.Collections.Generic.List<MythosCardEntity> newDraft, System.Collections.Generic.Queue<MythosCardEntity> newList) {
         var entity = inGameMythosCardsEntity;
         if (entity == null) {
-            entity = SetInGameMythosCards(newList, newDraft);
+            entity = SetInGameMythosCards(newDraft, newList);
         } else {
-            entity.ReplaceInGameMythosCards(newList, newDraft);
+            entity.ReplaceInGameMythosCards(newDraft, newList);
         }
     }
 
@@ -49,19 +49,19 @@ public partial class GameLoopEntity {
     public EldritchHorror.Entitas.Components.InGameMythosCardsComponent inGameMythosCards { get { return (EldritchHorror.Entitas.Components.InGameMythosCardsComponent)GetComponent(GameLoopComponentsLookup.InGameMythosCards); } }
     public bool hasInGameMythosCards { get { return HasComponent(GameLoopComponentsLookup.InGameMythosCards); } }
 
-    public void AddInGameMythosCards(System.Collections.Generic.Queue<MythosCardEntity> newList, System.Collections.Generic.List<MythosCardEntity> newDraft) {
+    public void AddInGameMythosCards(System.Collections.Generic.List<MythosCardEntity> newDraft, System.Collections.Generic.Queue<MythosCardEntity> newList) {
         var index = GameLoopComponentsLookup.InGameMythosCards;
         var component = (EldritchHorror.Entitas.Components.InGameMythosCardsComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.InGameMythosCardsComponent));
-        component.List = newList;
         component.Draft = newDraft;
+        component.List = newList;
         AddComponent(index, component);
     }
 
-    public void ReplaceInGameMythosCards(System.Collections.Generic.Queue<MythosCardEntity> newList, System.Collections.Generic.List<MythosCardEntity> newDraft) {
+    public void ReplaceInGameMythosCards(System.Collections.Generic.List<MythosCardEntity> newDraft, System.Collections.Generic.Queue<MythosCardEntity> newList) {
         var index = GameLoopComponentsLookup.InGameMythosCards;
         var component = (EldritchHorror.Entitas.Components.InGameMythosCardsComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.InGameMythosCardsComponent));
-        component.List = newList;
         component.Draft = newDraft;
+        component.List = newList;
         ReplaceComponent(index, component);
     }
 

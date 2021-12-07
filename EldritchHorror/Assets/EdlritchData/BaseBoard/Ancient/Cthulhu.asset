@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106c2e992e3c475ea909320dc3c3f019, type: 3}
+  m_Name: Cthulhu
+  m_EditorClassIdentifier: 
+  FrontSprite: {fileID: 0}
+  Type: {fileID: -1250299549419351856, guid: 4079b2d9ba6816b4491c2f110e5b68b0, type: 2}
+  AncientActMythosSettings:
+    First:
+    - TypeSo: {fileID: 4404939572119654479, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 2
+    - TypeSo: {fileID: 6164757554623799574, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 3
+    - TypeSo: {fileID: 5273411161306648462, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 1
+    Second:
+    - TypeSo: {fileID: 4404939572119654479, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 1
+    - TypeSo: {fileID: 6164757554623799574, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 2
+    - TypeSo: {fileID: 5273411161306648462, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 3
+    Third:
+    - TypeSo: {fileID: 4404939572119654479, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 3
+    - TypeSo: {fileID: 6164757554623799574, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 2
+    - TypeSo: {fileID: 5273411161306648462, guid: 3cd97f563102f1f4b9accd201e03c632,
+        type: 2}
+      Count: 2
+  BackSprite: {fileID: 0}

@@ -1,4 +1,5 @@
 using EldritchHorror;
+using EldritchHorror.UI;
 using EldritchHorror.UserProfile;
 using UnityEngine;
 using Zenject;

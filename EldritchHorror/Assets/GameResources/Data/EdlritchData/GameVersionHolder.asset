@@ -28,12 +28,12 @@ MonoBehaviour:
   m_Name: Forgoten
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  AncientCards: []
   FolderPath: Assets/EdlritchData/Forgoten
+  Version: 6
   Icon: {fileID: 0}
   MainSprite: {fileID: 0}
+  AncientCards: []
   MythosCards: []
-  Version: 6
 --- !u!114 &8546344316355951951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,11 +47,15 @@ MonoBehaviour:
   m_Name: BaseBoard
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  AncientCards:
-  - {fileID: 11400000, guid: 9b1a0a8ee1e019944abe12d9a7a157e6, type: 2}
   FolderPath: Assets/EdlritchData/BaseBoard
+  Version: 2
   Icon: {fileID: 0}
   MainSprite: {fileID: 0}
+  AncientCards:
+  - {fileID: 11400000, guid: 09a3bf3352d59da49990b3cea814c64b, type: 2}
+  - {fileID: 11400000, guid: 9b1a0a8ee1e019944abe12d9a7a157e6, type: 2}
+  - {fileID: 11400000, guid: a5cf70575c206b2489b8ea60a2f1a7f1, type: 2}
+  - {fileID: 11400000, guid: 6c95f5c8ad6eaa144b65055dc46a9022, type: 2}
   MythosCards:
   - {fileID: 11400000, guid: ef5aeeee3b338fa44a88579c8e435612, type: 2}
   - {fileID: 11400000, guid: 1cde64a85522a63448cba34b3e3c69ed, type: 2}
@@ -104,4 +108,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba2109d4d8f1d9649b5f29e69b6e876b, type: 2}
   - {fileID: 11400000, guid: f0f03a5f26f287840a48ee3383ecc123, type: 2}
   - {fileID: 11400000, guid: b3061621120096e4885d4e933777723f, type: 2}
-  Version: 2

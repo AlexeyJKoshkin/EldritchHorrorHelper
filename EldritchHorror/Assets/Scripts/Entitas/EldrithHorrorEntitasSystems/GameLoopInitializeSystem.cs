@@ -1,7 +1,6 @@
-using EldritchHorror;
 using EldritchHorror.Cards;
-using EldritchHorror.Data.Provider;
 using EldritchHorror.Entitas.Components;
+using EldritchHorror.UI;
 using Entitas;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +16,7 @@ namespace EldritchHorror.EntitasSystems
         private readonly Contexts _contexts;
         private readonly IMythosCardEntityGenerator _mythosCardEntityGenerator;
 
-        public GameLoopInitializeSystem(Contexts contexts, IMythosCardEntityGenerator mythosCardEntityGenerator) : base(contexts.mainLoop)
+        public GameLoopInitializeSystem(Contexts contexts,IMythosCardEntityGenerator mythosCardEntityGenerator) : base(contexts.mainLoop)
         {
             _contexts = contexts;
             _mythosCardEntityGenerator = mythosCardEntityGenerator;
@@ -53,12 +52,28 @@ namespace EldritchHorror.EntitasSystems
             //из даннных карты мифа создали entity и впихнули его в очередь
             mythosCardGameDefinitions.Select(_contexts.mythosCard.CreateMythosCard).ForEach(queue.Enqueue);
 
-            _contexts.gameLoop.masterEntityEntity.ReplaceInGameMythosCards(queue, new List<MythosCardEntity>());
+            _contexts.gameLoop.masterEntityEntity.ReplaceInGameMythosCards( new List<MythosCardEntity>(), queue);
         }
 
         private void CreateMainLoopEntity()
         {
-            _contexts.gameLoop.CreateEntity().isMasterEntity = true;
+            var master = _contexts.gameLoop.CreateEntity();
+            master.isMasterEntity = true;
+            master.AddOmenState(0);
+            master.AddTurnCounter(0);
         }
+    }
+
+    public static class MythosCardContextExtension
+    {
+        public static MythosCardEntity CreateMythosCard(this  MythosCardContext context,MythosCardDataDefinition arg)
+        {
+            if (context == null) return null;
+            var e = context.CreateEntity();
+            e.AddMythosDef(arg);
+            e.AddMythosState(MythosStateCardType.Lock);
+            return e;
+        }
+        
     }
 }

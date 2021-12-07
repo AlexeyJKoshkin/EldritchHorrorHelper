@@ -9,7 +9,7 @@ namespace EldritchHorror
         private PrepareGameCycleMachineStateMachineState(IPrepareGameStateMachine prepareGameStateMachine)
         {
             _prepareGameStateMachine = prepareGameStateMachine;
-            this.AddNewTransition(() => _prepareGameStateMachine.IsWorking).Bind(this);
+          //  this.AddNewTransition(() => _prepareGameStateMachine.IsWorking).Bind(this);
         }
 
         public override int Order => 1;

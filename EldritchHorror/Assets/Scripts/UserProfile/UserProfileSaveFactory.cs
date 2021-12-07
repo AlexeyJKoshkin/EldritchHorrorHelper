@@ -1,4 +1,3 @@
-
 namespace EldritchHorror.UserProfile
 {
     public interface IUserProfileSaveFactory

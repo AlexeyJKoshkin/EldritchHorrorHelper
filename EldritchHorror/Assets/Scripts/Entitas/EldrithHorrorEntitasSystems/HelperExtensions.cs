@@ -4,7 +4,7 @@ using EldritchHorror.UserProfile;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace  EldritchHorror.EntitasSystems
+namespace EldritchHorror.EntitasSystems
 {
     public static class HelperExtensions
     {

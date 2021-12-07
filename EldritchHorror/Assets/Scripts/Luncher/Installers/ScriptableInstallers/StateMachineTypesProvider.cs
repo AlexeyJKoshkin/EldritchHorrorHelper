@@ -7,16 +7,19 @@ namespace EldritchHorror
     {
         public static IEnumerable<Type> AllStateMachineType()
         {
-            yield return typeof(GameLoopStateMachine);
-            yield return typeof(PrepareGameStateMachine);
+            yield return typeof(EldritchHorror.GameLoopStateMachine);
+            yield return typeof(EldritchHorror.PrepareGameStateMachine);
         }
 
         public static IEnumerable<Type> AllStatesMachineType()
         {
-            yield return typeof(SelectionBossPrepareGameState);
-            yield return typeof(SelectionGameBoxesPrepareGameState);
-            yield return typeof(SelectionMythosCardPrepareGameState);
-            yield return typeof(PrepareGameCycleMachineStateMachineState);
+            yield return typeof(EldritchHorror.InitialEldritchMainState);
+            yield return typeof(EldritchHorror.PrepareGameCycleMachineStateMachineState);
+            yield return typeof(EldritchHorror.SelectionBossPrepareGameState);
+            yield return typeof(EldritchHorror.SelectionGameBoxesPrepareGameState);
+            yield return typeof(EldritchHorror.SelectionMythosCardPrepareGameState);
+            yield return typeof(EldritchHorror.GameplayStateMachine.MythosPhase);
+            yield return typeof(EldritchHorror.Core.AbstractStateMachineState);
         }
     }
 }

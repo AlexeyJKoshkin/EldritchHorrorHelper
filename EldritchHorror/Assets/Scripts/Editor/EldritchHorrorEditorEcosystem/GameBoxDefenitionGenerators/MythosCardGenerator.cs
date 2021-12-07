@@ -23,7 +23,11 @@ namespace EldritchHorrorEditorEcosystem.Helpers
         {
             GenerateFolder("Mythos");
             var settings = current.Settings;
-            if (settings == null) return;
+            if (settings == null)
+            {
+                return;
+            }
+
             var tempSpiteList = CardGeneratorUtility.LoadSprites(Texture2D);
             GenerateCards(settings, tempSpiteList);
         }
@@ -32,13 +36,11 @@ namespace EldritchHorrorEditorEcosystem.Helpers
         {
             int currentIndex = 0;
             foreach (var parameter in settings.SubCardsData)
-            {
                 for (var i = 0; i < parameter.Count; i++)
                 {
                     BuildCard(parameter, sprites[currentIndex], i);
                     currentIndex++;
                 }
-            }
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();

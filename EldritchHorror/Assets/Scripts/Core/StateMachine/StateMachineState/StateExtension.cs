@@ -6,7 +6,7 @@ namespace EldritchHorror.Core
     {
         public static void Bind(this IStateTransition traMachineState, AbstractStateMachineState state)
         {
-            state.AddTransaction(traMachineState);
+            HLogger.LogError("Bind impossible");
         }
 
         public static IStateTransition To<T>(this StateTransaction transaction) where T : class, IStateMachineState

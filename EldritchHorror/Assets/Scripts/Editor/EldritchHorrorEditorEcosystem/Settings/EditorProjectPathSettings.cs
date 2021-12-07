@@ -24,7 +24,11 @@ namespace EldritchHorror
 
             public string GetPartGameFolderPath(GameBoxDef part)
             {
-                if (part == null) return DataFolderPath;
+                if (part == null)
+                {
+                    return DataFolderPath;
+                }
+
                 return BuildPath(part.UniqueID);
             }
         }

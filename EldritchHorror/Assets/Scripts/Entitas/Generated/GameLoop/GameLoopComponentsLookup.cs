@@ -10,19 +10,25 @@ public static class GameLoopComponentsLookup {
 
     public const int InGameMythosCards = 0;
     public const int MasterEntity = 1;
-    public const int TurnCounter = 2;
+    public const int OmenState = 2;
+    public const int OmenUI = 3;
+    public const int TurnCounter = 4;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "InGameMythosCards",
         "MasterEntity",
+        "OmenState",
+        "OmenUI",
         "TurnCounter"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(EldritchHorror.Entitas.Components.InGameMythosCardsComponent),
         typeof(EldritchHorror.Entitas.Components.MasterEntityComponent),
+        typeof(EldritchHorror.Entitas.Components.OmenStateComponent),
+        typeof(EldritchHorror.Entitas.Components.OmenUIComponent),
         typeof(EldritchHorror.Entitas.Components.TurnCounterComponent)
     };
 }

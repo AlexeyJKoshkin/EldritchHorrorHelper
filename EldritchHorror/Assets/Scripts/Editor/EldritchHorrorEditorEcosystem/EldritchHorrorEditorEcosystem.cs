@@ -7,14 +7,11 @@ namespace EldritchHorrorEditorEcosystem
 {
     public class EldritchHorrorEditorEcosystem : IEldritchHorrorEditorEcosystem
     {
-        private readonly IGameLoopStateMachine _gameLoopStateMachine;
         private readonly EldritchHorrorEditorEcosystemGuiDrawer _gui;
-        private readonly IPrepareGameStateMachine _prepareGameMachineState;
 
-        public EldritchHorrorEditorEcosystem(IEldritchHorrorEditorEcosystemGUI[] gui, IGameLoopStateMachine gameLoopStateMachine, IPrepareGameStateMachine prepareGameMachineState)
+        public EldritchHorrorEditorEcosystem(IEldritchHorrorEditorEcosystemGUI[] gui)
         {
-            _gameLoopStateMachine = gameLoopStateMachine;
-            _prepareGameMachineState = prepareGameMachineState;
+
             _gui = new EldritchHorrorEditorEcosystemGuiDrawer(gui, this);
         }
 
