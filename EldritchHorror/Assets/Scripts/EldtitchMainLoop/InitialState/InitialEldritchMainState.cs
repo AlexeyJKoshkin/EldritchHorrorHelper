@@ -11,7 +11,7 @@ namespace EldritchHorror
         {
             _userSaveProfileStorage = userSaveProfileStorage;
 
-            this.AddNewTransition().To<PrepareGameCycleMachineStateMachineState>();
+            
         }
 
         public override void Enter()

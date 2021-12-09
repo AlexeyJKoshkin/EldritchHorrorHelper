@@ -1,19 +1,44 @@
+using EldritchHorror.GameplayStateMachine;
+using EldritchHorror.UI;
 using Entitas;
 using System.Collections.Generic;
 
 namespace EldritchHorror
 {
-    public interface IEldritchHorrorSceneLauncher
+    public interface IEldritchHorrorSceneLauncher : IEldritchHorrorEntitasRuntimeSystemBuilder
     {
-        Feature BuildUpdate();
         void ActivateScene();
+    }
+
+    public class EldritchHorrorSceneLauncher : IEldritchHorrorSceneLauncher
+    {
+        private readonly IEldritchHorrorEntitasRuntimeSystemBuilder _builder;
+        private readonly IEldritchWindowUIProvider _provider;
+        private readonly GameLoopContext _gameLoopContext;
+
+        public EldritchHorrorSceneLauncher(IEldritchHorrorEntitasRuntimeSystemBuilder builder, IEldritchWindowUIProvider provider, GameLoopContext gameLoopContext)
+        {
+            _builder = builder;
+            _provider = provider;
+            _gameLoopContext = gameLoopContext;
+        }
+
+        public Feature BuildUpdate()
+        {
+            return _builder.BuildUpdate();
+        }
+
+        public void ActivateScene()
+        {
+            _gameLoopContext.isMasterEntity = true;
+            _gameLoopContext.masterEntityEntity.ReplaceMainWindowUI(_provider.GetWindow<MainGameUIWindow>());
+        }
     }
 
     public interface IEldritchHorrorEntitasRuntimeSystemBuilder
     {
         Feature BuildUpdate();
     }
-
 
     public class EldritchHorrorEntitasRuntimeSystemBuilder : IEldritchHorrorEntitasRuntimeSystemBuilder
     {

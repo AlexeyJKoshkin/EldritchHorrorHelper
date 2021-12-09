@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using EldritchHorror.Cards;
-
 public sealed partial class MythosCardContext : Entitas.Context<MythosCardEntity> {
 
     public MythosCardContext()
@@ -30,6 +27,4 @@ public sealed partial class MythosCardContext : Entitas.Context<MythosCardEntity
             () => new MythosCardEntity()
         ) {
     }
-
-   
 }

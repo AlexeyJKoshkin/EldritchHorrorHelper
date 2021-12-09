@@ -1,25 +1,44 @@
 using EldritchHorror.Core;
 using EldritchHorror.UI;
+using System;
 
 namespace EldritchHorror.GameplayStateMachine
 {
-    public interface IMainGamePlayState : IStateMachineState
+    public interface IGameRoundPhase : IStateMachineState<GameLoopEntity>, IComparable
     {
-        
     }
 
-    public abstract class MainGamePlayState : AbstractStateMachineState,IMainGamePlayState
+    public abstract class MainGamePlayState : AbstractStateMachineState<GameLoopEntity>,IGameRoundPhase
     {
         public GameLoopContext GameLoopContext => _contexts.gameLoop;
         public MythosCardContext MythosCardContext => _contexts.mythosCard;
-        public MainGameUIWindow MainGameUiWindow { get; }
+      
 
         private readonly Contexts _contexts;
 
-        public MainGamePlayState(IEldritchWindowUIProvider provider, Contexts gameLoopContext)
+        public override void Enter()
+        {
+            HLogger.LogError($"Enter {this.GetType().Name}");
+        }
+
+        public override void Exit()
+        {
+            HLogger.LogError($"Exit {this.GetType().Name}");
+        }
+
+        public MainGamePlayState(Contexts gameLoopContext)
         {
             _contexts = gameLoopContext;
-            MainGameUiWindow = provider.GetWindow<MainGameUIWindow>();
+          
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj is MainGamePlayState state)
+            {
+                return this.Order.CompareTo(state.Order);
+            }
+            return 1;
         }
     }
 }

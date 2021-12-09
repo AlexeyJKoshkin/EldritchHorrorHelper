@@ -1,4 +1,3 @@
-using EldritchHorror.UI;
 
 namespace EldritchHorror.GameplayStateMachine
 {
@@ -6,12 +5,12 @@ namespace EldritchHorror.GameplayStateMachine
     {
         private readonly IEldritchOmen _omen;
 
-
         public override void Enter()
         {
-            MainGameUiWindow.Show();
+            base.Enter();
+            //MainGameUiWindow.Show(); //
             
-            GameLoopContext.masterEntityEntity.ReplaceOmenUI(MainGameUiWindow.OmenView);
+           // GameLoopContext.masterEntityEntity.ReplaceOmenUI(MainGameUiWindow.OmenView);
             
             //взять следующую карту
             GetNextCard();
@@ -22,24 +21,22 @@ namespace EldritchHorror.GameplayStateMachine
             MythosCardContext.isIsActiveMythos = false;
             var mythosQueue = GameLoopContext.inGameMythosCards.List; 
             var current = mythosQueue.Dequeue();
-            MainGameUiWindow.MythosDeckView.SetCurrent(current);
-            MainGameUiWindow.MythosDeckView.MythosCardCounter =(mythosQueue.Count);
-            
-            MainGameUiWindow.PreviewCardImage.UpdateView(current);
+            GameLoopContext.ReplaceInGameMythosCards(GameLoopContext.inGameMythosCards.Draft, mythosQueue);
             _omen.MoveNext();
-            
             current.isIsActiveMythos = true;
-            //todo: обработать карту
+            HLogger.LogError("Обработка действия карты");
         }
 
         public override void Exit()
         {
+            base.Exit();
           //  MainGameUiWindow.Hide();
-            GameLoopContext.ReplaceTurnCounter(GameLoopContext.turnCounter.Turn+1);
+          //  GameLoopContext.ReplaceTurnCounter(GameLoopContext.turnCounter.Turn+1);
+          
         }
 
 
-        public MythosPhase(IEldritchWindowUIProvider provider, IEldritchOmen omen, Contexts gameLoopContext) : base(provider, gameLoopContext)
+        public MythosPhase(IEldritchOmen omen, Contexts gameLoopContext) : base(gameLoopContext)
         {
             _omen = omen;
         }

@@ -22,14 +22,16 @@ public partial class Contexts : Entitas.IContexts {
     static Contexts _sharedInstance;
 
     public EldritchWorldMapContext eldritchWorldMap { get; set; }
+    public EldrithchUIContext eldrithchUI { get; set; }
     public GameLoopContext gameLoop { get; set; }
     public MainLoopContext mainLoop { get; set; }
     public MythosCardContext mythosCard { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { eldritchWorldMap, gameLoop, mainLoop, mythosCard }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { eldritchWorldMap, eldrithchUI, gameLoop, mainLoop, mythosCard }; } }
 
     public Contexts() {
         eldritchWorldMap = new EldritchWorldMapContext();
+        eldrithchUI = new EldrithchUIContext();
         gameLoop = new GameLoopContext();
         mainLoop = new MainLoopContext();
         mythosCard = new MythosCardContext();
@@ -68,6 +70,7 @@ public partial class Contexts {
     public void InitializeContextObservers() {
         try {
             CreateContextObserver(eldritchWorldMap);
+            CreateContextObserver(eldrithchUI);
             CreateContextObserver(gameLoop);
             CreateContextObserver(mainLoop);
             CreateContextObserver(mythosCard);

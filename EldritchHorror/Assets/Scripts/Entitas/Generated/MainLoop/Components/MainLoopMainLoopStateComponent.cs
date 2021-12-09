@@ -12,22 +12,22 @@ public partial class MainLoopContext {
     public EldritchHorror.Entitas.Components.MainLoopStateComponent mainLoopState { get { return mainLoopStateEntity.mainLoopState; } }
     public bool hasMainLoopState { get { return mainLoopStateEntity != null; } }
 
-    public MainLoopEntity SetMainLoopState(EldritchHorror.IGameLoopState newCurrentState) {
+    public MainLoopEntity SetMainLoopState(EldritchHorror.IGameLoopState newCurrent) {
         if (hasMainLoopState) {
             throw new Entitas.EntitasException("Could not set MainLoopState!\n" + this + " already has an entity with EldritchHorror.Entitas.Components.MainLoopStateComponent!",
                 "You should check if the context already has a mainLoopStateEntity before setting it or use context.ReplaceMainLoopState().");
         }
         var entity = CreateEntity();
-        entity.AddMainLoopState(newCurrentState);
+        entity.AddMainLoopState(newCurrent);
         return entity;
     }
 
-    public void ReplaceMainLoopState(EldritchHorror.IGameLoopState newCurrentState) {
+    public void ReplaceMainLoopState(EldritchHorror.IGameLoopState newCurrent) {
         var entity = mainLoopStateEntity;
         if (entity == null) {
-            entity = SetMainLoopState(newCurrentState);
+            entity = SetMainLoopState(newCurrent);
         } else {
-            entity.ReplaceMainLoopState(newCurrentState);
+            entity.ReplaceMainLoopState(newCurrent);
         }
     }
 
@@ -49,17 +49,17 @@ public partial class MainLoopEntity {
     public EldritchHorror.Entitas.Components.MainLoopStateComponent mainLoopState { get { return (EldritchHorror.Entitas.Components.MainLoopStateComponent)GetComponent(MainLoopComponentsLookup.MainLoopState); } }
     public bool hasMainLoopState { get { return HasComponent(MainLoopComponentsLookup.MainLoopState); } }
 
-    public void AddMainLoopState(EldritchHorror.IGameLoopState newCurrentState) {
+    public void AddMainLoopState(EldritchHorror.IGameLoopState newCurrent) {
         var index = MainLoopComponentsLookup.MainLoopState;
         var component = (EldritchHorror.Entitas.Components.MainLoopStateComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.MainLoopStateComponent));
-        component.CurrentState = newCurrentState;
+        component.Current = newCurrent;
         AddComponent(index, component);
     }
 
-    public void ReplaceMainLoopState(EldritchHorror.IGameLoopState newCurrentState) {
+    public void ReplaceMainLoopState(EldritchHorror.IGameLoopState newCurrent) {
         var index = MainLoopComponentsLookup.MainLoopState;
         var component = (EldritchHorror.Entitas.Components.MainLoopStateComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.MainLoopStateComponent));
-        component.CurrentState = newCurrentState;
+        component.Current = newCurrent;
         ReplaceComponent(index, component);
     }
 

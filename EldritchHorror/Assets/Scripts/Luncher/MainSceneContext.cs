@@ -1,38 +1,26 @@
-﻿using EldritchHorror.GameplayStateMachine;
-using EldritchHorror.UI;
+﻿using EldritchHorror.EntitasSystems;
 using Luncher;
 using Sirenix.OdinInspector;
-using UnityEngine;
 
 namespace EldritchHorror
 {
-    public class MainSceneContext : EldritchHorrorSceneContext<IEldritchHorrorEntitasRuntimeSystemBuilder>
+    public class MainSceneContext : EldritchHorrorSceneContext<IEldritchHorrorSceneLauncher>
     {
-        private MythosPhase _mythosPhase;
-        [SerializeField, ReadOnly]
-        private bool _isEnter;
+        private ITurnPhaseSwitcherSystem _mythosPhase;
         
-        protected override void LunchScene(IEldritchHorrorEntitasRuntimeSystemBuilder launcher)
+        protected override void LunchScene(IEldritchHorrorSceneLauncher launcher)
         {
             base.LunchScene(launcher);
-            //((EldritchWindowUIProvider) Container.Resolve<IEldritchWindowUIProvider>()).Storage = _uiStorage;
-            _mythosPhase = Container.Resolve<IMainGamePlayState>() as MythosPhase;
+            launcher.ActivateScene();
+            _mythosPhase = Container.Resolve<ITurnPhaseSwitcherSystem>();
         }
 
-        [Button, ShowIf("_isEnter")]
-        void Exit()
+        [Button]
+        void NewTurn()
         {
-            if(!_isEnter) return;
-                _mythosPhase.Exit();
-                _isEnter = false;
+            _mythosPhase.NewTurn();
         }
 
-        [Button, HideIf("_isEnter", true)]
-        void Enter()
-        {
-            if(_isEnter) return;
-            _mythosPhase.Enter();
-            _isEnter = true;
-        }
+        
     }
 }

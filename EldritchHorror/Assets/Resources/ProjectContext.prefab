@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06731151186cfb145877076ea2b9d459, type: 2}
   - {fileID: 11400000, guid: b91da502cd5f4274690dc05abb16d20d, type: 2}
   - {fileID: 11400000, guid: 4846d53955742c943be7c12a322b11d8, type: 2}
+  - {fileID: 11400000, guid: 50e133dd2c7a0704d977defc08624f6a, type: 2}
   _monoInstallers: []
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1

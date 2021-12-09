@@ -1,31 +1,66 @@
+using EldritchHorror.Core;
 using Entitas;
-using System.Collections.Generic;
 
 namespace EldritchHorror.EntitasSystems
 {
-    public class MainLoopSwitcherSystem : ReactiveSystem<MainLoopEntity>
+    public abstract class BaseStateEnterExitSystem<TEntity, TState> : IInitializeSystem, ITearDownSystem where TEntity : class, IEntity where TState :  IStateMachineState<TEntity>
     {
-        private IGameLoopState[] _allMainStates;
+        protected abstract int StateComponentIndex { get; }
 
-        public MainLoopSwitcherSystem(IContext<MainLoopEntity> context, IGameLoopState[] allMainStates) : base(context)
+        private IGroup<TEntity> _group;
+
+        public BaseStateEnterExitSystem(IContext<TEntity> context)
         {
-            _allMainStates = allMainStates;
+            _group = context.GetGroup(Matcher<TEntity>.AllOf(StateComponentIndex));
         }
 
-        protected override ICollector<MainLoopEntity> GetTrigger(IContext<MainLoopEntity> context)
+
+        public void Initialize()
         {
-            return context.CreateCollector(Matcher<MainLoopEntity>.AllOf(MainLoopMatcher.MainLoopState));
+            _group.OnEntityAdded += GroupOnOnEntityAdded;
+            _group.OnEntityRemoved += GroupOnEntityRemoved;
         }
 
-        protected override bool Filter(MainLoopEntity entity)
+        public void TearDown()
         {
-            return true;
+            _group.OnEntityAdded -= GroupOnOnEntityAdded;
+            _group.OnEntityRemoved -= GroupOnEntityRemoved;
         }
 
-        protected override void Execute(List<MainLoopEntity> entities)
+        protected virtual void OnStart(TEntity entity, TState state)
         {
-            var current = entities.SingleEntity();
-            HLogger.Log(current.mainLoopState?.CurrentState?.GetType().ToString());
+            state.Enter();
         }
+
+        protected virtual void OnEnd(TEntity entity, TState state)
+        {
+            state.Exit();
+        }
+        
+        void GroupOnOnEntityAdded(IGroup<TEntity> @group, TEntity entity, int index, IComponent component)
+        {
+            if (component is TState state)
+            {
+                OnStart(entity, state);
+            }
+        }
+        
+        private void GroupOnEntityRemoved(IGroup<TEntity> @group, TEntity entity, int index, IComponent component)
+        {
+            if (component is TState state)
+            {
+                OnEnd(entity, state);
+            }
+        }
+    }
+
+    public class MainLoopSwitcherSystem : BaseStateEnterExitSystem<MainLoopEntity,IStateMachineState<MainLoopEntity>>
+    {
+        public MainLoopSwitcherSystem(IContext<MainLoopEntity> context) : base(context)
+        {
+        }
+
+
+        protected override int StateComponentIndex => MainLoopComponentsLookup.MainLoopState;
     }
 }

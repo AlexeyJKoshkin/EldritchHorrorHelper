@@ -18,13 +18,15 @@ namespace EldritchHorror.Installers
         private void BindInstance(EldritchWindowUIStorage storage)
         {
             /*var storage = GameObject.Instantiate(_storage);
-          GameObject.DontDestroyOnLoad(storage);*/
+              GameObject.DontDestroyOnLoad(storage);*/
             
             Container.BindInterfacesTo<EldritchWindowUIStorage>().FromInstance(storage).AsSingle();
             foreach (var window in storage.AllWindows.Where(o => null != o))
             {
                 Container.BindInterfacesTo(window.GetType()).FromInstance(window).AsSingle();
             }
+            Container.Bind<IEldritchHorrorSceneLauncher>().To<EldritchHorrorSceneLauncher>().AsSingle();
+    
         }
     }
 }

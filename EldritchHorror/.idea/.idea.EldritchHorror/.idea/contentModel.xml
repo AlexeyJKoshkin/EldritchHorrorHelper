@@ -1104,17 +1104,11 @@
             <e p="SOHolderProvider.cs" t="Include" />
             <e p="StateMachine" t="Include">
               <e p="StateMachineExecutor" t="Include">
-                <e p="AbstractStateMachine.cs" t="Include" />
                 <e p="IStateMachine.cs" t="Include" />
               </e>
               <e p="StateMachineState" t="Include">
                 <e p="AbstractStateMachineState.cs" t="Include" />
                 <e p="IStateMachineState.cs" t="Include" />
-                <e p="StateExtension.cs" t="Include" />
-              </e>
-              <e p="StateTransition" t="Include">
-                <e p="IStateTransition.cs" t="Include" />
-                <e p="StateTransaction.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -1201,7 +1195,8 @@
             </e>
           </e>
           <e p="EldtitchMainLoop" t="Include">
-            <e p="GameLoopStateMachine.cs" t="Include" />
+            <e p="EldritchGameRound.cs" t="Include" />
+            <e p="EldritchOmen.cs" t="Include" />
             <e p="GameplayStateMachine" t="Include">
               <e p="MainGamePlayState.cs" t="Include" />
               <e p="MythosPhase.cs" t="Include" />
@@ -1214,9 +1209,7 @@
             <e p="MainLoopState.cs" t="Include" />
             <e p="PrepareGameState" t="Include">
               <e p="IPrepareGameMachineState.cs" t="Include" />
-              <e p="PrepareGameCycleMachineStateMachineState.cs" t="Include" />
               <e p="PrepareGameState.cs" t="Include" />
-              <e p="PrepareGameStateMachine.cs" t="Include" />
             </e>
           </e>
           <e p="Entitas" t="Include">
@@ -1230,12 +1223,22 @@
             <e p="EldrithHorrorEntitasSystems" t="Include">
               <e p="GameLoopInitializeSystem.cs" t="Include" />
               <e p="GameLoopSystems" t="Include">
-                <e p="OmenChangeSystem.cs" t="Include" />
+                <e p="GameLoopUIUpdateSystem.cs" t="Include" />
+                <e p="TurnPhaseStateSystem.cs" t="Include" />
+                <e p="TurnPhaseSwitcherSystem.cs" t="Include" />
+                <e p="UpdateUIReactionAdapter.cs" t="Include" />
               </e>
               <e p="HelperExtensions.cs" t="Include" />
               <e p="MainLoopInitializeSystem.cs" t="Include" />
               <e p="MainLoopSwitcherSystem.cs" t="Include" />
               <e p="MythosCardEntityGenerator.cs" t="Include" />
+              <e p="UIHelpers" t="Include">
+                <e p="CurrentMythosEntityUpdateUIHandler.cs" t="Include" />
+                <e p="EntityUpdateUIHandler.cs" t="Include" />
+                <e p="ICurrentWindowProvider.cs" t="Include" />
+                <e p="IEntityUpdateHandlerUI.cs" t="Include" />
+                <e p="OmenEntityUpdateUIHandler.cs" t="Include" />
+              </e>
             </e>
             <e p="Generated" t="Include">
               <e p="Components" t="Include">
@@ -1254,13 +1257,24 @@
                 <e p="EldritchWorldMapEntity.cs" t="Include" />
                 <e p="EldritchWorldMapMatcher.cs" t="Include" />
               </e>
+              <e p="EldrithchUI" t="Include">
+                <e p="EldrithchUIAttribute.cs" t="Include" />
+                <e p="EldrithchUIComponentsLookup.cs" t="Include" />
+                <e p="EldrithchUIContext.cs" t="Include" />
+                <e p="EldrithchUIEntity.cs" t="Include" />
+                <e p="EldrithchUIMatcher.cs" t="Include" />
+              </e>
               <e p="Feature.cs" t="Include" />
               <e p="GameLoop" t="Include">
                 <e p="Components" t="Include">
+                  <e p="GameLoopCurrentGamePhaseComponent.cs" t="Include" />
                   <e p="GameLoopInGameMythosCardsComponent.cs" t="Include" />
+                  <e p="GameLoopIsReadyComponent.cs" t="Include" />
+                  <e p="GameLoopMainWindowUIComponent.cs" t="Include" />
                   <e p="GameLoopMasterEntityComponent.cs" t="Include" />
                   <e p="GameLoopOmenStateComponent.cs" t="Include" />
                   <e p="GameLoopOmenUIComponent.cs" t="Include" />
+                  <e p="GameLoopPhaseReadyComponent.cs" t="Include" />
                   <e p="GameLoopTurnCounterComponent.cs" t="Include" />
                 </e>
                 <e p="GameLoopAttribute.cs" t="Include" />

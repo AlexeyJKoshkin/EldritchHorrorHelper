@@ -1,4 +1,5 @@
 using EdlritchDefs.GamePlayDefs;
+using EldritchHorror.GameplayStateMachine;
 using EldritchHorror.UI;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
@@ -6,17 +7,12 @@ using System.Collections.Generic;
 
 namespace EldritchHorror.Entitas.Components
 {
+    
     [GameLoop, Unique]
     public class InGameMythosCardsComponent : IComponent
     {
         public List<MythosCardEntity> Draft;
         public Queue<MythosCardEntity> List;
-    }
-
-    [GameLoop, Unique]
-    public class TurnCounterComponent : IComponent
-    {
-        public int Turn;
     }
 
     [GameLoop]
@@ -59,8 +55,40 @@ namespace EldritchHorror.Entitas.Components
         }
     }
 
+    /// <summary>
+    /// Содержит все данные для главного цикла
+    /// </summary>
     [GameLoop, Unique]
     public class MasterEntityComponent : IComponent
+    {
+    }
+
+    [GameLoop, Unique]
+    public class MainWindowUIComponent : WindowBindingComponent<MainGameUIWindow>
+    {
+        
+    }
+
+    /// <summary>
+    /// Текущая фаза хода
+    /// </summary>
+    [GameLoop]
+    public class CurrentGamePhaseComponent : StateHolderComponent<IGameRoundPhase, GameLoopEntity>,IGameRoundPhase, IComponent
+    {
+        public int CompareTo(object obj)
+        {
+            return Current?.CompareTo(obj) ?? 0;
+        }
+    }
+    
+    [GameLoop, Unique]
+    public class TurnCounterComponent : IComponent
+    {
+        public int Turn;
+    }
+
+    [GameLoop]
+    public class PhaseReadyComponent : IComponent
     {
     }
 }

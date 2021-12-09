@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace EldritchHorror
 {
-    public abstract class PrepareGameState : AbstractStateMachineState, IPrepareGameMachineState
+    public abstract class PrepareGameState : AbstractStateMachineState<MainLoopEntity>, IPrepareGameMachineState
     {
         public override void Exit()
         {
@@ -32,8 +32,7 @@ namespace EldritchHorror
     {
         private SelectionBossPrepareGameState()
         {
-            this.AddNewTransition(CheckBack).To<SelectionGameBoxesPrepareGameState>().Bind(this);
-            this.AddNewTransition(CheckNext).To<SelectionMythosCardPrepareGameState>().Bind(this);
+           
         }
 
         public override int Order => 10;
@@ -43,8 +42,7 @@ namespace EldritchHorror
     {
         private SelectionGameBoxesPrepareGameState()
         {
-            this.AddNewTransition(CheckBack).Bind(this);
-            this.AddNewTransition(CheckNext).To<SelectionBossPrepareGameState>().Bind(this);
+          
         }
 
         public override int Order => 1;
@@ -54,9 +52,7 @@ namespace EldritchHorror
     {
         private SelectionMythosCardPrepareGameState()
         {
-            this.AddNewTransition(CheckBack).To<SelectionBossPrepareGameState>().Bind(this);
-
-            this.AddNewTransition(CheckNext).Bind(this);
+           
         }
 
         public override int Order => 20;

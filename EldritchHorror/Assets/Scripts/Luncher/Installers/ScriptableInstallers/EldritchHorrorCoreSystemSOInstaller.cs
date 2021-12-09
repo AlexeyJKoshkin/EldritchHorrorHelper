@@ -16,8 +16,12 @@ namespace EldritchHorror
                                             {
                                                 typeof(MainLoopInitializeSystem),
                                                 typeof(GameLoopInitializeSystem),
-                                                typeof(OmenChangeSystem),
                                                 
+                                               
+                                                typeof(GameLoopUIUpdateSystem),
+                                                
+                                                typeof(TurnPhaseStateSystem),
+                                                typeof(TurnPhaseSwitcherSystem),
                                                 typeof(MainLoopSwitcherSystem)
                                             };
         public IEnumerable<Type> UpdateSystem => _updateSystems;
@@ -38,13 +42,13 @@ namespace EldritchHorror
 
         private void BindSystems()
         {
-            foreach (var type in _updateSystems) Container.BindInterfacesTo(type).AsSingle();
+            foreach (var type in _updateSystems) Container.BindInterfacesAndSelfTo(type).AsSingle();
         }
 
         private void BindContexts(Contexts shared)
         {
             Container.BindInstance(shared).AsSingle();
-            foreach (var context in shared.allContexts) Container.BindInterfacesTo(context.GetType()).FromInstance(context).AsSingle();
+            foreach (var context in shared.allContexts) Container.BindInterfacesAndSelfTo(context.GetType()).FromInstance(context).AsSingle();
         }
     }
 }

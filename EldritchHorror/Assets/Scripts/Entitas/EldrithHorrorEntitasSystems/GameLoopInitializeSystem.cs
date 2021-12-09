@@ -57,10 +57,8 @@ namespace EldritchHorror.EntitasSystems
 
         private void CreateMainLoopEntity()
         {
-            var master = _contexts.gameLoop.CreateEntity();
-            master.isMasterEntity = true;
-            master.AddOmenState(0);
-            master.AddTurnCounter(0);
+            _contexts.gameLoop.masterEntityEntity.AddOmenState(0);
+            _contexts.gameLoop.masterEntityEntity.AddTurnCounter(0);
         }
     }
 

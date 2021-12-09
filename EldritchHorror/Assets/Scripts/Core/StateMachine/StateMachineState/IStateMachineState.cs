@@ -1,9 +1,10 @@
 ﻿
+using Entitas;
+
 namespace EldritchHorror.Core
 {
-    public interface IStateMachineState
+    public interface IStateMachineState<T> where T:class, IEntity
     {
-        int Order { get; }
         void Exit();
         void Enter();
     }

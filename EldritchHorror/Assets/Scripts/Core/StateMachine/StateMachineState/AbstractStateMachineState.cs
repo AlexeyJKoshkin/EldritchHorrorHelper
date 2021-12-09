@@ -1,6 +1,8 @@
+using Entitas;
+
 namespace EldritchHorror.Core
 {
-    public class AbstractStateMachineState : IStateMachineState
+    public class AbstractStateMachineState<T> : IStateMachineState<T> where T:class, IEntity
     {
         public virtual void Exit()
         {

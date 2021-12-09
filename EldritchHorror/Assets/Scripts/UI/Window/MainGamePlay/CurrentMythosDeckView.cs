@@ -23,7 +23,7 @@ namespace EldritchHorror.UI
         public void SetCurrent(MythosCardEntity current)
         {
             _currentMytosPreview.UpdateView(current);
-            _currentMytosPreview.gameObject.SetActive(true);
+            _currentMytosPreview.gameObject.SetActive(current != null);
         }
 
         

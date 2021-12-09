@@ -1,17 +1,8 @@
 using EdlritchDefs.GamePlayDefs;
-using EldritchHorror.Core;
-using EldritchHorror.Entitas.Components;
 using Entitas;
 
 namespace EldritchHorror
 {
-    public class GameLoopStateMachine : AbstractStateMachine<IGameLoopState>, IGameLoopStateMachine
-    {
-        public GameLoopStateMachine(IGameLoopState[] states) : base(states)
-        {
-        }
-    }
-
     public interface IEldritchOmen
     {
         OmenType CurrentType { get; }
@@ -21,7 +12,7 @@ namespace EldritchHorror
         void MoveBack();
         void SetTo(int index);
     }
-
+    
     public class EldritchOmen :IEldritchOmen
     {
         private readonly GameLoopContext _context;

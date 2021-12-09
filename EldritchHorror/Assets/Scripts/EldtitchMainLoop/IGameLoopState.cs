@@ -2,7 +2,7 @@ using EldritchHorror.Core;
 
 namespace EldritchHorror
 {
-    public interface IGameLoopState : IStateMachineState
+    public interface IGameLoopState : IStateMachineState<MainLoopEntity>
     {
     }
-}
+ }

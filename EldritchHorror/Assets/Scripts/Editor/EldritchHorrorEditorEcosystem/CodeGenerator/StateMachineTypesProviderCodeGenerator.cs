@@ -33,7 +33,7 @@ namespace Editor.EldritchHorrorEditorEcosystem
 
             AppendLine(" public static IEnumerable<Type> AllStatesMachineType()");
             BeginTabBracers();
-            GenerateFor<IStateMachineState>();
+         //   GenerateFor<IStateMachineState>();
             EndTabBracers();
         }
 
