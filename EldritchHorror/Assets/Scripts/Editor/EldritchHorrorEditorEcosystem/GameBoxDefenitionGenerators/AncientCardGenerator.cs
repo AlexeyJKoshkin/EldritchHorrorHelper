@@ -1,12 +1,15 @@
+#region
+
 using EldritchHorror.Cards;
 using System.Linq;
 using UnityEngine;
 
+#endregion
 
 namespace EldritchHorrorEditorEcosystem.Helpers
 {
     [CreateAssetMenu]
-    public class AncientCardGenerator : CardGenerator<AncientCardDataDefinition, AncientCardGeneratorSettingsSettings, AncientTypeSO>
+    public class AncientCardGenerator : CardGenerator<AncientCardGeneratorSettingsSettings, AncientTypeSO>
     {
         public MythosCardTypesHolder MythosCardTypesHolder;
         public override string PropertyName => "AncientCards";
@@ -25,7 +28,7 @@ namespace EldritchHorrorEditorEcosystem.Helpers
         private void CreateOne(string bossName)
         {
             string path = $"{RootFolderPath}/{bossName}.asset";
-            var item = LoadAssetOrCreate(path);
+            var    item = LoadAssetOrCreate<AncientCardDataDefinition>(path);
             SetDefaultSettings(item);
         }
 
@@ -33,9 +36,9 @@ namespace EldritchHorrorEditorEcosystem.Helpers
         {
             item.AncientActMythosSettings = new AncientActMythosCardSettings
                                             {
-                                                First = CreateDefault(),
+                                                First  = CreateDefault(),
                                                 Second = CreateDefault(),
-                                                Third = CreateDefault()
+                                                Third  = CreateDefault()
                                             };
         }
 

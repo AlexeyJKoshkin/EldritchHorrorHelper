@@ -1,8 +1,10 @@
-using EldritchHorror;
-using EldritchHorror.UI;
+#region
+
 using EldritchHorror.UserProfile;
 using UnityEngine;
 using Zenject;
+
+#endregion
 
 namespace EldritchHorror
 {

@@ -1,7 +1,11 @@
-﻿using EldritchHorror.Cards;
+﻿#region
+
+using EldritchHorror.Cards;
 using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror
 {

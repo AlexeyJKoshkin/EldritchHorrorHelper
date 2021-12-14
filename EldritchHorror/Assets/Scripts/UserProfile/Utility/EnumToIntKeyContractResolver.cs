@@ -1,5 +1,9 @@
+#region
+
 using Newtonsoft.Json.Serialization;
 using System;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {

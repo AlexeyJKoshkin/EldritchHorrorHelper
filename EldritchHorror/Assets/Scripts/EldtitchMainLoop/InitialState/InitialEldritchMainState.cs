@@ -1,5 +1,8 @@
-using EldritchHorror.Core;
+#region
+
 using EldritchHorror.UserProfile;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -10,13 +13,11 @@ namespace EldritchHorror
         public InitialEldritchMainState(IUserSaveProfileStorage userSaveProfileStorage)
         {
             _userSaveProfileStorage = userSaveProfileStorage;
-
-            
         }
 
-        public override void Enter()
+        public override void Enter(MainLoopEntity stateEntity)
         {
-            base.Enter();
+            base.Enter(stateEntity);
             var lastGame = _userSaveProfileStorage.Current;
             HLogger.LogInfo($"Last Game Name {lastGame.Name}\n{lastGame.UserProfileData}");
         }

@@ -1,7 +1,10 @@
+#region
+
 using EldritchHorror.Data.Provider;
-using Sirenix.Utilities;
 using UnityEngine;
 using Zenject;
+
+#endregion
 
 namespace EldritchHorror
 {

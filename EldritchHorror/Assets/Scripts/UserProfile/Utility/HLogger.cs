@@ -1,5 +1,8 @@
-using System;
+#region
+
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -15,7 +18,7 @@ namespace EldritchHorror
             Debug.LogWarning(message);
         }
 
-        public static void LogError(string message)
+        public static void LogError(object message)
         {
             Debug.LogError(message);
         }

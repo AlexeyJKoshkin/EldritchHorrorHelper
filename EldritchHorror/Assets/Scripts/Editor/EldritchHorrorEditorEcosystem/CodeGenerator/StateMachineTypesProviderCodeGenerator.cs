@@ -1,16 +1,18 @@
+#region
+
 using CodeGenerator;
 using EldritchHorror;
 using EldritchHorror.Core;
 using GameKit.Editor;
 using System;
 
+#endregion
+
 namespace Editor.EldritchHorrorEditorEcosystem
 {
     public class StateMachineTypesProviderCodeGenerator : ClassGenerator, IEldritchHorrorCodeGenerator
     {
-        public StateMachineTypesProviderCodeGenerator() : base(typeof(StateMachineTypesProvider).Name)
-        {
-        }
+        public StateMachineTypesProviderCodeGenerator() : base(typeof(StateMachineTypesProvider).Name) { }
 
         public Type FileType => typeof(StateMachineTypesProvider);
 
@@ -33,7 +35,7 @@ namespace Editor.EldritchHorrorEditorEcosystem
 
             AppendLine(" public static IEnumerable<Type> AllStatesMachineType()");
             BeginTabBracers();
-         //   GenerateFor<IStateMachineState>();
+            //   GenerateFor<IStateMachineState>();
             EndTabBracers();
         }
 

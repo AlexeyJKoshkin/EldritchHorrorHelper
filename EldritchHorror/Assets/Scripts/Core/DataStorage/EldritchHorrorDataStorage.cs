@@ -1,8 +1,15 @@
-using GameKit.Editor;
+#region
+
 using Sirenix.OdinInspector;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using GameKit.Editor;
+using UnityEditor;
+
+#endif
+
+#endregion
 
 namespace EldritchHorror.Data.Provider
 {
@@ -16,9 +23,9 @@ namespace EldritchHorror.Data.Provider
         [Button]
         private void Generate()
         {
-            var possibleTypes = ReflectionHelper.GetAllTypesInSolution<DataBox>();
-            SerializedObject serializedObject = new SerializedObject(this);
-            SerializedProperty listProperty = serializedObject.FindProperty("_items");
+            var                possibleTypes    = ReflectionHelper.GetAllTypesInSolution<DataBox>();
+            SerializedObject   serializedObject = new SerializedObject(this);
+            SerializedProperty listProperty     = serializedObject.FindProperty("_items");
             foreach (var type in possibleTypes)
             {
                 if (Collection.Any(o => o.GetType() == type))
@@ -39,6 +46,6 @@ namespace EldritchHorror.Data.Provider
 
             EditorUtility.SetDirty(this);
         }
-    }
 #endif
+    }
 }

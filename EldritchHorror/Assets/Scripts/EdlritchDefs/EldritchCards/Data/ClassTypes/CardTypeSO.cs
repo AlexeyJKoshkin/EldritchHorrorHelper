@@ -9,7 +9,8 @@ namespace EldritchHorror.Cards
 
     public enum CardType
     {
-        Mythos,
-        Ancient
+        Mythos = 10,
+        Ancient = 20,
+        EncounterCards = 30,
     }
 }

@@ -27,13 +27,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f083f3da5d70425fafdcbbe0581e31b9, type: 3}
   m_Name: Forgoten
   m_EditorClassIdentifier: 
-  FrontSprite: {fileID: 0}
+  AncientCards: []
   FolderPath: Assets/EdlritchData/Forgoten
-  Version: 6
   Icon: {fileID: 0}
   MainSprite: {fileID: 0}
-  AncientCards: []
   MythosCards: []
+  EuropeEncounterCard: []
+  AmericaEncounterCard: []
+  Asia_AustraliaEncounterCard: []
+  GeneralEncounterCard: []
+  OtherWorldEncounterCard: []
+  Version: 4
 --- !u!114 &8546344316355951951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,16 +50,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f083f3da5d70425fafdcbbe0581e31b9, type: 3}
   m_Name: BaseBoard
   m_EditorClassIdentifier: 
-  FrontSprite: {fileID: 0}
-  FolderPath: Assets/EdlritchData/BaseBoard
-  Version: 2
-  Icon: {fileID: 0}
-  MainSprite: {fileID: 0}
   AncientCards:
   - {fileID: 11400000, guid: 09a3bf3352d59da49990b3cea814c64b, type: 2}
   - {fileID: 11400000, guid: 9b1a0a8ee1e019944abe12d9a7a157e6, type: 2}
   - {fileID: 11400000, guid: a5cf70575c206b2489b8ea60a2f1a7f1, type: 2}
   - {fileID: 11400000, guid: 6c95f5c8ad6eaa144b65055dc46a9022, type: 2}
+  FolderPath: Assets/EdlritchData/BaseBoard
+  Icon: {fileID: 0}
+  MainSprite: {fileID: 0}
   MythosCards:
   - {fileID: 11400000, guid: ef5aeeee3b338fa44a88579c8e435612, type: 2}
   - {fileID: 11400000, guid: 1cde64a85522a63448cba34b3e3c69ed, type: 2}
@@ -108,3 +110,69 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba2109d4d8f1d9649b5f29e69b6e876b, type: 2}
   - {fileID: 11400000, guid: f0f03a5f26f287840a48ee3383ecc123, type: 2}
   - {fileID: 11400000, guid: b3061621120096e4885d4e933777723f, type: 2}
+  EuropeEncounterCard:
+  - {fileID: 11400000, guid: c7cd741271946534fa10e9b14ef57ca4, type: 2}
+  - {fileID: 11400000, guid: 197b7d7d9cea7154881ebb5c8b92b4d7, type: 2}
+  - {fileID: 11400000, guid: 64140003f5b06054abab3d6ce3b40adf, type: 2}
+  - {fileID: 11400000, guid: af26dda4d3af8cb42be53299906c1a16, type: 2}
+  - {fileID: 11400000, guid: 24c73b274d40eed4b917e76a63f1df50, type: 2}
+  - {fileID: 11400000, guid: b9b90cbe39650a8498264873106d2538, type: 2}
+  - {fileID: 11400000, guid: 357504b9098d02f44b2c20530fd6869e, type: 2}
+  - {fileID: 11400000, guid: 62beacb10681d5d48896baee0edfe4aa, type: 2}
+  AmericaEncounterCard:
+  - {fileID: 11400000, guid: 32b04e75c4f7f6e4c90fa7e68385909d, type: 2}
+  - {fileID: 11400000, guid: 5bb895f72e85965498cd1dcda28e50c4, type: 2}
+  - {fileID: 11400000, guid: a06544293fce38a42a01ba860727fd33, type: 2}
+  - {fileID: 11400000, guid: a329b55ad81af794db26b111178dfd3f, type: 2}
+  - {fileID: 11400000, guid: 743880463db5cdd4d8adcab13589793f, type: 2}
+  - {fileID: 11400000, guid: a537e0786b979374aa9c457c190a3d2e, type: 2}
+  - {fileID: 11400000, guid: fb7e8aba2b8f76f4a86bc73af6015f5b, type: 2}
+  - {fileID: 11400000, guid: 83b595ea9ba9cf84b8e9920a95a083a1, type: 2}
+  Asia_AustraliaEncounterCard:
+  - {fileID: 11400000, guid: 7b198ed667a8ad64db8d03271d56d7dd, type: 2}
+  - {fileID: 11400000, guid: a3aa78ff20e3af24dad810ba5e5d7af3, type: 2}
+  - {fileID: 11400000, guid: b6601de9620a2784383e013e49d684ae, type: 2}
+  - {fileID: 11400000, guid: 0f42eba0f1529e046972b7a148562aad, type: 2}
+  - {fileID: 11400000, guid: 45cd27e2e8710474aafe1293562ad7da, type: 2}
+  - {fileID: 11400000, guid: e9c32302906e1de418994a0276354885, type: 2}
+  - {fileID: 11400000, guid: 4e03067ef6802a54490e4584701dfe10, type: 2}
+  - {fileID: 11400000, guid: 85a25370a620caf44b5fd9aa70c80250, type: 2}
+  GeneralEncounterCard:
+  - {fileID: 11400000, guid: f72c5c2fe8982d34092cb09d2a6db034, type: 2}
+  - {fileID: 11400000, guid: 0690a6e4f2f4bd64a856117cf6ba3ea8, type: 2}
+  - {fileID: 11400000, guid: 53cdcc1837ed71e44813be0b9af40194, type: 2}
+  - {fileID: 11400000, guid: 1cb06c8566444114b8fa69bc917a3eae, type: 2}
+  - {fileID: 11400000, guid: eeecd1bd074bc1c48a5fde9dfdc53279, type: 2}
+  - {fileID: 11400000, guid: 3c136cfa80f136245abcbc9c57d1a6b0, type: 2}
+  - {fileID: 11400000, guid: cee41463f1ec2314bb72aabb99676f6c, type: 2}
+  - {fileID: 11400000, guid: b81d6fc728af29046ad7741bb55a8eef, type: 2}
+  - {fileID: 11400000, guid: f667a9f8c3140cc4f992036b95870f23, type: 2}
+  - {fileID: 11400000, guid: f7de12314c2294e4f840c856770f0f49, type: 2}
+  - {fileID: 11400000, guid: 2cf93864d690d67468a284ce8f5511b5, type: 2}
+  - {fileID: 11400000, guid: 76190a79705a47b44aa1f3e459a076fe, type: 2}
+  OtherWorldEncounterCard:
+  - {fileID: 11400000, guid: 527a845343d99c34a9876f09f4d4d137, type: 2}
+  - {fileID: 11400000, guid: fff9f3389ee4b1c44bc92672f652d33f, type: 2}
+  - {fileID: 11400000, guid: 412a68a71eabdb04a84b6941af93f2ff, type: 2}
+  - {fileID: 11400000, guid: 91b195802ae160a4e8d4fed3d151350b, type: 2}
+  - {fileID: 11400000, guid: 7f366902a724d0d4f8c5617864fdc037, type: 2}
+  - {fileID: 11400000, guid: 81073d08b172c9f4c8e43c32b8e7f53b, type: 2}
+  - {fileID: 11400000, guid: 576f6b598d20fb649a2c3ccea998504d, type: 2}
+  - {fileID: 11400000, guid: 0545d9cb44efca54f9e1c3b7b454b149, type: 2}
+  - {fileID: 11400000, guid: a201b86885518ba4e973506f50c68e1d, type: 2}
+  - {fileID: 11400000, guid: 0ff6091375ae0bd4ba9d7904811f3980, type: 2}
+  - {fileID: 11400000, guid: eb40adef32805004bb188d22f0d0116e, type: 2}
+  - {fileID: 11400000, guid: 5cc1a993fdfdd9a458111294a9389efa, type: 2}
+  - {fileID: 11400000, guid: a6d685273ce90234094c9b112bad0d8c, type: 2}
+  - {fileID: 11400000, guid: 48419864d46fd1d469ccd07307d951df, type: 2}
+  - {fileID: 11400000, guid: f80b87b5e612afe418e696df4a1d546c, type: 2}
+  - {fileID: 11400000, guid: 7144ee6c9ecd49f4a90ad9027327d7b3, type: 2}
+  - {fileID: 11400000, guid: bb5b5aa956510714cbbe6c610b1f3470, type: 2}
+  - {fileID: 11400000, guid: 2509b4b9485962c4099a5efffa46b0e0, type: 2}
+  - {fileID: 11400000, guid: 6cce00f7904a2434ca78d9f3278f040b, type: 2}
+  - {fileID: 11400000, guid: 97758a958ff1eca4ab9a8ed7d521d3f7, type: 2}
+  - {fileID: 11400000, guid: fddcbebedd796d14fb0c5545eb11e601, type: 2}
+  - {fileID: 11400000, guid: 49427c6db17fcca4eb4b18d1ce64f691, type: 2}
+  - {fileID: 11400000, guid: 3067d59642d30af4a8cf26b8a6b48041, type: 2}
+  - {fileID: 11400000, guid: c87d8d95de3dfa2468c42417acf610ee, type: 2}
+  Version: 2

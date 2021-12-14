@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7427621831604310553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: Special
+  m_EditorClassIdentifier: 
+--- !u!114 &-5976273828872696420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: Research
+  m_EditorClassIdentifier: 
+--- !u!114 &-5400813742039548690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: Expedition
+  m_EditorClassIdentifier: 
+--- !u!114 &-1564398646160774204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: OtherWorld
+  m_EditorClassIdentifier: 
+--- !u!114 &-988107317140311117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: America
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9673e5ecb0b04b5582ec355fae19ec18, type: 3}
+  m_Name: EncounterTypeCardHolder
+  m_EditorClassIdentifier: Assembly-CSharp:EldritchHorror.Cards:EncounterTypeCardHolder
+  _collection:
+  - {fileID: 4998651075055002329}
+  - {fileID: -5400813742039548690}
+  - {fileID: -1564398646160774204}
+  - {fileID: -988107317140311117}
+  - {fileID: 1401277254612724656}
+  - {fileID: 6826786338860070827}
+  - {fileID: -5976273828872696420}
+  - {fileID: -7427621831604310553}
+--- !u!114 &1401277254612724656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: Europe
+  m_EditorClassIdentifier: 
+--- !u!114 &4998651075055002329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: General
+  m_EditorClassIdentifier: 
+--- !u!114 &6826786338860070827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128b1ac34dd4746abb8d0dcea30ee89, type: 3}
+  m_Name: Asia_Australia
+  m_EditorClassIdentifier: 

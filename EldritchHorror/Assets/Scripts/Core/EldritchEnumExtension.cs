@@ -1,6 +1,4 @@
 namespace EldritchHorror
 {
-    public class EldritchEnumExtension
-    {
-    }
+    public class EldritchEnumExtension { }
 }

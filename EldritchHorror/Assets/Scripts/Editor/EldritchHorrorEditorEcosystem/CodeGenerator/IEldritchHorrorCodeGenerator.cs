@@ -1,5 +1,9 @@
+#region
+
 using CodeGenerator;
 using System;
+
+#endregion
 
 namespace Editor.EldritchHorrorEditorEcosystem
 {

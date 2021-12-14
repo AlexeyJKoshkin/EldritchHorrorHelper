@@ -10,19 +10,22 @@ public static class MainLoopComponentsLookup {
 
     public const int IsReady = 0;
     public const int MainLoopState = 1;
-    public const int UserProfile = 2;
+    public const int PlayerRole = 2;
+    public const int UserProfile = 3;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
         "IsReady",
         "MainLoopState",
+        "PlayerRole",
         "UserProfile"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(EldritchHorror.Entitas.Components.IsReady),
         typeof(EldritchHorror.Entitas.Components.MainLoopStateComponent),
+        typeof(EldritchHorror.Entitas.Components.PlayerRoleComponent),
         typeof(EldritchHorror.Entitas.Components.UserProfileComponent)
     };
 }

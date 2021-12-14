@@ -1,9 +1,12 @@
+#region
+
 using EldritchHorror.Data.Provider;
 using GameKit;
-using GameKit.Editor;
 using Sirenix.OdinInspector;
 using System;
 using UnityEditor;
+
+#endregion
 
 namespace EldritchHorror.Cards
 {
@@ -14,9 +17,9 @@ namespace EldritchHorror.Cards
         [Button, ShowIf("Count", 0)]
         private void CreateAll()
         {
-            foreach (MythosInfluenceType influenceName in EnumExtension.GetAllEnumElements(MythosInfluenceType.None))
+            foreach (MythosInfluenceType influenceName in GameKit.Editor.EnumExtension.GetAllEnumElements(MythosInfluenceType.None))
             {
-                var item = EditorUtils.CreateSubAsset<MythosInfluenceTypeSO>(influenceName.ToString(), this);
+                var item = GameKit.Editor.EditorUtils.CreateSubAsset<MythosInfluenceTypeSO>(influenceName.ToString(), this);
                 item.InfluenceType = influenceName;
                 _collection.Add(item);
             }

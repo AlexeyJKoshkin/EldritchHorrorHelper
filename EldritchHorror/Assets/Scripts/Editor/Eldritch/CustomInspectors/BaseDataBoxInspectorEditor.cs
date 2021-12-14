@@ -1,9 +1,12 @@
+#region
+
 using EldritchHorror.Data.Provider;
-using EldritchHorrorEditorEcosystem;
 using GameKit.Editor;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror
 {

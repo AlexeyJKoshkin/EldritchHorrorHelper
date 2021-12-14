@@ -1,8 +1,12 @@
+#region
+
 using EldritchHorror.EntitasSystems;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -15,11 +19,11 @@ namespace EldritchHorror
         private List<Type> _updateSystems = new List<Type>
                                             {
                                                 typeof(MainLoopInitializeSystem),
+                                                typeof(UIControllerHandlerComposite),
                                                 typeof(GameLoopInitializeSystem),
-                                                
-                                               
+                                                typeof(SetClickedMythosCardToPreview),
+                                                typeof(SetClickedEncounterCardToPreview),
                                                 typeof(GameLoopUIUpdateSystem),
-                                                
                                                 typeof(TurnPhaseStateSystem),
                                                 typeof(TurnPhaseSwitcherSystem),
                                                 typeof(MainLoopSwitcherSystem)
@@ -32,11 +36,14 @@ namespace EldritchHorror
             BindContexts(shared);
             BindSystems();
             BindDependencies();
+            Container.BindInstance(this).AsSingle();
             Container.BindInterfacesTo<EldritchHorrorEntitasRuntimeSystemBuilder>().AsSingle();
         }
 
         private void BindDependencies()
         {
+            Container.Bind<MasterRolePlayerUILayoutHandler>().AsSingle();
+            Container.Bind<DefaultRolePlayerUILayoutHandler>().AsSingle();
             Container.BindInterfacesTo<MythosCardEntityGenerator>().AsSingle();
         }
 

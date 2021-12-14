@@ -1,8 +1,13 @@
+#region
+
+using EdlritchDefs.EldritchCards.Data.ClassTypes;
 using EldritchHorror.Cards;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem.Helpers
 {
@@ -11,7 +16,7 @@ namespace EldritchHorrorEditorEcosystem.Helpers
         void Generate();
     }
 
-    public class MythosCardGenerator : CardGenerator<MythosCardDataDefinition, MythosCardGeneratorSettings, MythosTypeSO>, IGameBoxContentsDefinitionGenerator
+    public class MythosCardGenerator : CardGenerator<MythosCardGeneratorSettings, MythosTypeSO>, IGameBoxContentsDefinitionGenerator
     {
         [SerializeField] private DifficultTypesHolder _difficultTypesHolder;
         public Texture2D Texture2D;
@@ -48,11 +53,11 @@ namespace EldritchHorrorEditorEcosystem.Helpers
 
         private void BuildCard(SubMythosCardGenerationParameter parameter, Sprite sprite, int index)
         {
-            var card = CreateCard(sprite.name);
+            var card = CreateCard<MythosCardDataDefinition>(sprite.name);
 
-            var mythosType = parameter.TypeSo;
+            var mythosType         = parameter.TypeSo;
             var createTypeSelector = CreateTypeSelector(parameter.DifficultMythosCardSettings);
-            var difficcultType = createTypeSelector.FirstOrDefault(o => o.indexex.Contains(index)).type;
+            var difficcultType     = createTypeSelector.FirstOrDefault(o => o.indexex.Contains(index)).type;
             difficcultType = difficcultType == MythosDifficultType.None ? MythosDifficultType.Simple : difficcultType;
             var difficultSO = _difficultTypesHolder.Collection.FirstOrDefault(o => o.DifficultType == difficcultType);
 
@@ -78,15 +83,18 @@ namespace EldritchHorrorEditorEcosystem.Helpers
 
         private void SetData(MythosCardDataDefinition card, MythosCardTypeSO mythosType, DifficultTypeSO difficcultType, Sprite sprite)
         {
-            card.FrontSprite = sprite;
+            card.FrontSprite    = sprite;
             card.MythosCardType = mythosType;
-            card.DifficultType = difficcultType;
+            card.DifficultType  = difficcultType;
         }
 
-        private MythosCardDataDefinition CreateCard(string spriteName)
-        {
-            string nameObject = $"{RootFolderPath}/{spriteName}.asset";
-            return LoadAssetOrCreate(nameObject);
-        }
+       
     }
+
+    public abstract class EncounterCardGenerator : CardGenerator< EncounterGeneratorSettings, EncounterCardTypeSO>
+    {
+      
+    }
+
 }
+     

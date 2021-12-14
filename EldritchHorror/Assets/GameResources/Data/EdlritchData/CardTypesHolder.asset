@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080cfde6f9d341fab271e187022d2778, type: 3}
   m_Name: BossTypeSO
   m_EditorClassIdentifier: 
-  FrontSprite: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +27,19 @@ MonoBehaviour:
   _collection:
   - {fileID: 4002203448852014741}
   - {fileID: -1250299549419351856}
+  - {fileID: 2792798676655329703}
+--- !u!114 &2792798676655329703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42093b099074f99bdea1f36f2cfe1e0, type: 3}
+  m_Name: EncounterCardTypeSO
+  m_EditorClassIdentifier: 
 --- !u!114 &4002203448852014741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,5 +52,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddea086213c4da191f9ae5a4247fc66, type: 3}
   m_Name: Mythos
   m_EditorClassIdentifier: 
-  FrontSprite: {fileID: 0}
   BackSprite: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}

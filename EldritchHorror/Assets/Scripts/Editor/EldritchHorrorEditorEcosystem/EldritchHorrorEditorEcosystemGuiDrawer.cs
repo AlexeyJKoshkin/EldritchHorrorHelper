@@ -1,6 +1,10 @@
+#region
+
 using GameKit.Editor;
 using UnityEditor;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {

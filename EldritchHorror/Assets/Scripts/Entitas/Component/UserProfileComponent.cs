@@ -1,6 +1,10 @@
+#region
+
 using EldritchHorror.UserProfile;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
+
+#endregion
 
 namespace EldritchHorror.Entitas.Components
 {

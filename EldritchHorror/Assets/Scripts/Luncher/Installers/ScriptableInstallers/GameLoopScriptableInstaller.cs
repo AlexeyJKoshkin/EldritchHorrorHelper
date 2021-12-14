@@ -1,7 +1,11 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -20,7 +24,6 @@ namespace EldritchHorror
             StateMachineTypesProvider.AllStateMachineType().ForEach(e => types.Add(e));
             StateMachineTypesProvider.AllStatesMachineType().ForEach(e => types.Add(e));
             types.ForEach(e => Container.BindInterfacesAndSelfTo(e).AsSingle());
-        
         }
     }
 }

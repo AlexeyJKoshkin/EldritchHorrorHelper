@@ -22,4 +22,16 @@ namespace GameKit.Editor
             EditorGUI.EndDisabledGroup();
         }
     }
+
+    [CustomPropertyDrawer(typeof(CenteredSpriteDrawerAttribute))]
+    public class CenteredSpriteAttributeDrawer : PropertyDrawer
+    {
+
+
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            var size = ((CenteredSpriteDrawerAttribute) this.attribute).Size;
+              property.objectReferenceValue =  CenteredSpriteDrawer.Draw(property.objectReferenceValue as Sprite,size);
+        }
+    }
 }

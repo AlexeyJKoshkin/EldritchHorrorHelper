@@ -1,6 +1,10 @@
+#region
+
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {
@@ -25,7 +29,7 @@ namespace EldritchHorror.UserProfile
         public UserSaveProfileStorage(UserSavePathSettings savePathSettings, IUserProfileSaveFactory saveFactory)
         {
             _savePathSettings = savePathSettings;
-            _saveFactory = saveFactory;
+            _saveFactory      = saveFactory;
             var root = LoadDirectory();
             _current = FactoryCreateSave("Current");
             foreach (var saveFolder in root.EnumerateDirectories()) GetSave(saveFolder.Name);

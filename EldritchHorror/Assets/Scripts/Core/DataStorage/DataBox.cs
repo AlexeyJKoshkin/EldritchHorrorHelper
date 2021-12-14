@@ -1,6 +1,10 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror.Data.Provider
 {
@@ -16,13 +20,9 @@ namespace EldritchHorror.Data.Provider
             _collection.RemoveAll(o => ReferenceEquals(o, null));
         }
 
-        public sealed override void Reload()
-        {
-        }
+        public sealed override void Reload() { }
 
-        public override void OnAfterDeserialize()
-        {
-        }
+        public override void OnAfterDeserialize() { }
 
         public override Type ObjectType => typeof(T);
         public override int Count => _collection.Count;

@@ -1115,12 +1115,12 @@
           <e p="Editor" t="Include">
             <e p="Eldritch" t="Include">
               <e p="CustomInspectors" t="Include">
+                <e p="BaseCardDataSOEditor.cs" t="Include" />
                 <e p="BaseDataBoxInspectorEditor.cs" t="Include" />
                 <e p="BehaviorExecutorScriptableEditor.cs" t="Include" />
                 <e p="CardTypesHolderEditor.cs" t="Include" />
                 <e p="EldritchHorrorEditorEcosystemLauncherEditor.cs" t="Include" />
                 <e p="MythosCardTypesHolderEditor.cs" t="Include" />
-                <e p="MytosCardDataSOEditor.cs" t="Include" />
               </e>
             </e>
             <e p="EldritchHorrorEditorEcosystem" t="Include">
@@ -1144,6 +1144,7 @@
                 <e p="AncientCardGenerator.cs" t="Include" />
                 <e p="CardGenerator.cs" t="Include" />
                 <e p="MythosCardGenerator.cs" t="Include" />
+                <e p="SimpleEncounterCardGenerator.cs" t="Include" />
               </e>
               <e p="IDataProvider.cs" t="Include" />
               <e p="IEldritchHorrorEditorEcosystem.cs" t="Include" />
@@ -1167,17 +1168,24 @@
                   <e p="BaseGameCartSO.cs" t="Include" />
                   <e p="CardTypeSO.cs" t="Include" />
                   <e p="DifficultTypeSO.cs" t="Include" />
+                  <e p="EncounterCardTypeSO.cs" t="Include" />
+                  <e p="EncounterTypeSO.cs" t="Include" />
+                  <e p="ExpeditionTypeSo.cs" t="Include" />
                   <e p="GameBoxDef.cs" t="Include" />
                   <e p="GamePartSO" t="Include">
                     <e p="AncientCardGeneratorSettingsSettings.cs" t="Include" />
                     <e p="ICardGeneratorSettings.cs" t="Include" />
                     <e p="MythosCardGeneratorSettings.cs" t="Include" />
+                    <e p="SimpleEncounterGeneratorSettings.cs" t="Include" />
                   </e>
                   <e p="MythosTypeSO.cs" t="Include" />
                 </e>
                 <e p="DifficultTypesHolder.cs" t="Include" />
+                <e p="EncounterTypeCardHolder.cs" t="Include" />
+                <e p="ExpeditionLocationTypeCardHolder.cs" t="Include" />
                 <e p="GameCardsData" t="Include">
                   <e p="AncientCardDataDefinition.cs" t="Include" />
+                  <e p="EncounterCardDefinition.cs" t="Include" />
                   <e p="MythosCardDataDefinition.cs" t="Include" />
                   <e p="MythosCardTypeSo.cs" t="Include" />
                   <e p="MythosInfluenceTypeSO.cs" t="Include" />
@@ -1198,6 +1206,7 @@
             <e p="EldritchGameRound.cs" t="Include" />
             <e p="EldritchOmen.cs" t="Include" />
             <e p="GameplayStateMachine" t="Include">
+              <e p="IMythosCardActionResolver.cs" t="Include" />
               <e p="MainGamePlayState.cs" t="Include" />
               <e p="MythosPhase.cs" t="Include" />
             </e>
@@ -1214,18 +1223,32 @@
           </e>
           <e p="Entitas" t="Include">
             <e p="Component" t="Include">
+              <e p="AbstractBaseComponent.cs" t="Include" />
+              <e p="EldritchCard" t="Include">
+                <e p="DeckEntityWrapper.cs" t="Include" />
+                <e p="EldrictCardComponent.cs" t="Include" />
+                <e p="MythosComponent.cs" t="Include" />
+                <e p="MythosStateCardType.cs" t="Include" />
+              </e>
               <e p="GameLoopComponents.cs" t="Include" />
               <e p="MainLoopStateComponent.cs" t="Include" />
-              <e p="MythosDefComponent.cs" t="Include" />
               <e p="SpriteHolderComponent.cs" t="Include" />
               <e p="UserProfileComponent.cs" t="Include" />
             </e>
             <e p="EldrithHorrorEntitasSystems" t="Include">
+              <e p="EldritchCardContextExtension.cs" t="Include" />
               <e p="GameLoopInitializeSystem.cs" t="Include" />
               <e p="GameLoopSystems" t="Include">
+                <e p="AbstractUIUpdateSystem.cs" t="Include" />
                 <e p="GameLoopUIUpdateSystem.cs" t="Include" />
+                <e p="SetClickedMythosCardToPreview.cs" t="Include" />
                 <e p="TurnPhaseStateSystem.cs" t="Include" />
                 <e p="TurnPhaseSwitcherSystem.cs" t="Include" />
+                <e p="UIlLayoutHandler" t="Include">
+                  <e p="AbstractRolePlayerUILayoutHandler.cs" t="Include" />
+                  <e p="DefaultRolePlayerUILayoutHandler.cs" t="Include" />
+                  <e p="MasterRolePlayerUILayoutHandler.cs" t="Include" />
+                </e>
                 <e p="UpdateUIReactionAdapter.cs" t="Include" />
               </e>
               <e p="HelperExtensions.cs" t="Include" />
@@ -1233,11 +1256,10 @@
               <e p="MainLoopSwitcherSystem.cs" t="Include" />
               <e p="MythosCardEntityGenerator.cs" t="Include" />
               <e p="UIHelpers" t="Include">
-                <e p="CurrentMythosEntityUpdateUIHandler.cs" t="Include" />
-                <e p="EntityUpdateUIHandler.cs" t="Include" />
                 <e p="ICurrentWindowProvider.cs" t="Include" />
                 <e p="IEntityUpdateHandlerUI.cs" t="Include" />
-                <e p="OmenEntityUpdateUIHandler.cs" t="Include" />
+                <e p="IUIControllerHandler.cs" t="Include" />
+                <e p="UIControllerHandlerComposite.cs" t="Include" />
               </e>
             </e>
             <e p="Generated" t="Include">
@@ -1247,6 +1269,25 @@
                 </e>
               </e>
               <e p="Contexts.cs" t="Include" />
+              <e p="EldritchCard" t="Include">
+                <e p="Components" t="Include">
+                  <e p="EldritchCardBackSpriteComponent.cs" t="Include" />
+                  <e p="EldritchCardClickComponent.cs" t="Include" />
+                  <e p="EldritchCardEncounterComponent.cs" t="Include" />
+                  <e p="EldritchCardFontSpriteComponent.cs" t="Include" />
+                  <e p="EldritchCardInProcessTypeComponent.cs" t="Include" />
+                  <e p="EldritchCardIsActiveMythosComponent.cs" t="Include" />
+                  <e p="EldritchCardIsDraftMythosComponent.cs" t="Include" />
+                  <e p="EldritchCardIsReadyComponent.cs" t="Include" />
+                  <e p="EldritchCardMythosComponent.cs" t="Include" />
+                  <e p="EldritchCardMythosStateComponent.cs" t="Include" />
+                </e>
+                <e p="EldritchCardAttribute.cs" t="Include" />
+                <e p="EldritchCardComponentsLookup.cs" t="Include" />
+                <e p="EldritchCardContext.cs" t="Include" />
+                <e p="EldritchCardEntity.cs" t="Include" />
+                <e p="EldritchCardMatcher.cs" t="Include" />
+              </e>
               <e p="EldritchWorldMap" t="Include">
                 <e p="Components" t="Include">
                   <e p="EldritchWorldMapSpriteHolderComponent.cs" t="Include" />
@@ -1267,13 +1308,18 @@
               <e p="Feature.cs" t="Include" />
               <e p="GameLoop" t="Include">
                 <e p="Components" t="Include">
+                  <e p="GameLoopAmericaCardDeckComponent.cs" t="Include" />
+                  <e p="GameLoopAsiaAustraliaCardDeckComponent.cs" t="Include" />
                   <e p="GameLoopCurrentGamePhaseComponent.cs" t="Include" />
-                  <e p="GameLoopInGameMythosCardsComponent.cs" t="Include" />
+                  <e p="GameLoopEuropeCardDeckComponent.cs" t="Include" />
+                  <e p="GameLoopGeneralCardDeckComponent.cs" t="Include" />
+                  <e p="GameLoopInGameMythosDeckComponent.cs" t="Include" />
                   <e p="GameLoopIsReadyComponent.cs" t="Include" />
                   <e p="GameLoopMainWindowUIComponent.cs" t="Include" />
                   <e p="GameLoopMasterEntityComponent.cs" t="Include" />
                   <e p="GameLoopOmenStateComponent.cs" t="Include" />
                   <e p="GameLoopOmenUIComponent.cs" t="Include" />
+                  <e p="GameLoopOtherWorldCardDeckComponent.cs" t="Include" />
                   <e p="GameLoopPhaseReadyComponent.cs" t="Include" />
                   <e p="GameLoopTurnCounterComponent.cs" t="Include" />
                 </e>
@@ -1287,6 +1333,7 @@
                 <e p="Components" t="Include">
                   <e p="MainLoopIsReadyComponent.cs" t="Include" />
                   <e p="MainLoopMainLoopStateComponent.cs" t="Include" />
+                  <e p="MainLoopPlayerRoleComponent.cs" t="Include" />
                   <e p="MainLoopUserProfileComponent.cs" t="Include" />
                 </e>
                 <e p="MainLoopAttribute.cs" t="Include" />
@@ -1294,20 +1341,6 @@
                 <e p="MainLoopContext.cs" t="Include" />
                 <e p="MainLoopEntity.cs" t="Include" />
                 <e p="MainLoopMatcher.cs" t="Include" />
-              </e>
-              <e p="MythosCard" t="Include">
-                <e p="Components" t="Include">
-                  <e p="MythosCardIsActiveMythosComponent.cs" t="Include" />
-                  <e p="MythosCardIsDraftMythosComponent.cs" t="Include" />
-                  <e p="MythosCardIsReadyComponent.cs" t="Include" />
-                  <e p="MythosCardMythosDefComponent.cs" t="Include" />
-                  <e p="MythosCardMythosStateComponent.cs" t="Include" />
-                </e>
-                <e p="MythosCardAttribute.cs" t="Include" />
-                <e p="MythosCardComponentsLookup.cs" t="Include" />
-                <e p="MythosCardContext.cs" t="Include" />
-                <e p="MythosCardEntity.cs" t="Include" />
-                <e p="MythosCardMatcher.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -1334,11 +1367,14 @@
             <e p="Window" t="Include">
               <e p="EldritchWindow.cs" t="Include" />
               <e p="EldritchWindowUIStorage.cs" t="Include" />
+              <e p="EncountersPanelView.cs" t="Include" />
               <e p="IEldritchWindow.cs" t="Include" />
               <e p="IEldritchWindowUIStorage.cs" t="Include" />
               <e p="MainGamePlay" t="Include">
-                <e p="CurrentMythosDeckView.cs" t="Include" />
-                <e p="MythosCardUIView.cs" t="Include" />
+                <e p="CurrentCardDeckView.cs" t="Include" />
+                <e p="EndrithCardUIView.cs" t="Include" />
+                <e p="EntityMonoBehaviour.cs" t="Include" />
+                <e p="MythosPhaseControlPanelUI.cs" t="Include" />
                 <e p="OmenViewUI.cs" t="Include" />
                 <e p="RumorCardView.cs" t="Include" />
               </e>

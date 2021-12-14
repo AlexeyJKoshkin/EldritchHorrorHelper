@@ -1,7 +1,11 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -14,7 +18,7 @@ namespace EldritchHorror
                 return default;
             }
 
-            var n = Random.Range(0, list.Count);
+            var n      = Random.Range(0, list.Count);
             var result = list[n];
             if (remove)
             {
@@ -64,8 +68,8 @@ namespace EldritchHorror
         public static void SetParentZero(this Transform child, Transform parent)
         {
             child.SetParent(parent);
-            child.localScale = Vector3.one;
-            child.localPosition = Vector3.zero;
+            child.localScale       = Vector3.one;
+            child.localPosition    = Vector3.zero;
             child.localEulerAngles = Vector3.zero;
         }
 

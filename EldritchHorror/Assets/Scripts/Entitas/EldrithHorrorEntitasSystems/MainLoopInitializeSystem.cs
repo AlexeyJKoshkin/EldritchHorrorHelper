@@ -1,5 +1,9 @@
+#region
+
 using EldritchHorror.UserProfile;
 using Entitas;
+
+#endregion
 
 namespace EldritchHorror.EntitasSystems
 {
@@ -14,7 +18,7 @@ namespace EldritchHorror.EntitasSystems
         public MainLoopInitializeSystem(IUserSaveProfileStorage userSaveProfileStorage, Contexts contexts)
         {
             _userSaveProfileStorage = userSaveProfileStorage;
-            _contexts = contexts;
+            _contexts               = contexts;
         }
 
         public void Initialize()
@@ -22,6 +26,7 @@ namespace EldritchHorror.EntitasSystems
             var entity = _contexts.mainLoop.CreateEntity();
             entity.AddUserProfile(_userSaveProfileStorage.Current.UserProfileData);
             entity.isIsReady = true;
+            entity.ReplacePlayerRole(true, true);
         }
     }
 }

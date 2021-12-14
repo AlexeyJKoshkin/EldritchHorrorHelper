@@ -1,4 +1,8 @@
+#region
+
 using System.IO;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {
@@ -17,7 +21,7 @@ namespace EldritchHorror.UserProfile
         public UserProfileSave(UserProfileData userProfileData, IDataFromJsonBuilder<UserProfileData> builder)
         {
             UserProfileData = userProfileData;
-            _builder = builder;
+            _builder        = builder;
             if (!FolderInfo.Exists)
             {
                 FolderInfo.Create();

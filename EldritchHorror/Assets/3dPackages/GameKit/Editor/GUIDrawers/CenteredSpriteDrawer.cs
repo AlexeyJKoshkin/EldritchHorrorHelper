@@ -27,7 +27,7 @@ namespace GameKit.Editor
             return EditorGUILayout.ObjectField(sprite, typeof(Sprite), false) as Sprite;
         }
 
-        public Sprite Draw(Sprite sprite, Vector2 size)
+        public static Sprite Draw(Sprite sprite, Vector2 size)
         {
             DrawCenterBoxContent(size, sprite);
 

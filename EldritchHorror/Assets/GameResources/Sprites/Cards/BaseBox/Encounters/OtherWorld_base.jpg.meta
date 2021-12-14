@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 38c465f531fc6e64d9c364ac45f1530c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7847768096647779535
+    second: OtherWorld_base_0
+  - first:
+      213: -2226853069856287873
+    second: OtherWorld_base_1
+  - first:
+      213: 7361287782754312733
+    second: OtherWorld_base_2
+  - first:
+      213: 8768575227383438578
+    second: OtherWorld_base_3
+  - first:
+      213: -6227909435222855365
+    second: OtherWorld_base_4
+  - first:
+      213: -9170859523071539572
+    second: OtherWorld_base_5
+  - first:
+      213: -2622130368807773993
+    second: OtherWorld_base_6
+  - first:
+      213: 4378128783909942742
+    second: OtherWorld_base_7
+  - first:
+      213: -2667583006890748822
+    second: OtherWorld_base_8
+  - first:
+      213: -7565427254763685211
+    second: OtherWorld_base_9
+  - first:
+      213: -1097130306143258183
+    second: OtherWorld_base_10
+  - first:
+      213: 4029767492887971006
+    second: OtherWorld_base_11
+  - first:
+      213: 8457243798690444020
+    second: OtherWorld_base_12
+  - first:
+      213: -4646406077975306082
+    second: OtherWorld_base_13
+  - first:
+      213: 2815619295709933234
+    second: OtherWorld_base_14
+  - first:
+      213: 2217902069134164165
+    second: OtherWorld_base_15
+  - first:
+      213: -8720971102716331263
+    second: OtherWorld_base_16
+  - first:
+      213: 5876099223836003310
+    second: OtherWorld_base_17
+  - first:
+      213: 9152455796747092503
+    second: OtherWorld_base_18
+  - first:
+      213: -5473645365351224304
+    second: OtherWorld_base_19
+  - first:
+      213: -4786025459362225100
+    second: OtherWorld_base_20
+  - first:
+      213: 4897399371000406642
+    second: OtherWorld_base_21
+  - first:
+      213: 4479465657983762131
+    second: OtherWorld_base_22
+  - first:
+      213: 1059292746152851464
+    second: OtherWorld_base_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 7
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 7
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OtherWorld_base_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc49550318fd8ec60800000000000000
+      internalID: 7847768096647779535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_1
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f735a3c6ee0a811e0800000000000000
+      internalID: -2226853069856287873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_2
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d126e749c3c882660800000000000000
+      internalID: 7361287782754312733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_3
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcda7e16bc30b970800000000000000
+      internalID: 8768575227383438578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_4
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31fc349d550299a0800000000000000
+      internalID: -6227909435222855365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_5
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8600526adf8ab080800000000000000
+      internalID: -9170859523071539572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_6
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8d27c72525c9bd0800000000000000
+      internalID: -2622130368807773993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_7
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 2140
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d57dd1ceec32cc30800000000000000
+      internalID: 4378128783909942742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6498618367dafad0800000000000000
+      internalID: -2667583006890748822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_9
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa70c1cef3320790800000000000000
+      internalID: -7565427254763685211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_10
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9f306acc536c0f0800000000000000
+      internalID: -1097130306143258183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_11
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb401052f2c9ce730800000000000000
+      internalID: 4029767492887971006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_12
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2b1df2d6a2e5570800000000000000
+      internalID: 8457243798690444020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_13
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90e0103a46a48fb0800000000000000
+      internalID: -4646406077975306082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_14
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bea687e4d6131720800000000000000
+      internalID: 2815619295709933234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_15
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 1070
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c088515e2297ce10800000000000000
+      internalID: 2217902069134164165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b752edcf2e8f680800000000000000
+      internalID: -8720971102716331263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_17
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb81b57c191c8150800000000000000
+      internalID: 5876099223836003310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_18
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712439b2e0e040f70800000000000000
+      internalID: 9152455796747092503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_19
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ce6c37a84b904b0800000000000000
+      internalID: -5473645365351224304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_20
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4342db0c33f949db0800000000000000
+      internalID: -4786025459362225100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_21
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27263b7c7ce07f340800000000000000
+      internalID: 4897399371000406642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_22
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3defeaf58424a2e30800000000000000
+      internalID: 4479465657983762131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OtherWorld_base_23
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 0
+        width: 727
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808b697e32d53be00800000000000000
+      internalID: 1059292746152851464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,22 +1,15 @@
+#region
+
 using EldritchHorror.Core;
 using System.Threading.Tasks;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror
 {
     public abstract class PrepareGameState : AbstractStateMachineState<MainLoopEntity>, IPrepareGameMachineState
     {
-        public override void Exit()
-        {
-            Debug.LogError($"Exit {GetType().Name}");
-        }
-
-        public override async void Enter()
-        {
-            Debug.LogError($"Enter {GetType().Name}");
-            await Task.Delay(2000);
-        }
-
         protected virtual bool CheckBack()
         {
             return false;
@@ -30,30 +23,21 @@ namespace EldritchHorror
 
     public class SelectionBossPrepareGameState : PrepareGameState
     {
-        private SelectionBossPrepareGameState()
-        {
-           
-        }
+        private SelectionBossPrepareGameState() { }
 
         public override int Order => 10;
     }
 
     public class SelectionGameBoxesPrepareGameState : PrepareGameState
     {
-        private SelectionGameBoxesPrepareGameState()
-        {
-          
-        }
+        private SelectionGameBoxesPrepareGameState() { }
 
         public override int Order => 1;
     }
 
     public class SelectionMythosCardPrepareGameState : PrepareGameState
     {
-        private SelectionMythosCardPrepareGameState()
-        {
-           
-        }
+        private SelectionMythosCardPrepareGameState() { }
 
         public override int Order => 20;
     }

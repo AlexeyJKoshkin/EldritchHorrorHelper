@@ -1,6 +1,10 @@
+#region
+
 using Entitas;
 using System;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror.Entitas.Components
 {

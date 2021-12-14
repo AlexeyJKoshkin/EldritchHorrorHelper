@@ -1,5 +1,9 @@
+#region
+
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
+
+#endregion
 
 namespace EldritchHorror
 {

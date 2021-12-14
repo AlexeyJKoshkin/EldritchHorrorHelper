@@ -1,5 +1,9 @@
+#region
+
 using Sirenix.OdinInspector;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror.Cards
 {
@@ -10,4 +14,6 @@ namespace EldritchHorror.Cards
         public Sprite BackSprite;
         public override CardType Type => CardType.Mythos;
     }
+
+    
 }

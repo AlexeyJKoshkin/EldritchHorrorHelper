@@ -1,7 +1,4 @@
 namespace EldritchHorror.UI
 {
-    public class RumorCardView : MythosCardUIView
-    {
-       
-    }
+    public class RumorCardView : EndrithCardUIView { }
 }

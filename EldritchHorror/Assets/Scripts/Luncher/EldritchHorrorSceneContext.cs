@@ -1,7 +1,9 @@
+#region
+
 using EldritchHorror;
-using System;
-using System.Collections.Generic;
 using Zenject;
+
+#endregion
 
 namespace Luncher
 {
@@ -10,14 +12,14 @@ namespace Luncher
         private Feature _fixedUpdateExecute;
 
         private Feature _updateExecute;
-        
+
         protected override void RunInternal()
         {
             PostResolve += OnPostResolveHandler;
             base.RunInternal();
         }
 
-        protected  void OnPostResolveHandler()
+        protected void OnPostResolveHandler()
         {
             PostResolve -= OnPostResolveHandler;
             LunchScene(Container.Resolve<T>());

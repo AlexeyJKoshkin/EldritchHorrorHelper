@@ -1,4 +1,8 @@
+#region
+
 using System.Threading.Tasks;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {
@@ -10,7 +14,7 @@ namespace EldritchHorror.UserProfile
         public UserProfilePartBuilder(IJsonFileOperation jsonFileOperation, IJsonConverter jsonConverter)
         {
             _jsonFileOperation = jsonFileOperation;
-            _jsonConverter = jsonConverter;
+            _jsonConverter     = jsonConverter;
         }
 
         protected abstract string FileName { get; }
@@ -40,9 +44,7 @@ namespace EldritchHorror.UserProfile
 
     public class MythosCardSaveSettingsBuilder : UserProfilePartBuilder<MythosCardSaveSettings>
     {
-        public MythosCardSaveSettingsBuilder(IJsonFileOperation jsonFileOperation, IJsonConverter jsonConverter) : base(jsonFileOperation, jsonConverter)
-        {
-        }
+        public MythosCardSaveSettingsBuilder(IJsonFileOperation jsonFileOperation, IJsonConverter jsonConverter) : base(jsonFileOperation, jsonConverter) { }
 
         protected override string FileName => "Mythos";
 
@@ -59,9 +61,7 @@ namespace EldritchHorror.UserProfile
 
     public class GameCardSetSettingsBuilder : UserProfilePartBuilder<GameCardSetSettings>
     {
-        public GameCardSetSettingsBuilder(IJsonFileOperation jsonFileOperation, IJsonConverter jsonConverter) : base(jsonFileOperation, jsonConverter)
-        {
-        }
+        public GameCardSetSettingsBuilder(IJsonFileOperation jsonFileOperation, IJsonConverter jsonConverter) : base(jsonFileOperation, jsonConverter) { }
 
         protected override string FileName => "GameSetCards";
 

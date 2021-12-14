@@ -1,9 +1,4 @@
-using TMPro;
-
 namespace EldritchHorror.UI
 {
-    public class StartMenuUIWindow : EldritchWindow
-    {
-    }
-    
+    public class StartMenuUIWindow : EldritchWindow { }
 }

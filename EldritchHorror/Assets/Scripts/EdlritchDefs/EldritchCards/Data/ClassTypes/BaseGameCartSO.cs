@@ -1,11 +1,17 @@
+#region
+
 using EldritchHorror.Data.Provider;
+using GameKit;
+using Sirenix.OdinInspector;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror.Cards
 {
     public abstract class BaseGameCartSO : ScriptableObject, IDataObject
     {
-        [HideInInspector] public Sprite FrontSprite;
+       
         public virtual string UniqueID => name;
     }
 }

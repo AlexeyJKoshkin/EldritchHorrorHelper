@@ -1,7 +1,10 @@
+#region
+
 using GameKit;
-using GameKit.Editor;
 using System.Collections.Generic;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror.Cards
 {

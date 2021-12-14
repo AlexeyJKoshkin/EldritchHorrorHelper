@@ -1,7 +1,11 @@
+#region
+
 using GameKit.Editor;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -31,8 +35,8 @@ namespace EldritchHorror
             EditorUtils.CreateAssetFolder(rootpath);
 
             string folderName = "";
-            Type type = typeof(T);
-            string path = null;
+            Type   type       = typeof(T);
+            string path       = null;
             if (_folderNames.TryGetValue(type, out folderName))
             {
                 string folderPath = rootpath + folderName;

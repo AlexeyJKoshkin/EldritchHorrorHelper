@@ -1,4 +1,8 @@
+#region
+
 using System.IO;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {

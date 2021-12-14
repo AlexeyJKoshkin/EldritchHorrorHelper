@@ -1,11 +1,13 @@
+#region
+
 using EldritchHorror.Data.Provider;
 using System;
 
+#endregion
+
 namespace EldritchHorror.Cards
 {
-    public class GameVersionHolder : DataBox<GameBoxDef>
-    {
-    }
+    public class GameVersionHolder : DataBox<GameBoxDef> { }
 
     [Flags]
     public enum GameVersion

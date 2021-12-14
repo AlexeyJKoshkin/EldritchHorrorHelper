@@ -1,10 +1,13 @@
-﻿using System;
-using System.Linq;
+﻿#region
+
 using CodeGenerator.EnumGenerator;
 using EldritchHorror;
 using GameKit.Editor;
-using Kitchen;
+using System;
+using System.Linq;
 using UnityEditor;
+
+#endregion
 
 namespace CodeGenerator
 {

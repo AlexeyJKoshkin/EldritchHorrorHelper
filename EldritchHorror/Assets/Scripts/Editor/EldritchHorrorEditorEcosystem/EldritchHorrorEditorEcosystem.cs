@@ -1,7 +1,9 @@
-using EldritchHorror;
-using EldritchHorror.Core;
+#region
+
 using System;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {
@@ -11,7 +13,6 @@ namespace EldritchHorrorEditorEcosystem
 
         public EldritchHorrorEditorEcosystem(IEldritchHorrorEditorEcosystemGUI[] gui)
         {
-
             _gui = new EldritchHorrorEditorEcosystemGuiDrawer(gui, this);
         }
 

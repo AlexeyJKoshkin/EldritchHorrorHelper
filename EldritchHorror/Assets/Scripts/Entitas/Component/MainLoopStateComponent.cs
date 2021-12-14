@@ -1,37 +1,26 @@
+#region
+
 using EldritchHorror.Core;
 using EldritchHorror.UI;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
+#endregion
+
 namespace EldritchHorror.Entitas.Components
 {
-    public abstract class StateHolderComponent<T,TEntity> : IStateMachineState<TEntity> where T : IStateMachineState<TEntity> where TEntity:class, IEntity
-    {
-        public T Current;
-        public void Exit()
-        {
-            Current?.Exit();
-        }
-
-        public void Enter()
-        {
-            Current?.Enter();
-        }
-    }
-    
-    public abstract class WindowBindingComponent<T> : IComponent where T : class, IEldritchWindow
-    {
-        public T Window;
-    }
-
     [MainLoop, Unique]
-    public class MainLoopStateComponent :StateHolderComponent<IGameLoopState, MainLoopEntity>, IComponent
-    {
-    }
+    public class MainLoopStateComponent : StateHolderComponent<IGameLoopState, MainLoopEntity>, IComponent { }
 
+    [MainLoop, EldritchCard, GameLoop]
+    public class IsReady : IComponent { }
+    
+    
 
-    [MainLoop, MythosCard, GameLoop]
-    public class IsReady : IComponent
+    [MainLoop]
+    public class PlayerRoleComponent : IComponent
     {
+        public bool IsMaster;
+        public bool IsLeader;
     }
 }

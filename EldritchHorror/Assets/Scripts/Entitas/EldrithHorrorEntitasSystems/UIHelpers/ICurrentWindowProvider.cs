@@ -1,6 +1,6 @@
 namespace EldritchHorror.EntitasSystems
 {
-    interface ICurrentWindowProvider<TWindow>
+    public interface ICurrentWindowProvider<TWindow>
     {
         TWindow Window { get; }
     }

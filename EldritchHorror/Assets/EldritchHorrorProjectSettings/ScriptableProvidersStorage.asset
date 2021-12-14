@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _items:
   - {fileID: 11400000, guid: 4079b2d9ba6816b4491c2f110e5b68b0, type: 2}
-  - {fileID: 11400000, guid: 23c8538b6d8d6594c8920ded46aad93a, type: 2}
   - {fileID: 11400000, guid: 75060e8022f61194b897e1ba9bd6b352, type: 2}
-  - {fileID: 11400000, guid: 3cd97f563102f1f4b9accd201e03c632, type: 2}
-  - {fileID: 11400000, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+  - {fileID: 11400000, guid: 573be415d95d8b54eae2c7a464f76cda, type: 2}
+  - {fileID: 11400000, guid: f2bdd42d3c0addf4eb5771cbb680d830, type: 2}
   _path: Assets/GameResources/Data/EdlritchData
   CreateNewIfMissed: 1

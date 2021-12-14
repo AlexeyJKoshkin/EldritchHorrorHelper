@@ -1,11 +1,14 @@
-﻿
+﻿#region
+
 using Entitas;
+
+#endregion
 
 namespace EldritchHorror.Core
 {
-    public interface IStateMachineState<T> where T:class, IEntity
+    public interface IStateMachineState<T> where T : class, IEntity
     {
-        void Exit();
-        void Enter();
+        void Exit(T stateEntity);
+        void Enter(T stateEntity);
     }
 }

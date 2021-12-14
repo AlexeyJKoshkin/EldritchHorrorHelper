@@ -1,5 +1,8 @@
-using EldritchHorror;
+#region
+
 using GameKit.CustomGameEditor;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {

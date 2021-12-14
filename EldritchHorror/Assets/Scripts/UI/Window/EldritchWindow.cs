@@ -1,9 +1,12 @@
+#region
+
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorror.UI
 {
-    
-    public abstract class EldritchWindow : MonoBehaviour, IEldritchWindow
+    public abstract class EldrtichUIComponent : MonoBehaviour
     {
         public void Show()
         {
@@ -14,5 +17,10 @@ namespace EldritchHorror.UI
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public abstract class EldritchWindow : EldrtichUIComponent, IEldritchWindow
+    {
+    
     }
 }

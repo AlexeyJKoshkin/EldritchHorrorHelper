@@ -1,7 +1,10 @@
-using EldritchHorror.GameplayStateMachine;
+#region
+
+using EldritchHorror.EntitasSystems;
 using EldritchHorror.UI;
 using Entitas;
-using System.Collections.Generic;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -13,14 +16,20 @@ namespace EldritchHorror
     public class EldritchHorrorSceneLauncher : IEldritchHorrorSceneLauncher
     {
         private readonly IEldritchHorrorEntitasRuntimeSystemBuilder _builder;
-        private readonly IEldritchWindowUIProvider _provider;
+        private readonly ITurnPhaseSwitcherSystem _turnPhaseSwitcherSystem;
         private readonly GameLoopContext _gameLoopContext;
+        private readonly MainLoopContext _mainLoopContext;
+        private readonly IEldritchWindowUIProvider _provider;
 
-        public EldritchHorrorSceneLauncher(IEldritchHorrorEntitasRuntimeSystemBuilder builder, IEldritchWindowUIProvider provider, GameLoopContext gameLoopContext)
+        public EldritchHorrorSceneLauncher(IEldritchHorrorEntitasRuntimeSystemBuilder builder,
+                                           ITurnPhaseSwitcherSystem turnPhaseSwitcherSystem,
+                                           IEldritchWindowUIProvider provider, GameLoopContext gameLoopContext, MainLoopContext mainLoopContext)
         {
-            _builder = builder;
-            _provider = provider;
+            _builder         = builder;
+            _turnPhaseSwitcherSystem = turnPhaseSwitcherSystem;
+            _provider        = provider;
             _gameLoopContext = gameLoopContext;
+            _mainLoopContext = mainLoopContext;
         }
 
         public Feature BuildUpdate()
@@ -31,7 +40,10 @@ namespace EldritchHorror
         public void ActivateScene()
         {
             _gameLoopContext.isMasterEntity = true;
+            //временно устанавливаем окно тут. когда добавиться меню, то будет включать его
             _gameLoopContext.masterEntityEntity.ReplaceMainWindowUI(_provider.GetWindow<MainGameUIWindow>());
+            _gameLoopContext.masterEntityEntity.ReplaceTurnCounter(0);
+            _turnPhaseSwitcherSystem.NewTurn();
         }
     }
 

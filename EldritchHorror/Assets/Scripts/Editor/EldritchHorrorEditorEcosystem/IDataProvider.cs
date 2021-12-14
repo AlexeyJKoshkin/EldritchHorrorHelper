@@ -1,7 +1,1 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace EldritchHorrorEditorEcosystem
-{
-}
+namespace EldritchHorrorEditorEcosystem {}

@@ -1,4 +1,8 @@
+#region
+
 using GameKit;
+
+#endregion
 
 namespace EldritchHorror.Cards
 {

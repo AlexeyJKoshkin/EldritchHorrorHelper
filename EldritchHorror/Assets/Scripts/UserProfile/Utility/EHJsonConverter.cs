@@ -1,5 +1,9 @@
+#region
+
 using Newtonsoft.Json;
 using System;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {
@@ -7,15 +11,13 @@ namespace EldritchHorror.UserProfile
     {
         protected readonly JsonSerializerSettings _jsonSettings;
 
-        public EHJsonConverter() : this(Formatting.None)
-        {
-        }
+        public EHJsonConverter() : this(Formatting.None) { }
 
         public EHJsonConverter(Formatting formatting = Formatting.None)
         {
             _jsonSettings = new JsonSerializerSettings
                             {
-                                Formatting = formatting,
+                                Formatting       = formatting,
                                 ContractResolver = new EnumToIntKeyContractResolver()
                             };
         }

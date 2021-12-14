@@ -1,6 +1,9 @@
+#region
+
 using EldritchHorror;
 using EldritchHorror.UserProfile;
 
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {

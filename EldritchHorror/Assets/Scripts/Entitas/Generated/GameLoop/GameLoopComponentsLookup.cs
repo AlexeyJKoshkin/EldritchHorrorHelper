@@ -8,38 +8,53 @@
 //------------------------------------------------------------------------------
 public static class GameLoopComponentsLookup {
 
-    public const int CurrentGamePhase = 0;
-    public const int InGameMythosCards = 1;
-    public const int IsReady = 2;
-    public const int MainWindowUI = 3;
-    public const int MasterEntity = 4;
-    public const int OmenState = 5;
-    public const int OmenUI = 6;
-    public const int PhaseReady = 7;
-    public const int TurnCounter = 8;
+    public const int AmericaCardDeck = 0;
+    public const int AsiaAustraliaCardDeck = 1;
+    public const int CurrentGamePhase = 2;
+    public const int EuropeCardDeck = 3;
+    public const int GeneralCardDeck = 4;
+    public const int InGameMythosDeck = 5;
+    public const int IsReady = 6;
+    public const int MainWindowUI = 7;
+    public const int MasterEntity = 8;
+    public const int OmenState = 9;
+    public const int OmenUI = 10;
+    public const int OtherWorldCardDeck = 11;
+    public const int PhaseReady = 12;
+    public const int TurnCounter = 13;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
+        "AmericaCardDeck",
+        "AsiaAustraliaCardDeck",
         "CurrentGamePhase",
-        "InGameMythosCards",
+        "EuropeCardDeck",
+        "GeneralCardDeck",
+        "InGameMythosDeck",
         "IsReady",
         "MainWindowUI",
         "MasterEntity",
         "OmenState",
         "OmenUI",
+        "OtherWorldCardDeck",
         "PhaseReady",
         "TurnCounter"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(EldritchHorror.Entitas.Components.AmericaCardDeckComponent),
+        typeof(EldritchHorror.Entitas.Components.AsiaAustraliaCardDeckComponent),
         typeof(EldritchHorror.Entitas.Components.CurrentGamePhaseComponent),
-        typeof(EldritchHorror.Entitas.Components.InGameMythosCardsComponent),
+        typeof(EldritchHorror.Entitas.Components.EuropeCardDeckComponent),
+        typeof(EldritchHorror.Entitas.Components.GeneralCardDeckComponent),
+        typeof(EldritchHorror.Entitas.Components.InGameMythosDeckComponent),
         typeof(EldritchHorror.Entitas.Components.IsReady),
         typeof(EldritchHorror.Entitas.Components.MainWindowUIComponent),
         typeof(EldritchHorror.Entitas.Components.MasterEntityComponent),
         typeof(EldritchHorror.Entitas.Components.OmenStateComponent),
         typeof(EldritchHorror.Entitas.Components.OmenUIComponent),
+        typeof(EldritchHorror.Entitas.Components.OtherWorldCardDeckComponent),
         typeof(EldritchHorror.Entitas.Components.PhaseReadyComponent),
         typeof(EldritchHorror.Entitas.Components.TurnCounterComponent)
     };

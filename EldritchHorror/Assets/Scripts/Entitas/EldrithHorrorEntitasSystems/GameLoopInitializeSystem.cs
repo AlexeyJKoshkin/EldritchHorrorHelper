@@ -1,9 +1,15 @@
+#region
+
+using EdlritchDefs.EldritchCards.Data.ClassTypes;
 using EldritchHorror.Cards;
-using EldritchHorror.Entitas.Components;
-using EldritchHorror.UI;
+using EldritchHorror.Data.Provider;
+using EldritchHorror.UserProfile;
 using Entitas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+
+#endregion
 
 namespace EldritchHorror.EntitasSystems
 {
@@ -14,11 +20,13 @@ namespace EldritchHorror.EntitasSystems
     public class GameLoopInitializeSystem : ReactiveSystem<MainLoopEntity>
     {
         private readonly Contexts _contexts;
+        private readonly IDataStorage _dataStorage;
         private readonly IMythosCardEntityGenerator _mythosCardEntityGenerator;
 
-        public GameLoopInitializeSystem(Contexts contexts,IMythosCardEntityGenerator mythosCardEntityGenerator) : base(contexts.mainLoop)
+        public GameLoopInitializeSystem(Contexts contexts, IDataStorage dataStorage, IMythosCardEntityGenerator mythosCardEntityGenerator) : base(contexts.mainLoop)
         {
-            _contexts = contexts;
+            _contexts                  = contexts;
+            _dataStorage = dataStorage;
             _mythosCardEntityGenerator = mythosCardEntityGenerator;
         }
 
@@ -35,43 +43,52 @@ namespace EldritchHorror.EntitasSystems
 
         protected override void Execute(List<MainLoopEntity> entities)
         {
-            var profile = entities.SingleEntity().userProfile;
-            var mythosCardDef = _mythosCardEntityGenerator.GenerateBySave(profile); // cгeненерировали entity -карты мифов для игры
-            GenerateEntities(mythosCardDef);
-        }
-
-        private void GenerateEntities(List<MythosCardDataDefinition> mythosCardGameDefinitions)
-        {
+            var profile       = entities.SingleEntity().userProfile;
             CreateMainLoopEntity();
-            CreateMythosEntity(mythosCardGameDefinitions);
+            
+            var gameboxes = _dataStorage.All<GameBoxDef>()
+                                        .Where(e => profile.GameSetCards.GameVersion.HasFlag(e.Version))
+                                        .ToList();
+            var ancientCard = gameboxes.FindBoss(profile.GameSetCards.AncientName);
+            
+            CreateMythosEntity(gameboxes, ancientCard, profile.MythosCards);
+            
+            CreateEncounters(gameboxes);
         }
 
-        private void CreateMythosEntity(List<MythosCardDataDefinition> mythosCardGameDefinitions)
+        private void CreateEncounters(List<GameBoxDef> gameboxes)
         {
-            Queue<MythosCardEntity> queue = new Queue<MythosCardEntity>();
-            //из даннных карты мифа создали entity и впихнули его в очередь
-            mythosCardGameDefinitions.Select(_contexts.mythosCard.CreateMythosCard).ForEach(queue.Enqueue);
+            AddCard(_contexts.gameLoop.masterEntityEntity.AddAmericaCardDeck, gameboxes.SelectMany(o => o.AmericaEncounterCard).ToList());
+            AddCard(_contexts.gameLoop.masterEntityEntity.AddAsiaAustraliaCardDeck, gameboxes.SelectMany(o => o.Asia_AustraliaEncounterCard).ToList());
+            AddCard(_contexts.gameLoop.masterEntityEntity.AddGeneralCardDeck, gameboxes.SelectMany(o => o.GeneralEncounterCard).ToList());
+            AddCard(_contexts.gameLoop.masterEntityEntity.AddOtherWorldCardDeck, gameboxes.SelectMany(o => o.OtherWorldEncounterCard).ToList());
+            AddCard(_contexts.gameLoop.masterEntityEntity.AddEuropeCardDeck, gameboxes.SelectMany(o => o.EuropeEncounterCard).ToList());
+        }
 
-            _contexts.gameLoop.masterEntityEntity.ReplaceInGameMythosCards( new List<MythosCardEntity>(), queue);
+        private void AddCard(Action<Queue<EldritchCardEntity>> addComponent, List<EncounterCardDefinition> cardDefinitions)
+        {
+            Queue<EldritchCardEntity> encounters = new Queue<EldritchCardEntity>();
+            while (cardDefinitions.Count > 0)
+            {
+                encounters.Enqueue(_contexts.eldritchCard.CreateEncounter(cardDefinitions.GetRandom(true)));
+            }
+            addComponent(encounters);
+        }
+
+        private void CreateMythosEntity(List<GameBoxDef> gameboxes, AncientCardDataDefinition ancientCard, MythosCardSaveSettings profileMythosCards)
+        {
+            var mythosCardDef = _mythosCardEntityGenerator.GenerateBySave(gameboxes,ancientCard, profileMythosCards); // cгeненерировали entity -карты мифов для игры
+            
+            Queue<EldritchCardEntity> queue = new Queue<EldritchCardEntity>();
+            //из даннных карты мифа создали entity и впихнули его в очередь
+            mythosCardDef.Select(_contexts.eldritchCard.CreateMythosCard).ForEach(queue.Enqueue);
+
+            _contexts.gameLoop.masterEntityEntity.ReplaceInGameMythosDeck(new Stack<EldritchCardEntity>(), queue);
         }
 
         private void CreateMainLoopEntity()
         {
             _contexts.gameLoop.masterEntityEntity.AddOmenState(0);
-            _contexts.gameLoop.masterEntityEntity.AddTurnCounter(0);
         }
-    }
-
-    public static class MythosCardContextExtension
-    {
-        public static MythosCardEntity CreateMythosCard(this  MythosCardContext context,MythosCardDataDefinition arg)
-        {
-            if (context == null) return null;
-            var e = context.CreateEntity();
-            e.AddMythosDef(arg);
-            e.AddMythosState(MythosStateCardType.Lock);
-            return e;
-        }
-        
     }
 }

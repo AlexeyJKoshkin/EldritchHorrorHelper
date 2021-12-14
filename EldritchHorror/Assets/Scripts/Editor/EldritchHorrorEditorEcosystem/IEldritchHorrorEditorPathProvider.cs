@@ -1,8 +1,11 @@
+#region
+
 using EldritchHorror;
 using EldritchHorror.Cards;
 using EldritchHorror.Data.Provider;
 using GameKit.Editor;
 
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {
@@ -18,7 +21,7 @@ namespace EldritchHorrorEditorEcosystem
 
         public EldritchHorrorEditorPathProvider(IDataStorage storage, EditorProjectPathSettings projectPathSettings)
         {
-            _storage = storage;
+            _storage             = storage;
             _projectPathSettings = projectPathSettings;
         }
 

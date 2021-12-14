@@ -1,8 +1,10 @@
+#region
+
 using EldritchHorror.Core;
+
+#endregion
 
 namespace EldritchHorror
 {
-    public interface IGameLoopState : IStateMachineState<MainLoopEntity>
-    {
-    }
- }
+    public interface IGameLoopState : IStateMachineState<MainLoopEntity> { }
+}

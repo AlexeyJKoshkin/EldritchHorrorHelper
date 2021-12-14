@@ -1,5 +1,9 @@
+#region
+
 using EldritchHorror.Cards;
 using System;
+
+#endregion
 
 namespace EldritchHorror.UserProfile
 {

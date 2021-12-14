@@ -1,6 +1,8 @@
-using GameKit.EditorContext;
-using Sirenix.OdinInspector;
+#region
 
+using GameKit.EditorContext;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {

@@ -1,5 +1,9 @@
+#region
+
 using System.Collections.Generic;
 using System.Linq;
+
+#endregion
 
 namespace EldritchHorror.UI
 {
@@ -19,7 +23,11 @@ namespace EldritchHorror.UI
 
         public T GetWindow<T>() where T : IEldritchWindow
         {
-            if (Storage == null) return default;
+            if (Storage == null)
+            {
+                return default;
+            }
+
             return (T) Storage.AllWindows.FirstOrDefault(o => o is T);
         }
     }

@@ -1,7 +1,11 @@
+#region
+
 using EldritchHorror.GameplayStateMachine;
 using Entitas;
 using System.Collections.Generic;
 using System.Linq;
+
+#endregion
 
 namespace EldritchHorror.EntitasSystems
 {
@@ -11,16 +15,24 @@ namespace EldritchHorror.EntitasSystems
     }
 
 
-    public class TurnPhaseSwitcherSystem : ReactiveSystem<GameLoopEntity>,ITurnPhaseSwitcherSystem
+    public class TurnPhaseSwitcherSystem : ReactiveSystem<GameLoopEntity>, ITurnPhaseSwitcherSystem
     {
         private readonly GameLoopContext _context;
         private readonly List<IGameRoundPhase> _phases;
         private int _currentIndexPhase;
-        public TurnPhaseSwitcherSystem(GameLoopContext context,IGameRoundPhase[] phases) : base(context)
+
+        public TurnPhaseSwitcherSystem(GameLoopContext context, IGameRoundPhase[] phases) : base(context)
         {
             _context = context;
-            _phases = phases.ToList();
+            _phases  = phases.ToList();
             _phases.Sort();
+        }
+
+        public void NewTurn()
+        {
+            _currentIndexPhase = -1;
+            var entity = _context.CreateEntity();
+            NextPhase(entity);
         }
 
         protected override ICollector<GameLoopEntity> GetTrigger(IContext<GameLoopEntity> context)
@@ -42,24 +54,17 @@ namespace EldritchHorror.EntitasSystems
         private void NextPhase(GameLoopEntity gameLoopEntity)
         {
             _currentIndexPhase++;
+            gameLoopEntity.isPhaseReady = false;
             if (_currentIndexPhase >= _phases.Count)
             {
                 gameLoopEntity.RemoveCurrentGamePhase();
                 gameLoopEntity.Destroy();
-                this._context.ReplaceTurnCounter(this._context.turnCounter.Turn+1);
+                NewTurn();
             }
             else
             {
                 gameLoopEntity.ReplaceCurrentGamePhase(_phases[_currentIndexPhase]);
             }
         }
-
-        public void NewTurn()
-        {
-            _currentIndexPhase = -1;
-            var entity = _context.CreateEntity();
-            NextPhase(entity);
-        }
     }
-  
 }

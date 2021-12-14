@@ -8,4 +8,14 @@ namespace GameKit
     public class ReadOnlyAttribute : PropertyAttribute
     {
     }
+
+    public class CenteredSpriteDrawerAttribute : PropertyAttribute
+    {
+        public Vector2 Size;
+
+        public CenteredSpriteDrawerAttribute(float x, float y)
+        {
+            Size = new Vector2(x,y);
+        }
+    }
 }

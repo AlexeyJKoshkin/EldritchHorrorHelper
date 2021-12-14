@@ -21,20 +21,20 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
+    public EldritchCardContext eldritchCard { get; set; }
     public EldritchWorldMapContext eldritchWorldMap { get; set; }
     public EldrithchUIContext eldrithchUI { get; set; }
     public GameLoopContext gameLoop { get; set; }
     public MainLoopContext mainLoop { get; set; }
-    public MythosCardContext mythosCard { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { eldritchWorldMap, eldrithchUI, gameLoop, mainLoop, mythosCard }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { eldritchCard, eldritchWorldMap, eldrithchUI, gameLoop, mainLoop }; } }
 
     public Contexts() {
+        eldritchCard = new EldritchCardContext();
         eldritchWorldMap = new EldritchWorldMapContext();
         eldrithchUI = new EldrithchUIContext();
         gameLoop = new GameLoopContext();
         mainLoop = new MainLoopContext();
-        mythosCard = new MythosCardContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),
@@ -69,11 +69,11 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContextObservers() {
         try {
+            CreateContextObserver(eldritchCard);
             CreateContextObserver(eldritchWorldMap);
             CreateContextObserver(eldrithchUI);
             CreateContextObserver(gameLoop);
             CreateContextObserver(mainLoop);
-            CreateContextObserver(mythosCard);
         } catch(System.Exception) {
         }
     }

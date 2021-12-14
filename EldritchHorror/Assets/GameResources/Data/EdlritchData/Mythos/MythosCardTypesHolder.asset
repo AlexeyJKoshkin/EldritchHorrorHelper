@@ -28,6 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91416fbc04cb49ca827a0ff950ebdadb, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
+  FrontSprite: {fileID: 0}
   Back: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}
   InfluenceTypeSos:
   - {fileID: 8774475409286304089, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
@@ -43,11 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91416fbc04cb49ca827a0ff950ebdadb, type: 3}
   m_Name: Yellow
   m_EditorClassIdentifier: 
+  FrontSprite: {fileID: 0}
   Back: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}
   InfluenceTypeSos:
   - {fileID: 1960680845305491600, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
-  - {fileID: 3433585344792817885, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
   - {fileID: 202317536499774566, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
+  - {fileID: 3433585344792817885, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}
 --- !u!114 &6164757554623799574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91416fbc04cb49ca827a0ff950ebdadb, type: 3}
   m_Name: Green
   m_EditorClassIdentifier: 
+  FrontSprite: {fileID: 0}
   Back: {fileID: 21300000, guid: ae444c55e2776be4d9736cb598017ba4, type: 3}
   InfluenceTypeSos:
   - {fileID: 1960680845305491600, guid: 838b9e8b985527b49b2ec03e260ecb92, type: 2}

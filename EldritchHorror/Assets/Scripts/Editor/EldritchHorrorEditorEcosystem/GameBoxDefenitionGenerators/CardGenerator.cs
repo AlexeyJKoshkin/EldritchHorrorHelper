@@ -1,12 +1,15 @@
+#region
+
 using EldritchHorror.Cards;
 using GameKit.Editor;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem.Helpers
 {
@@ -20,11 +23,11 @@ namespace EldritchHorrorEditorEcosystem.Helpers
         }
     }
 
-    public abstract class CardGenerator<TCardDefinition, TSettings, TTypeSo> : ScriptableObject where TTypeSo : CardTypeSO where TCardDefinition : BaseCardDataSO
+    public abstract class CardGenerator<TSettings, TTypeSo> : ScriptableObject where TTypeSo : CardTypeSO 
     {
         public List<GameBoardGeneratorSettings> BoardSettings = new List<GameBoardGeneratorSettings>();
         public TTypeSo CardTypeSo;
-        [SerializeField] private GameBoxDef gameBoxDef;
+        [SerializeField] public GameBoxDef gameBoxDef;
 
         [GameKit.ReadOnly] public string RootFolderPath = "";
 
@@ -64,20 +67,28 @@ namespace EldritchHorrorEditorEcosystem.Helpers
 
         public abstract void GenerateCurrent(GameBoardGeneratorSettings current);
 
-        public static TCardDefinition LoadAssetOrCreate(string path)
+        public static T LoadAssetOrCreate<T>(string path) where T : BaseCardDataSO
         {
-            var asset = EditorUtils.LoadAsset<TCardDefinition>(path, true);
+            var asset = EditorUtils.LoadAsset<T>(path, true);
             asset.Type = EditorUtils.FindAsset<TTypeSo>();
             return asset;
         }
+        
+        
+        public  T CreateCard<T>( string spriteName) where T : BaseCardDataSO
+        {
+            string nameObject = $"{RootFolderPath}/{spriteName}.asset";
+            return LoadAssetOrCreate<T>(nameObject);
+        }
 
 
-        public void UpdateCardList()
+        public virtual void UpdateCardList()
         {
             SerializedObject serializedObject = new SerializedObject(gameBoxDef);
-            var proprety = serializedObject.FindProperty(PropertyName);
+            var              proprety         = serializedObject.FindProperty(PropertyName);
+            if (proprety == null) throw new NullReferenceException(PropertyName + " Is null");
             proprety.ClearArray();
-            var list = EditorUtils.LoadAllAssetsAtPath<TCardDefinition>(RootFolderPath, true).ToList();
+            var list = EditorUtils.LoadAllAssetsAtPath<ScriptableObject>(RootFolderPath, true).ToList();
             for (int i = 0; i < list.Count; i++)
             {
                 proprety.InsertArrayElementAtIndex(i);

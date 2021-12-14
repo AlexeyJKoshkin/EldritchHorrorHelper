@@ -1,5 +1,9 @@
+#region
+
 using EdlritchDefs.GamePlayDefs;
 using Entitas;
+
+#endregion
 
 namespace EldritchHorror
 {
@@ -12,19 +16,21 @@ namespace EldritchHorror
         void MoveBack();
         void SetTo(int index);
     }
-    
-    public class EldritchOmen :IEldritchOmen
+
+    public class EldritchOmen : IEldritchOmen
     {
         private readonly GameLoopContext _context;
-        private GameLoopEntity OmenEntity => _context.masterEntityEntity;
 
-        public EldritchOmen(IContext<GameLoopEntity>  context)
+        public EldritchOmen(IContext<GameLoopEntity> context)
         {
             _context = context as GameLoopContext;
         }
 
+        private GameLoopEntity OmenEntity => _context.masterEntityEntity;
+
         public OmenType CurrentType => OmenEntity.omenState.Omen;
         public int Position => OmenEntity.omenState.CurrentState;
+
         public void MoveNext()
         {
             int current = OmenEntity.omenState.GetNext();

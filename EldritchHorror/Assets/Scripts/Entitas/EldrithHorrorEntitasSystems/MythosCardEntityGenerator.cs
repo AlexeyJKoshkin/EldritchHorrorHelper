@@ -1,34 +1,34 @@
+#region
+
 using EldritchHorror.Cards;
 using EldritchHorror.Data.Provider;
 using EldritchHorror.UserProfile;
 using System.Collections.Generic;
 using System.Linq;
 
+#endregion
+
 namespace EldritchHorror.EntitasSystems
 {
     public interface IMythosCardEntityGenerator
     {
-        List<MythosCardDataDefinition> GenerateBySave(IUserProfileData profile);
+
+        List<MythosCardDataDefinition> GenerateBySave(List<GameBoxDef> gameboxes, AncientCardDataDefinition ancientCard,MythosCardSaveSettings mythosCardSaveSettings);
     }
 
     public class MythosCardEntityGenerator : IMythosCardEntityGenerator
     {
-        private readonly Contexts _contexts;
         private readonly IDataStorage _dataStorage;
 
-        public MythosCardEntityGenerator(Contexts contexts, IDataStorage dataStorage)
+        public MythosCardEntityGenerator(IDataStorage dataStorage)
         {
-            _contexts = contexts;
             _dataStorage = dataStorage;
         }
 
-        public List<MythosCardDataDefinition> GenerateBySave(IUserProfileData profile)
+
+        public List<MythosCardDataDefinition> GenerateBySave(List<GameBoxDef> gameboxes, AncientCardDataDefinition ancientCard, MythosCardSaveSettings mythosCardSaveSettings)
         {
-            var gameboxes = _dataStorage.All<GameBoxDef>()
-                                        .Where(e => profile.GameSetCards.GameVersion.HasFlag(e.Version))
-                                        .ToList();
-            var ancientCard = gameboxes.FindBoss(profile.GameSetCards.AncientName);
-            var mythosCards = gameboxes.SelectMythos(profile.MythosCards)
+            var mythosCards = gameboxes.SelectMythos(mythosCardSaveSettings)
                                        .GroupBy(o => o.MythosCardType)
                                        .ToDictionary(o => o.Key, o => o.ToList());
             return Generate(ancientCard.AncientActMythosSettings, mythosCards);

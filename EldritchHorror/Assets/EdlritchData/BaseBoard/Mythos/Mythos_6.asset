@@ -15,7 +15,8 @@ MonoBehaviour:
   FrontSprite: {fileID: -6848419562512049295, guid: 48bdd820ec4ee3344943fca0bc5469c0,
     type: 3}
   Type: {fileID: 4002203448852014741, guid: 4079b2d9ba6816b4491c2f110e5b68b0, type: 2}
-  MythosCardType: {fileID: 5273411161306648462, guid: 3cd97f563102f1f4b9accd201e03c632,
-    type: 2}
   DifficultType: {fileID: -8791835215428189661, guid: 23c8538b6d8d6594c8920ded46aad93a,
+    type: 2}
+  IsProcess: 0
+  MythosCardType: {fileID: 5273411161306648462, guid: 3cd97f563102f1f4b9accd201e03c632,
     type: 2}

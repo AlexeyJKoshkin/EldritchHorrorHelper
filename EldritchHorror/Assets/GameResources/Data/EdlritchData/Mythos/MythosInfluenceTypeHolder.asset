@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlaceRumorToken
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 12
   Icon: {fileID: 0}
+  InfluenceType: 64
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: SpawnGates
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 4
   Icon: {fileID: 0}
+  InfluenceType: 4
 --- !u!114 &840320314057395008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,8 +63,8 @@ MonoBehaviour:
   m_Name: MonsterSurge
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 6
   Icon: {fileID: 0}
+  InfluenceType: 8
 --- !u!114 &1960680845305491600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Name: AdvanceOmen
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 2
   Icon: {fileID: 0}
+  InfluenceType: 2
 --- !u!114 &3433585344792817885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Name: Reckoning
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 8
   Icon: {fileID: 0}
+  InfluenceType: 16
 --- !u!114 &6738061706588689455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Name: PlaceEldritchTokens
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 14
   Icon: {fileID: 0}
+  InfluenceType: 64
 --- !u!114 &8774475409286304089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Name: SpawnClues
   m_EditorClassIdentifier: 
   FrontSprite: {fileID: 0}
-  InfluenceType: 10
   Icon: {fileID: 0}
+  InfluenceType: 32

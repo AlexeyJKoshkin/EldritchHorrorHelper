@@ -1,3 +1,5 @@
+#region
+
 using Editor.EldritchHorrorEditorEcosystem;
 using GameKit.Editor;
 using Sirenix.Utilities;
@@ -5,6 +7,8 @@ using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+
+#endregion
 
 namespace EldritchHorrorEditorEcosystem
 {

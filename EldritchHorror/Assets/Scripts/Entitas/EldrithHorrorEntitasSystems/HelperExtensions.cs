@@ -1,8 +1,11 @@
-using EldritchHorror;
+#region
+
 using EldritchHorror.Cards;
 using EldritchHorror.UserProfile;
 using System.Collections.Generic;
 using System.Linq;
+
+#endregion
 
 namespace EldritchHorror.EntitasSystems
 {

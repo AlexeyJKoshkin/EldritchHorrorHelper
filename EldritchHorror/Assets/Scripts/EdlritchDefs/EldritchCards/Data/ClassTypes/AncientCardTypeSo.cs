@@ -1,6 +1,4 @@
 namespace EldritchHorror.Cards
 {
-    public class AncientCardTypeSo : BaseCardDataSO
-    {
-    }
+    public class AncientCardTypeSo : BaseCardDataSO { }
 }
