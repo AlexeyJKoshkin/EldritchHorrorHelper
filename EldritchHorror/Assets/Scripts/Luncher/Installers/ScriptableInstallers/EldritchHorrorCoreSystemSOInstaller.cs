@@ -1,8 +1,10 @@
 #region
 
+using EldritchHorror.Core;
 using EldritchHorror.EntitasSystems;
 using System;
 using System.Collections.Generic;
+using EldritchHorror.UI;
 using UnityEngine;
 using Zenject;
 
@@ -19,8 +21,8 @@ namespace EldritchHorror
         private List<Type> _updateSystems = new List<Type>
                                             {
                                                 typeof(MainLoopInitializeSystem),
-                                                typeof(UIControllerHandlerComposite),
-                                                typeof(GameLoopInitializeSystem),
+        
+ 
                                                 typeof(SetClickedMythosCardToPreview),
                                                 typeof(SetClickedEncounterCardToPreview),
                                                 typeof(GameLoopUIUpdateSystem),
@@ -42,9 +44,21 @@ namespace EldritchHorror
 
         private void BindDependencies()
         {
+            BindUI();
+
             Container.Bind<MasterRolePlayerUILayoutHandler>().AsSingle();
-            Container.Bind<DefaultRolePlayerUILayoutHandler>().AsSingle();
             Container.BindInterfacesTo<MythosCardEntityGenerator>().AsSingle();
+        }
+
+        private void BindUI()
+        {
+            
+            Container.BindInterfacesTo<EldritchWindowUIProvider>().AsSingle(); // биндим провайдер окон на уровне систем,  чтобы иметь доступ к обертке UI  
+            Container.BindInterfacesTo<UiHandleDispatcher>().AsSingle();
+            
+            Container.BindInterfacesTo<MainMenuUIHandler>().AsSingle();
+            Container.BindInterfacesTo<PrepareGamePhaseStateUiHandler>().AsSingle();
+            Container.BindInterfacesTo<GameLoopGameStateUIHandler>().AsSingle();
         }
 
         private void BindSystems()

@@ -11,7 +11,7 @@ public static class EldritchCardComponentsLookup {
     public const int BackSprite = 0;
     public const int Click = 1;
     public const int Encounter = 2;
-    public const int FontSprite = 3;
+    public const int FrontSprite = 3;
     public const int InProcessType = 4;
     public const int IsActiveMythos = 5;
     public const int IsDraftMythos = 6;
@@ -25,7 +25,7 @@ public static class EldritchCardComponentsLookup {
         "BackSprite",
         "Click",
         "Encounter",
-        "FontSprite",
+        "FrontSprite",
         "InProcessType",
         "IsActiveMythos",
         "IsDraftMythos",

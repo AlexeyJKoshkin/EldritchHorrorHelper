@@ -9,14 +9,9 @@ using UnityEngine;
 
 namespace EldritchHorror.UI
 {
-    public class EldritchWindowUIStorage : MonoBehaviour, IEldritchWindowUIStorage, IEldritchWindowUIProvider
+    public class EldritchWindowUIStorage : MonoBehaviour, IEldritchWindowUIStorage
     {
         [SerializeField, ReadOnly] private List<EldritchWindow> _windows = new List<EldritchWindow>();
-
-        public T GetWindow<T>() where T : IEldritchWindow
-        {
-            return (T) AllWindows.FirstOrDefault(o => o is T);
-        }
 
         public IReadOnlyList<IEldritchWindow> AllWindows => _windows;
 

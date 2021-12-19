@@ -13,11 +13,12 @@ using System.Collections.Generic;
 
 namespace EldritchHorror.Entitas.Components
 {
+    public abstract class StateReadyComponent { }
+
     [GameLoop, Unique]
-    public class InGameMythosDeckComponent : IComponent
+    public class InGameMythosDeckComponent :EncounterDeckComponent, IComponent
     {
         public Stack<EldritchCardEntity> History;
-        public Queue<EldritchCardEntity> List;
     }
 
 
@@ -89,19 +90,13 @@ namespace EldritchHorror.Entitas.Components
     [GameLoop, Unique]
     public class MasterEntityComponent : IComponent { }
 
-    [GameLoop, Unique]
-    public class MainWindowUIComponent : WindowBindingComponent<MainGameUIWindow> { }
-
     /// <summary>
     ///     Текущая фаза хода
     /// </summary>
     [GameLoop]
-    public class CurrentGamePhaseComponent : StateHolderComponent<IGameRoundPhase, GameLoopEntity>, IGameRoundPhase, IComponent
+    public class CurrentGamePhaseComponent : StateHolderComponent<IGameRoundPhase, GameLoopEntity>,  IComponent
     {
-        public int CompareTo(object obj)
-        {
-            return Current?.CompareTo(obj) ?? 0;
-        }
+
     }
 
     [GameLoop, Unique]
@@ -111,7 +106,7 @@ namespace EldritchHorror.Entitas.Components
     }
 
     [GameLoop]
-    public class PhaseReadyComponent : IComponent { }
+    public class PhaseReadyComponent : StateReadyComponent,IComponent { }
 
     public abstract class EncounterDeckComponent : CardDeckComponent<EldritchCardEntity>
     {

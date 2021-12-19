@@ -1,6 +1,7 @@
 #region
 
 using EldritchHorror;
+using System;
 using Zenject;
 
 #endregion
@@ -9,6 +10,10 @@ namespace Luncher
 {
     public abstract class EldritchHorrorSceneContext<T> : SceneContext where T : IEldritchHorrorEntitasRuntimeSystemBuilder
     {
+        protected static Action OnUpdate;
+        protected static Action OnFixedUpdate;
+        protected static Action OnLateUpdate;
+        
         private Feature _fixedUpdateExecute;
 
         private Feature _updateExecute;
@@ -34,11 +39,28 @@ namespace Luncher
         protected void CreateUpdate(T launcher)
         {
             _updateExecute = launcher.BuildUpdate();
+            OnUpdate += _updateExecute.Execute;
+        }
+
+
+        protected virtual void OnDestroy()
+        {
+            OnUpdate -= _updateExecute.Execute;
         }
 
         private void Update()
         {
-            _updateExecute.Execute();
+           OnUpdate?.Invoke();
+        }
+
+        private void LateUpdate()
+        {
+            OnLateUpdate?.Invoke();
+        }
+
+        private void FixedUpdate()
+        {
+            OnFixedUpdate?.Invoke();
         }
     }
 }

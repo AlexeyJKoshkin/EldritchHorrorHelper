@@ -16,11 +16,8 @@ namespace EldritchHorror.GameplayStateMachine
 
     public class MythosCardActionResolver : ReactiveSystem<EldritchCardEntity>
     {
-        private ICurrentWindowProvider<MainGameUIWindow> windowProvider;
-
-        public MythosCardActionResolver(ICollector<EldritchCardEntity> collector, ICurrentWindowProvider<MainGameUIWindow> resolver) : base(collector)
+        public MythosCardActionResolver(ICollector<EldritchCardEntity> collector) : base(collector)
         {
-            windowProvider = resolver;
         }
 
         protected override ICollector<EldritchCardEntity> GetTrigger(IContext<EldritchCardEntity> context)

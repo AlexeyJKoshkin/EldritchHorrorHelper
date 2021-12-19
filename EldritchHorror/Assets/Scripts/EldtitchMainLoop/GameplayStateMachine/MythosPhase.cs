@@ -1,8 +1,10 @@
 #region
 
 using EldritchHorror.Cards;
+using EldritchHorror.Core;
 using EldritchHorror.Entitas.Components;
 using EldritchHorror.EntitasSystems;
+using EldritchHorror.UI;
 using System;
 using UnityEngine;
 
@@ -15,22 +17,17 @@ namespace EldritchHorror.GameplayStateMachine
         public override int Order => 40;
         private readonly IEldritchOmen _omen;
 
-        public MythosPhase(IEldritchOmen omen,IEldritchUIController uiControllerHandler, Contexts gameLoopContext) : base(gameLoopContext,uiControllerHandler)
-        {
-            _omen = omen;
-        }
 
-        public override void Enter(GameLoopEntity stateEntity)
+        protected override void OnEnter(GameLoopEntity stateEntity)
         {
-            base.Enter(stateEntity);
-            UIControllerHandler.EnterGamePhase(this, stateEntity);
+            base.OnEnter(stateEntity);
             if (EldritchCardContext.isIsActiveMythos)
             {
                 EldritchCardContext.isActiveMythosEntity.isIsActiveMythos = false;
             }
 
             //взять следующую карту
-            var current = GameLoopContext.inGameMythosDeck.List.Dequeue();
+            var current = GameLoopContext.inGameMythosDeck.CardOrder.Dequeue();
             UpdateCardEntity(current);
         }
 
@@ -47,7 +44,7 @@ namespace EldritchHorror.GameplayStateMachine
             {
                 GameLoopContext.inGameMythosDeck.History.Push(current);
             }
-            GameLoopContext.ReplaceInGameMythosDeck(GameLoopContext.inGameMythosDeck.History, GameLoopContext.inGameMythosDeck.List);
+            GameLoopContext.ReplaceInGameMythosDeck(GameLoopContext.inGameMythosDeck.History, GameLoopContext.inGameMythosDeck.CardOrder);
         }
 
         private void Handle(MythosCardDataDefinition def)
@@ -81,10 +78,14 @@ namespace EldritchHorror.GameplayStateMachine
         /// заканчиваем фазу мифов
         /// </summary>
         /// <param name="stateEntity"></param>
-        public override void Exit(GameLoopEntity stateEntity)
+        protected override void OnExit(GameLoopEntity stateEntity)
         {
-            base.Exit(stateEntity);
-            UIControllerHandler.ExitGamePhase(this,stateEntity);
+            base.OnExit(stateEntity);
+        }
+
+        public MythosPhase(Contexts gameLoopContext,  IEldritchOmen omen) : base(gameLoopContext)
+        {
+            _omen = omen;
         }
     }
 
@@ -92,15 +93,16 @@ namespace EldritchHorror.GameplayStateMachine
     public class PrepareGamePhase : MainGamePlayState
     {
         public override int Order => 10;
-       
-        public override void Enter(GameLoopEntity stateEntity)
+
+        protected override void OnEnter(GameLoopEntity stateEntity)
         {
-            base.Enter(stateEntity);
+            base.OnEnter(stateEntity);
             GameLoopContext.ReplaceTurnCounter(GameLoopContext.turnCounter.Turn +1);
             stateEntity.isPhaseReady = true;
         }
 
-        public PrepareGamePhase(Contexts gameLoopContext, IEldritchUIController uiControllerHandler) : base(gameLoopContext, uiControllerHandler) { }
+
+        public PrepareGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
     }
 
     //фейковый окончательный стейт
@@ -108,34 +110,36 @@ namespace EldritchHorror.GameplayStateMachine
     {
         public override int Order => 50;
 
-        public EndTurnGamePhase(Contexts gameLoopContext, IEldritchUIController uiControllerHandler) : base(gameLoopContext, uiControllerHandler) { }
+
+        public EndTurnGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
     }
 
     public class ActionGamePhase : MainGamePlayState {
         public override int Order => 20;
 
-        public ActionGamePhase(Contexts gameLoopContext, IEldritchUIController uiControllerHandler) : base(gameLoopContext, uiControllerHandler) { }
+
+        public ActionGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
     }
 
     public class EncounterGamePhase : MainGamePlayState
     {
         public override int Order => 30;
-      
-  
 
-        public override void Enter(GameLoopEntity stateEntity)
+
+        protected override void OnEnter(GameLoopEntity stateEntity)
         {
-            base.Enter(stateEntity);
-            UIControllerHandler.EnterGamePhase(this,stateEntity);
+            base.OnEnter(stateEntity);
+          
             stateEntity.isPhaseReady = true;
         }
 
-        public override void Exit(GameLoopEntity stateEntity)
+        protected override void OnExit(GameLoopEntity stateEntity)
         {
-            base.Exit(stateEntity);
-            UIControllerHandler.ExitGamePhase(this,stateEntity);
+            base.OnExit(stateEntity);
+
         }
 
-        public EncounterGamePhase(Contexts gameLoopContext, IEldritchUIController uiControllerHandler) : base(gameLoopContext, uiControllerHandler) { }
+
+        public EncounterGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
     }
 }

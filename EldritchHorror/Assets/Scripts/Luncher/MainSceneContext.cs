@@ -3,6 +3,8 @@
 using EldritchHorror.EntitasSystems;
 using Luncher;
 using Sirenix.OdinInspector;
+using System;
+using UnityEngine;
 
 #endregion
 
@@ -12,8 +14,12 @@ namespace EldritchHorror
     {
         protected override void LunchScene(IEldritchHorrorSceneLauncher launcher)
         {
-            base.LunchScene(launcher);
+            base.LunchScene(launcher); //тут запускаются все логические системы
             launcher.ActivateScene();
         }
+    }
+
+    public class UnitActionHandler : MonoBehaviour
+    {
     }
 }

@@ -1,5 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
 using EldritchHorror.Cards;
 using EldritchHorror.Entitas.Components;
+using Entitas;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace EldritchHorror.EntitasSystems {
@@ -27,7 +31,6 @@ namespace EldritchHorror.EntitasSystems {
             e.AddFrontSprite(front);
             return e;
         }
-
-       
     }
+
 }

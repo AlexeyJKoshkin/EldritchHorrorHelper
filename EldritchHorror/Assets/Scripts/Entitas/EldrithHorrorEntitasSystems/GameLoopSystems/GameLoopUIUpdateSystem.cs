@@ -15,7 +15,7 @@ namespace EldritchHorror.EntitasSystems
      * Шлет в обработчик команду при обновлении/удалении сущности
      */
        
-    public class GameLoopUIUpdateSystem : AbstractUIUpdateSystem<MainGameUIWindow, GameLoopEntity>, ITearDownSystem, IInitializeSystem
+    public class GameLoopUIUpdateSystem :  ITearDownSystem, IInitializeSystem
     {
         private readonly Contexts _contexts;
 
@@ -24,19 +24,19 @@ namespace EldritchHorror.EntitasSystems
         public GameLoopUIUpdateSystem(Contexts contexts)
         {
             _contexts = contexts;
-            _group = contexts.gameLoop.GetGroup(GameLoopMatcher.MainWindowUI);
+        //    _group = contexts.gameLoop.GetGroup(GameLoopMatcher.MainWindowUI);
         }
         
         public void Initialize()
         {
-            var e = _group.GetSingleEntity();
+            /*var e = _group.GetSingleEntity();
             if (e != null)
             {
                 GroupOnOnEntityAdded(_group, e, 1, null);
                 return;
             }
           
-            _group.OnEntityAdded += GroupOnOnEntityAdded;
+            _group.OnEntityAdded += GroupOnOnEntityAdded;*/
         }
 
         private void GroupOnOnEntityAdded(IGroup<GameLoopEntity> @group, GameLoopEntity entity, int index, IComponent component)
@@ -46,12 +46,7 @@ namespace EldritchHorror.EntitasSystems
        }
 
 
-        private MainGameUIWindow Window => _contexts.gameLoop.mainWindowUI.Window;
-
-        protected override MainGameUIWindow GetWindow()
-        {
-            return Window;
-        }
+      
 
 
 

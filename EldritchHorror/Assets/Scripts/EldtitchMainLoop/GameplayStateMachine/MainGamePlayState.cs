@@ -2,47 +2,42 @@
 
 using EldritchHorror.Core;
 using EldritchHorror.EntitasSystems;
+using EldritchHorror.UI;
 using System;
 
 #endregion
 
 namespace EldritchHorror.GameplayStateMachine
 {
-    public interface IGameRoundPhase : IStateMachineState<GameLoopEntity>, IComparable { }
+    public interface IGameRoundPhase : IStateMachineState<GameLoopEntity>, IComparable
+    {
+
+    }
 
     public abstract class MainGamePlayState : AbstractStateMachineState<GameLoopEntity>, IGameRoundPhase
     {
-        protected readonly IEldritchUIController UIControllerHandler;
+        public int Turn => _contexts.gameLoop.turnCounter.Turn;
         
         private readonly Contexts _contexts;
 
-        public MainGamePlayState(Contexts gameLoopContext, IEldritchUIController uiControllerHandler)
+        public MainGamePlayState(Contexts gameLoopContext) : base()
         {
             _contexts = gameLoopContext;
-            UIControllerHandler = uiControllerHandler;
+          
         }
 
         public GameLoopContext GameLoopContext => _contexts.gameLoop;
         public EldritchCardContext EldritchCardContext => _contexts.eldritchCard;
 
-        public override void Enter(GameLoopEntity stateEntity)
+        protected override void OnEnter(GameLoopEntity stateEntity)
         {
             HLogger.LogError($"Enter {GetType().Name}");
         }
 
-        public override void Exit(GameLoopEntity stateEntity)
+        protected override void OnExit(GameLoopEntity stateEntity)
         {
             HLogger.LogError($"Exit {GetType().Name}");
         }
 
-        public int CompareTo(object obj)
-        {
-            if (obj is MainGamePlayState state)
-            {
-                return Order.CompareTo(state.Order);
-            }
-
-            return 1;
-        }
     }
 }

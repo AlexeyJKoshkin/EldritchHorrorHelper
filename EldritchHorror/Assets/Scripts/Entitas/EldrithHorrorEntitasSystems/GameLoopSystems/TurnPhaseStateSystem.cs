@@ -12,8 +12,7 @@ namespace EldritchHorror.EntitasSystems
     /// </summary>
     public class TurnPhaseStateSystem : BaseStateEnterExitSystem<GameLoopEntity, IGameRoundPhase>
     {
-        public TurnPhaseStateSystem(IContext<GameLoopEntity> context) : base(context) { }
-
-        protected override int StateComponentIndex => GameLoopComponentsLookup.CurrentGamePhase;
+        protected override IMatcher<GameLoopEntity> StateComponentIndex => GameLoopMatcher.CurrentGamePhase;
+        public TurnPhaseStateSystem(IContext<GameLoopEntity> context, IUiHandleDispatcher uiHandleDispatcher) : base(context, uiHandleDispatcher) { }
     }
 }

@@ -1213,7 +1213,11 @@
             <e p="IGameLoopState.cs" t="Include" />
             <e p="IGameLoopStateMachine.cs" t="Include" />
             <e p="InitialState" t="Include">
+              <e p="CreateGameState.cs" t="Include" />
+              <e p="GameLoopGameState.cs" t="Include" />
+              <e p="GameSettingsSelectionState.cs" t="Include" />
               <e p="InitialEldritchMainState.cs" t="Include" />
+              <e p="MainMenuState.cs" t="Include" />
             </e>
             <e p="MainLoopState.cs" t="Include" />
             <e p="PrepareGameState" t="Include">
@@ -1236,17 +1240,16 @@
               <e p="UserProfileComponent.cs" t="Include" />
             </e>
             <e p="EldrithHorrorEntitasSystems" t="Include">
+              <e p="BaseStateEnterExitSystem.cs" t="Include" />
               <e p="EldritchCardContextExtension.cs" t="Include" />
-              <e p="GameLoopInitializeSystem.cs" t="Include" />
               <e p="GameLoopSystems" t="Include">
-                <e p="AbstractUIUpdateSystem.cs" t="Include" />
+                <e p="CycleStateSwitcher.cs" t="Include" />
                 <e p="GameLoopUIUpdateSystem.cs" t="Include" />
                 <e p="SetClickedMythosCardToPreview.cs" t="Include" />
                 <e p="TurnPhaseStateSystem.cs" t="Include" />
                 <e p="TurnPhaseSwitcherSystem.cs" t="Include" />
                 <e p="UIlLayoutHandler" t="Include">
                   <e p="AbstractRolePlayerUILayoutHandler.cs" t="Include" />
-                  <e p="DefaultRolePlayerUILayoutHandler.cs" t="Include" />
                   <e p="MasterRolePlayerUILayoutHandler.cs" t="Include" />
                 </e>
                 <e p="UpdateUIReactionAdapter.cs" t="Include" />
@@ -1255,11 +1258,10 @@
               <e p="MainLoopInitializeSystem.cs" t="Include" />
               <e p="MainLoopSwitcherSystem.cs" t="Include" />
               <e p="MythosCardEntityGenerator.cs" t="Include" />
+              <e p="UiHandleDispatcher.cs" t="Include" />
               <e p="UIHelpers" t="Include">
-                <e p="ICurrentWindowProvider.cs" t="Include" />
                 <e p="IEntityUpdateHandlerUI.cs" t="Include" />
                 <e p="IUIControllerHandler.cs" t="Include" />
-                <e p="UIControllerHandlerComposite.cs" t="Include" />
               </e>
             </e>
             <e p="Generated" t="Include">
@@ -1274,7 +1276,7 @@
                   <e p="EldritchCardBackSpriteComponent.cs" t="Include" />
                   <e p="EldritchCardClickComponent.cs" t="Include" />
                   <e p="EldritchCardEncounterComponent.cs" t="Include" />
-                  <e p="EldritchCardFontSpriteComponent.cs" t="Include" />
+                  <e p="EldritchCardFrontSpriteComponent.cs" t="Include" />
                   <e p="EldritchCardInProcessTypeComponent.cs" t="Include" />
                   <e p="EldritchCardIsActiveMythosComponent.cs" t="Include" />
                   <e p="EldritchCardIsDraftMythosComponent.cs" t="Include" />
@@ -1315,7 +1317,6 @@
                   <e p="GameLoopGeneralCardDeckComponent.cs" t="Include" />
                   <e p="GameLoopInGameMythosDeckComponent.cs" t="Include" />
                   <e p="GameLoopIsReadyComponent.cs" t="Include" />
-                  <e p="GameLoopMainWindowUIComponent.cs" t="Include" />
                   <e p="GameLoopMasterEntityComponent.cs" t="Include" />
                   <e p="GameLoopOmenStateComponent.cs" t="Include" />
                   <e p="GameLoopOmenUIComponent.cs" t="Include" />
@@ -1331,9 +1332,11 @@
               </e>
               <e p="MainLoop" t="Include">
                 <e p="Components" t="Include">
+                  <e p="MainLoopGameBoxesComponent.cs" t="Include" />
                   <e p="MainLoopIsReadyComponent.cs" t="Include" />
                   <e p="MainLoopMainLoopStateComponent.cs" t="Include" />
                   <e p="MainLoopPlayerRoleComponent.cs" t="Include" />
+                  <e p="MainLoopSelectedBoxComponent.cs" t="Include" />
                   <e p="MainLoopUserProfileComponent.cs" t="Include" />
                 </e>
                 <e p="MainLoopAttribute.cs" t="Include" />
@@ -1363,17 +1366,21 @@
             <e p="MainSceneContext.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="IStateUIHandler.cs" t="Include" />
+            <e p="MainMenuUIHandler.cs" t="Include" />
             <e p="MoveableUIElement.cs" t="Include" />
+            <e p="PrepareGamePhaseStateUiHandler.cs" t="Include" />
             <e p="Window" t="Include">
               <e p="EldritchWindow.cs" t="Include" />
               <e p="EldritchWindowUIStorage.cs" t="Include" />
-              <e p="EncountersPanelView.cs" t="Include" />
+              <e p="GameMasterCardDeckPanelView.cs" t="Include" />
               <e p="IEldritchWindow.cs" t="Include" />
               <e p="IEldritchWindowUIStorage.cs" t="Include" />
               <e p="MainGamePlay" t="Include">
                 <e p="CurrentCardDeckView.cs" t="Include" />
                 <e p="EndrithCardUIView.cs" t="Include" />
                 <e p="EntityMonoBehaviour.cs" t="Include" />
+                <e p="EntityUIBinder.cs" t="Include" />
                 <e p="MythosPhaseControlPanelUI.cs" t="Include" />
                 <e p="OmenViewUI.cs" t="Include" />
                 <e p="RumorCardView.cs" t="Include" />

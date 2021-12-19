@@ -2,7 +2,7 @@
 
 using EldritchHorror.GameplayStateMachine;
 using Entitas;
-using System.Collections.Generic;
+using System;
 using System.Linq;
 
 #endregion
@@ -14,48 +14,34 @@ namespace EldritchHorror.EntitasSystems
         void NewTurn();
     }
 
-
-    public class TurnPhaseSwitcherSystem : ReactiveSystem<GameLoopEntity>, ITurnPhaseSwitcherSystem
+    public class TurnPhaseSwitcherSystem : CycleStateSwitcher<GameLoopEntity,IGameRoundPhase>, ITurnPhaseSwitcherSystem
     {
         private readonly GameLoopContext _context;
-        private readonly List<IGameRoundPhase> _phases;
-        private int _currentIndexPhase;
 
-        public TurnPhaseSwitcherSystem(GameLoopContext context, IGameRoundPhase[] phases) : base(context)
+        public TurnPhaseSwitcherSystem(GameLoopContext context, IGameRoundPhase[] phases) : base(context, phases)
         {
             _context = context;
-            _phases  = phases.ToList();
-            _phases.Sort();
+
         }
 
         public void NewTurn()
         {
-            _currentIndexPhase = -1;
+            this.StateBox.Reset();
             var entity = _context.CreateEntity();
-            NextPhase(entity);
+            HandleNextPhase(this.StateBox.GetNext(), entity);
         }
 
-        protected override ICollector<GameLoopEntity> GetTrigger(IContext<GameLoopEntity> context)
-        {
-            return context.CreateCollector(Matcher<GameLoopEntity>.AllOf(GameLoopMatcher.PhaseReady, GameLoopMatcher.CurrentGamePhase));
-        }
+        protected override IMatcher<GameLoopEntity> ReadyStateMatcher => Matcher<GameLoopEntity>.AllOf(GameLoopMatcher.PhaseReady, GameLoopMatcher.CurrentGamePhase);
 
         protected override bool Filter(GameLoopEntity entity)
         {
             return entity.isPhaseReady;
         }
 
-        protected override void Execute(List<GameLoopEntity> entities)
-        {
-            var e = entities.SingleEntity();
-            NextPhase(e);
-        }
 
-        private void NextPhase(GameLoopEntity gameLoopEntity)
+        protected override void HandleNextPhase(IGameRoundPhase nextState, GameLoopEntity gameLoopEntity)
         {
-            _currentIndexPhase++;
-            gameLoopEntity.isPhaseReady = false;
-            if (_currentIndexPhase >= _phases.Count)
+            if (nextState == null)
             {
                 gameLoopEntity.RemoveCurrentGamePhase();
                 gameLoopEntity.Destroy();
@@ -63,7 +49,8 @@ namespace EldritchHorror.EntitasSystems
             }
             else
             {
-                gameLoopEntity.ReplaceCurrentGamePhase(_phases[_currentIndexPhase]);
+                gameLoopEntity.isPhaseReady = false;
+                gameLoopEntity.ReplaceCurrentGamePhase(nextState);
             }
         }
     }

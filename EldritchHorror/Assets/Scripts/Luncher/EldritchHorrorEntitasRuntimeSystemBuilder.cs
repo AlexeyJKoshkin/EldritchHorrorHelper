@@ -2,6 +2,7 @@
 
 using EldritchHorror.EntitasSystems;
 using EldritchHorror.UI;
+using EldritchHorror.UserProfile;
 using Entitas;
 
 #endregion
@@ -16,18 +17,23 @@ namespace EldritchHorror
     public class EldritchHorrorSceneLauncher : IEldritchHorrorSceneLauncher
     {
         private readonly IEldritchHorrorEntitasRuntimeSystemBuilder _builder;
+        private readonly IUserSaveProfileStorage _userSaveProfileStorage;
         private readonly ITurnPhaseSwitcherSystem _turnPhaseSwitcherSystem;
         private readonly GameLoopContext _gameLoopContext;
         private readonly MainLoopContext _mainLoopContext;
         private readonly IEldritchWindowUIProvider _provider;
+        private readonly IEldritchWindowUIStorage _uiStorage;
 
         public EldritchHorrorSceneLauncher(IEldritchHorrorEntitasRuntimeSystemBuilder builder,
-                                           ITurnPhaseSwitcherSystem turnPhaseSwitcherSystem,
-                                           IEldritchWindowUIProvider provider, GameLoopContext gameLoopContext, MainLoopContext mainLoopContext)
+                                           IUserSaveProfileStorage userSaveProfileStorage, 
+                                           IEldritchWindowUIProvider provider,
+                                           IEldritchWindowUIStorage uiStorage,
+                                           GameLoopContext gameLoopContext, MainLoopContext mainLoopContext)
         {
             _builder         = builder;
-            _turnPhaseSwitcherSystem = turnPhaseSwitcherSystem;
+            _userSaveProfileStorage = userSaveProfileStorage;
             _provider        = provider;
+            _uiStorage = uiStorage;
             _gameLoopContext = gameLoopContext;
             _mainLoopContext = mainLoopContext;
         }
@@ -39,11 +45,12 @@ namespace EldritchHorror
 
         public void ActivateScene()
         {
-            _gameLoopContext.isMasterEntity = true;
-            //временно устанавливаем окно тут. когда добавиться меню, то будет включать его
+            // обеспечили доступность UI
+            ((EldritchWindowUIProvider) _provider).Storage = _uiStorage; 
+            /*//временно устанавливаем окно тут. когда добавиться меню, то будет включать его
             _gameLoopContext.masterEntityEntity.ReplaceMainWindowUI(_provider.GetWindow<MainGameUIWindow>());
             _gameLoopContext.masterEntityEntity.ReplaceTurnCounter(0);
-            _turnPhaseSwitcherSystem.NewTurn();
+            _turnPhaseSwitcherSystem.NewTurn();*/
         }
     }
 

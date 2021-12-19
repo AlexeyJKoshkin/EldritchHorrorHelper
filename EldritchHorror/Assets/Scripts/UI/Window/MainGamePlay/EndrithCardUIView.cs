@@ -1,5 +1,6 @@
 #region
 
+using Entitas;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ namespace EldritchHorror.UI
             set => _actionBtn.interactable = value;
         }
 
-        private void Awake()
+        protected void Awake()
         {
             _actionBtn?.onClick.AddListener(OnClickHandler);
         }
@@ -39,13 +40,18 @@ namespace EldritchHorror.UI
             _actionBtn = GetComponentInChildren<Button>(true);
         }
 
-        protected override void UpdateView()
+        protected override void DoUpdateView()
         {
-            ImageView.sprite = Current.FrontSprite.Sprite;
+            ImageView.sprite = Current.frontSprite.Sprite;
             gameObject.SetActive(true);
         }
 
-        protected override void Clear()
+        public override void UpdateView(IEntity e, int index, IComponent component)
+        {
+            
+        }
+
+        protected override void DoClear()
         {
             ImageView.sprite = Current.backSprite.Sprite;
         }

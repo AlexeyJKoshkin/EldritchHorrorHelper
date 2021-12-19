@@ -4,19 +4,21 @@ using Entitas;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace EldritchHorror.Entitas.Components {
-    public abstract class StateHolderComponent<T, TEntity> : IStateMachineState<TEntity> where T : IStateMachineState<TEntity> where TEntity : class, IEntity
+namespace EldritchHorror.Entitas.Components 
+{
+    public interface IStatHolderComponent<out T, TEntity> where T : IStateMachineState<TEntity> where TEntity : class, IEntity
     {
-        public T Current;
+        T Current { get; }
+    }
 
-        public void Exit(TEntity statentity)
-        {
-            Current?.Exit(statentity);
-        }
+    public abstract class StateHolderComponent<T, TEntity> : IStatHolderComponent<T, TEntity> where T : IStateMachineState<TEntity> where TEntity : class, IEntity
+    {
+        public T Current { get; set; }
 
-        public void Enter(TEntity statentity)
+
+        public int CompareTo(object obj)
         {
-            Current?.Enter(statentity);
+            return Current == null ? 0 : Current.CompareTo(obj);
         }
     }
     

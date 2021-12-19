@@ -53,7 +53,7 @@ public partial class GameLoopEntity {
         var index = GameLoopComponentsLookup.InGameMythosDeck;
         var component = (EldritchHorror.Entitas.Components.InGameMythosDeckComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.InGameMythosDeckComponent));
         component.History = newHistory;
-        component.List = newList;
+        component.CardOrder = newList;
         AddComponent(index, component);
     }
 
@@ -61,7 +61,7 @@ public partial class GameLoopEntity {
         var index = GameLoopComponentsLookup.InGameMythosDeck;
         var component = (EldritchHorror.Entitas.Components.InGameMythosDeckComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.InGameMythosDeckComponent));
         component.History = newHistory;
-        component.List = newList;
+        component.CardOrder = newList;
         ReplaceComponent(index, component);
     }
 

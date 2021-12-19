@@ -15,15 +15,14 @@ public static class GameLoopComponentsLookup {
     public const int GeneralCardDeck = 4;
     public const int InGameMythosDeck = 5;
     public const int IsReady = 6;
-    public const int MainWindowUI = 7;
-    public const int MasterEntity = 8;
-    public const int OmenState = 9;
-    public const int OmenUI = 10;
-    public const int OtherWorldCardDeck = 11;
-    public const int PhaseReady = 12;
-    public const int TurnCounter = 13;
+    public const int MasterEntity = 7;
+    public const int OmenState = 8;
+    public const int OmenUI = 9;
+    public const int OtherWorldCardDeck = 10;
+    public const int PhaseReady = 11;
+    public const int TurnCounter = 12;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 13;
 
     public static readonly string[] componentNames = {
         "AmericaCardDeck",
@@ -33,7 +32,6 @@ public static class GameLoopComponentsLookup {
         "GeneralCardDeck",
         "InGameMythosDeck",
         "IsReady",
-        "MainWindowUI",
         "MasterEntity",
         "OmenState",
         "OmenUI",
@@ -50,7 +48,6 @@ public static class GameLoopComponentsLookup {
         typeof(EldritchHorror.Entitas.Components.GeneralCardDeckComponent),
         typeof(EldritchHorror.Entitas.Components.InGameMythosDeckComponent),
         typeof(EldritchHorror.Entitas.Components.IsReady),
-        typeof(EldritchHorror.Entitas.Components.MainWindowUIComponent),
         typeof(EldritchHorror.Entitas.Components.MasterEntityComponent),
         typeof(EldritchHorror.Entitas.Components.OmenStateComponent),
         typeof(EldritchHorror.Entitas.Components.OmenUIComponent),

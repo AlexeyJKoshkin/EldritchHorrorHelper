@@ -787,7 +787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed60716e57154081bed56853f85d30d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardDeckView: {fileID: 0}
   OmenView: {fileID: 7441908920015040437}
   PreviewCardImage: {fileID: 4522842174007054367}
   RumorCardViews:
@@ -797,7 +796,7 @@ MonoBehaviour:
   - {fileID: 6695051369012429503}
   _turnCounter: {fileID: 3738382072456841271}
   MythosPhaseControlPanel: {fileID: 3462660479948988187}
-  EncountersPanelView: {fileID: 0}
+  _gameMasterCardDeckPanelView: {fileID: 0}
 --- !u!1 &745798578731040639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,7 +2624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4414026879387324776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2738,10 +2737,10 @@ RectTransform:
   m_Father: {fileID: 8856227422710917309}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 588, y: -289}
-  m_SizeDelta: {x: -1251.0458, y: -653.6407}
+  m_AnchoredPosition: {x: 625.52, y: -866.8123}
+  m_SizeDelta: {x: -1251.0458, y: 400.3754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1967331764184787907
 CanvasRenderer:
@@ -4140,7 +4139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4900887193289977831
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4156,10 +4155,10 @@ RectTransform:
   m_Father: {fileID: 1666340639234721472}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 777.2, y: -376.95}
+  m_SizeDelta: {x: 254, y: 243.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7449585981516906985
 CanvasRenderer:
@@ -6651,6 +6650,7 @@ MonoBehaviour:
   ResearchWorldDeckView: {fileID: 7698925414685131684}
   ExpeditionDeckView: {fileID: 5597063416107929986}
   SpecialDeckView: {fileID: 7707926076065330404}
+  MythosDeckView: {fileID: 6078578570851256314}
 --- !u!1 &8803606233959267205
 GameObject:
   m_ObjectHideFlags: 0

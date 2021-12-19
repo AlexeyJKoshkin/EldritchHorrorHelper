@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class EldritchCardEntity {
 
-    public EldritchHorror.Entitas.Components.FrontSpriteComponent FrontSprite { get { return (EldritchHorror.Entitas.Components.FrontSpriteComponent)GetComponent(EldritchCardComponentsLookup.FontSprite); } }
-    public bool hasFontSprite { get { return HasComponent(EldritchCardComponentsLookup.FontSprite); } }
+    public EldritchHorror.Entitas.Components.FrontSpriteComponent frontSprite { get { return (EldritchHorror.Entitas.Components.FrontSpriteComponent)GetComponent(EldritchCardComponentsLookup.FrontSprite); } }
+    public bool hasFrontSprite { get { return HasComponent(EldritchCardComponentsLookup.FrontSprite); } }
 
     public void AddFrontSprite(UnityEngine.Sprite newSprite) {
-        var index = EldritchCardComponentsLookup.FontSprite;
+        var index = EldritchCardComponentsLookup.FrontSprite;
         var component = (EldritchHorror.Entitas.Components.FrontSpriteComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.FrontSpriteComponent));
         component.Sprite = newSprite;
         AddComponent(index, component);
     }
 
-    public void ReplaceFontSprite(UnityEngine.Sprite newSprite) {
-        var index = EldritchCardComponentsLookup.FontSprite;
+    public void ReplaceFrontSprite(UnityEngine.Sprite newSprite) {
+        var index = EldritchCardComponentsLookup.FrontSprite;
         var component = (EldritchHorror.Entitas.Components.FrontSpriteComponent)CreateComponent(index, typeof(EldritchHorror.Entitas.Components.FrontSpriteComponent));
         component.Sprite = newSprite;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveFontSprite() {
-        RemoveComponent(EldritchCardComponentsLookup.FontSprite);
+    public void RemoveFrontSprite() {
+        RemoveComponent(EldritchCardComponentsLookup.FrontSprite);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class EldritchCardEntity {
 //------------------------------------------------------------------------------
 public sealed partial class EldritchCardMatcher {
 
-    static Entitas.IMatcher<EldritchCardEntity> _matcherFontSprite;
+    static Entitas.IMatcher<EldritchCardEntity> _matcherFrontSprite;
 
-    public static Entitas.IMatcher<EldritchCardEntity> FontSprite {
+    public static Entitas.IMatcher<EldritchCardEntity> FrontSprite {
         get {
-            if (_matcherFontSprite == null) {
-                var matcher = (Entitas.Matcher<EldritchCardEntity>)Entitas.Matcher<EldritchCardEntity>.AllOf(EldritchCardComponentsLookup.FontSprite);
+            if (_matcherFrontSprite == null) {
+                var matcher = (Entitas.Matcher<EldritchCardEntity>)Entitas.Matcher<EldritchCardEntity>.AllOf(EldritchCardComponentsLookup.FrontSprite);
                 matcher.componentNames = EldritchCardComponentsLookup.componentNames;
-                _matcherFontSprite = matcher;
+                _matcherFrontSprite = matcher;
             }
 
-            return _matcherFontSprite;
+            return _matcherFrontSprite;
         }
     }
 }

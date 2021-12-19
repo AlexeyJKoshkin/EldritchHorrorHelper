@@ -2,6 +2,7 @@
 
 using Entitas;
 using UnityEngine;
+using UnityEngine.Purchasing;
 
 #endregion
 
@@ -13,31 +14,41 @@ namespace EldritchHorror.UI
         void Bind(TEntity entity);
     }
 
+    public interface IUView
+    {
+        void Clear();
+        void UpdateView();
+        void UpdateView(IEntity e, int index, IComponent component);
+    }
+
+
     public abstract class EntityMonoBehaviour<TEntity> : MonoBehaviour, IEntityMonoBehaviour<TEntity> where TEntity : class, IEntity
     {
-        public TEntity Current { get; private set; }
+        private EntityUIBinder<TEntity> _binder;
+
+            protected  EntityMonoBehaviour()
+        {
+            _binder = new EntityUIBinder<TEntity>(UpdateView, DoUpdateView, DoClear);
+        }
+
+        public TEntity Current => _binder.Current;
 
         public void Bind(TEntity entity)
         {
-            if (entity == null)
-            {
-                if (Current == null)
-                {
-                    return;
-                }
-
-                Clear();
-                Current = null;
-            }
-            else
-            {
-                Current = entity;
-                UpdateView();
-            }
+            if(_binder == null)
+                _binder = new EntityUIBinder<TEntity>(UpdateView, DoUpdateView, DoClear);
+            _binder.Bind(entity);
         }
 
-        protected virtual void UpdateView() { }
 
-        protected virtual void Clear() { }
+
+        public abstract void UpdateView(IEntity e, int index, IComponent component);
+        
+
+
+        protected abstract void DoClear();
+
+        protected abstract void DoUpdateView();
     }
+
 }

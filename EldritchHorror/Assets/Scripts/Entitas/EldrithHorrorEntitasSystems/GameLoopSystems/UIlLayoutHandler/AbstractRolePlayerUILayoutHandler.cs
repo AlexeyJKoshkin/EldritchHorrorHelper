@@ -9,8 +9,7 @@ namespace EldritchHorror.EntitasSystems
 {
     public abstract class AbstractRolePlayerUILayoutHandler : IEnumerable<IUpdateUiReactionAdapter>
     {
-        protected MainGameUIWindow Window => _contexts.gameLoop.mainWindowUI.Window;
-        
+       
         private readonly List<IUpdateUiReactionAdapter> _uiHandler = new List<IUpdateUiReactionAdapter>();
         private readonly Contexts _contexts;
 
@@ -22,41 +21,9 @@ namespace EldritchHorror.EntitasSystems
         
         void CreateAdapters()
         {
-            OnEntityChange<EldritchCardEntity>()
-                .FromGroup(Matcher<EldritchCardEntity>.AllOf(EldritchCardMatcher.Mythos, EldritchCardMatcher.IsActiveMythos))
-                .CreateHandler(UpdateCurrentMythos, RemoveCurrentMythosHandler).Bind();
-            
-            OnEntityChange<EldritchCardEntity>()
-                .FromGroup(Matcher<EldritchCardEntity>.AllOf(EldritchCardMatcher.Mythos, EldritchCardMatcher.InProcessType))
-                .CreateHandler(OnAddProcessCard, RemoveProcessCard).Bind();
-          
-           
-            OnEntityChange<GameLoopEntity>()
-                .FromGroup(Matcher<GameLoopEntity>.AnyOf(GameLoopMatcher.AmericaCardDeck, 
-                                                         GameLoopMatcher.EuropeCardDeck, 
-                                                         GameLoopMatcher.AsiaAustraliaCardDeck,
-                                                         GameLoopMatcher.GeneralCardDeck,
-                                                         GameLoopMatcher.OtherWorldCardDeck))
-                .CreateHandler(UpdateEncounterCard, null).Bind();
-            
-            
-            //обновляем задник карт и знамение
-            OnEntityChange<GameLoopEntity>()
-                .FromGroup(Matcher<GameLoopEntity>.AnyOf(GameLoopMatcher.InGameMythosDeck, GameLoopMatcher.OmenState, GameLoopMatcher.TurnCounter))
-                .CreateHandler(UpdateGeneralGameStateUI, null).Bind();
+        
+
         }
-
-        protected virtual void UpdateCurrentMythos(EldritchCardEntity entity, int index, IComponent component) { }
-        protected virtual void RemoveCurrentMythosHandler(EldritchCardEntity entity, int index) { }
-        protected virtual void RemoveProcessCard(EldritchCardEntity entity, int index) { }
-        protected virtual void OnAddProcessCard(EldritchCardEntity entity, int index, IComponent component) { }
-        protected virtual void UpdateGeneralGameStateUI(GameLoopEntity entity, int index, IComponent component) { }
-        public virtual void ExitMythosPhase(GameLoopEntity stateEntity) { }
-        public virtual void EnterMythosPhase(GameLoopEntity stateEntity) { }
-        public virtual void EnterEncounterPhase(GameLoopEntity stateEntity) { }
-
-        public virtual void ExitEncounterPhase(GameLoopEntity stateEntity) { }
-        protected virtual void UpdateEncounterCard(GameLoopEntity entity, int index, IComponent component) { }
 
         private Builder<T> OnEntityChange<T>() where T : class, IEntity
         {
