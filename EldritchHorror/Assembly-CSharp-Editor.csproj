@@ -56,49 +56,31 @@
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorEcosystemInfrastructure.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\EcoSystemSettingsInstaller.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchMenu.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\RangeSliderEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\CustomEditorInstallersProviderInspector.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorPathProvider.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\AncientCardGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorProjectPathSettings.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\uGUITools.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\UserSaveProfileStorageTest.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\AccordionElementEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIBezierCurveEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IDataProvider.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\SingletonSettings.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\FancyScrollView\ScrollerEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\MythosCardGenerator.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\CUITextEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\UIExtensionsMenuOptions.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\AllCodeGeneratorWindow.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\IEldritchHorrorCodeGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorEcosystem.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\ColorPickerPresetsEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystemLauncher.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconListCopier.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\CanvasGroupActivator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGeneratorUnityMenu.cs" />
-     <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\BehaviorExecutorScriptableEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\ScrollPositionControllerEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\BoxSliderEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\BaseCustomEditorInstaller.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\BaseDataBoxInspectorEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIGraphicEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\EldritchHorrorEditorEcosystemLauncherEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\BezierLineRendererEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\DiContainerWrapper.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystemGuiDrawer.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorGUI\IEldritchHorrorEditorEcosystemGUI.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\MythosCardTypesHolderEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystem.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\NonDrawingGraphicEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicRenameEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\CustomEditorInstallersProvider.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\CardGenerator.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\BaseCardDataSOEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\CardTypesHolderEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\ReadOnlyDrawer.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIImageEditor.cs" />
-     <Compile Include="Assets\BehaviorBricks\Editor\BehaviorExecutorEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\SimpleEncounterCardGenerator.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -358,9 +340,6 @@
  <Reference Include="Sirenix.Serialization.Config">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
- <Reference Include="BBEditor">
- <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/BehaviorBricks/Editor/Bin/BBEditor.dll</HintPath>
- </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
@@ -399,9 +378,6 @@
  </Reference>
  <Reference Include="Sirenix.Serialization">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="BehaviorBricks">
- <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/BehaviorBricks/Runtime/BehaviorBricks.dll</HintPath>
  </Reference>
  <Reference Include="DesperateDevs.CodeGeneration">
  <HintPath>D:/Projects/EldritchHorror/EldritchHorror/Assets/3dPackages/DesperateDevs/Editor/DesperateDevs.CodeGeneration.dll</HintPath>
@@ -937,10 +913,6 @@
       <Project>{5784b7da-6a54-8d3f-75d0-268cf2b16935}</Project>
       <Name>GameKit</Name>
     </ProjectReference>
-    <ProjectReference Include="GameKit.Editor.csproj">
-      <Project>{323fff97-7de1-d8c4-f375-2bec7ad6add8}</Project>
-      <Name>GameKit.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{9c5c9c4d-6812-4c1e-d46a-7924f7e297e8}</Project>
       <Name>Zenject-Editor</Name>
@@ -948,10 +920,6 @@
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{fafbcc74-d019-8a68-36dc-8871f753547f}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="Gamekit.EditorDIContainer.csproj">
-      <Project>{0093c56d-b75b-b0e0-af77-2546eb374dcf}</Project>
-      <Name>Gamekit.EditorDIContainer</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{5e95989b-c823-b2f1-033b-b606deab955d}</Project>
@@ -964,6 +932,10 @@
     <ProjectReference Include="LeanCommon.csproj">
       <Project>{fd8949ef-ca2a-2542-4af1-5a70f3b3d9a2}</Project>
       <Name>LeanCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="Gamekit.Editor.csproj">
+      <Project>{ac93176d-4659-a92b-f791-30201d5fa0ac}</Project>
+      <Name>Gamekit.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

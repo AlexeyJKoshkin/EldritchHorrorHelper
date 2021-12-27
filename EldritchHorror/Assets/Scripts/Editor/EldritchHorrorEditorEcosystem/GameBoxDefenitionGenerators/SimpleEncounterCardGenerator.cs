@@ -1,8 +1,8 @@
-using EdlritchDefs.EldritchCards.Data.ClassTypes;
 using EldritchHorror.Cards;
 using GameKit.Editor;
 using System.Collections.Generic;
 using System.Linq;
+using EldritchHorror.Cards.Data;
 using UnityEditor;
 using UnityEngine;
 

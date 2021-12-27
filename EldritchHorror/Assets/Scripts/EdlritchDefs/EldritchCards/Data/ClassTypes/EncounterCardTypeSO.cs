@@ -1,6 +1,5 @@
-using EldritchHorror.Cards;
 
-namespace EdlritchDefs.EldritchCards.Data.ClassTypes {
+namespace EldritchHorror.Cards.Data {
     public class EncounterCardTypeSO : CardTypeSO
     {
         public override CardType Type => CardType.EncounterCards;

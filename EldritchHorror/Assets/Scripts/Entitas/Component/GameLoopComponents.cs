@@ -1,12 +1,9 @@
 #region
-
-using EdlritchDefs.EldritchCards.Data.ClassTypes;
 using EdlritchDefs.GamePlayDefs;
 using EldritchHorror.GameplayStateMachine;
 using EldritchHorror.UI;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
-using System.Collections;
 using System.Collections.Generic;
 
 #endregion

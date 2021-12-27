@@ -2,7 +2,7 @@ using EldritchHorror.Cards;
 using GameKit;
 using UnityEngine;
 
-namespace EdlritchDefs.EldritchCards.Data.ClassTypes {
+namespace EldritchHorror.Cards.Data {
     [AllowMultiItems]
     public class EncounterTypeSO : BaseGameCartSO
     {

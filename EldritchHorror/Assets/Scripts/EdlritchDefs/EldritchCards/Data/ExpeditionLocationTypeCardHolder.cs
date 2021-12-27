@@ -1,4 +1,4 @@
-using EdlritchDefs.EldritchCards.Data.ClassTypes;
+using EldritchHorror.Cards.Data;
 using EldritchHorror.Data.Provider;
 
 namespace EldritchHorror.Cards {

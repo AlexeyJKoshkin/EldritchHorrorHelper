@@ -12,11 +12,6 @@ namespace EldritchHorror.Core
         Type StateType { get; }
     }
 
-    public class StateUIHandlerComposite
-    {
-        
-    }
-
     public class StateUIHandler<TEntity, TState> : IStateUIHandler where TEntity : class where TState : class
     {
         private readonly IEldritchWindowUIProvider _windowUiProvider;

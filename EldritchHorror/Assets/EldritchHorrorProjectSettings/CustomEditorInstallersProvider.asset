@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73581082102e4beb8c45a952e2ab1900, type: 3}
+  m_Script: {fileID: 11500000, guid: edf30d4905c24894801319b59839da16, type: 3}
   m_Name: CustomEditorInstallersProvider
   m_EditorClassIdentifier: 
   _allAvailableInstallers:
@@ -26,9 +26,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f1e270d61144f38b582907e4248aa5, type: 3}
   m_Name: EcoSystemSettingsInstaller
   m_EditorClassIdentifier: 
-  _settings: {fileID: 11400000, guid: 4d5ccb80ec900e749b2d29f25d2377c1, type: 2}
   _dataStorage: {fileID: 11400000, guid: f147e28a48cf1534eb99e443ae55885f, type: 2}
   _installers:
   - {fileID: 11400000, guid: 52d8193813691494f89b728467907582, type: 2}
   - {fileID: 11400000, guid: 4846d53955742c943be7c12a322b11d8, type: 2}
   - {fileID: 11400000, guid: 50e133dd2c7a0704d977defc08624f6a, type: 2}
+  _settings: {fileID: 11400000, guid: 4d5ccb80ec900e749b2d29f25d2377c1, type: 2}

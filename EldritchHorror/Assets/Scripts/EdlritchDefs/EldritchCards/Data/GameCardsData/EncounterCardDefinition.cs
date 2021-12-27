@@ -1,6 +1,5 @@
-using EdlritchDefs.EldritchCards.Data.ClassTypes;
+using EldritchHorror.Cards.Data;
 using GameKit;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace EldritchHorror.Cards {

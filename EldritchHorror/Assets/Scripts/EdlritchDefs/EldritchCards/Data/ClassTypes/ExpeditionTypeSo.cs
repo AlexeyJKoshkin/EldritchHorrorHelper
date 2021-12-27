@@ -1,7 +1,7 @@
 using EldritchHorror.Cards;
 using GameKit;
 
-namespace EdlritchDefs.EldritchCards.Data.ClassTypes {
+namespace EldritchHorror.Cards.Data {
     [AllowMultiItems]
     public class ExpeditionTypeSo : BaseGameCartSO
     {

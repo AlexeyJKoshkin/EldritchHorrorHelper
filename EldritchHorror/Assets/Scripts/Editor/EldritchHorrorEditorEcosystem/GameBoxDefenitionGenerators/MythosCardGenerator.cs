@@ -1,9 +1,8 @@
 #region
-
-using EdlritchDefs.EldritchCards.Data.ClassTypes;
 using EldritchHorror.Cards;
 using System.Collections.Generic;
 using System.Linq;
+using EldritchHorror.Cards.Data;
 using UnityEditor;
 using UnityEngine;
 

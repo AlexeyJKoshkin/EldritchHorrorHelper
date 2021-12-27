@@ -1,6 +1,6 @@
-using EdlritchDefs.EldritchCards.Data.ClassTypes;
 using System;
 using System.Collections.Generic;
+using EldritchHorror.Cards.Data;
 using UnityEngine;
 
 namespace EldritchHorror.Cards {
