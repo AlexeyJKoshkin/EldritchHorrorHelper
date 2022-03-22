@@ -1,18 +1,16 @@
+#region
+
 using System;
 using Entitas;
 
-namespace EldritchHorror.UI {
-    class EntityUIBinder<TEntity> where TEntity : class, IEntity
-    {
-        struct HandlerBox
-        {
-            public Action<IEntity, int, IComponent> UpdateReplcedHandler;
-            public Action UpdateHandler;
-            public Action UpdateClear;
-        }
+#endregion
 
+namespace EldritchHorror.UI
+{
+    internal class EntityUIBinder<TEntity> where TEntity : class, IEntity
+    {
         private HandlerBox _handlerBox;
-        
+
 
         public EntityUIBinder(IUView container)
         {
@@ -68,6 +66,13 @@ namespace EldritchHorror.UI {
         private void OnComponentReplaced(IEntity entity, int index, IComponent previouscomponent, IComponent newcomponent)
         {
             _handlerBox.UpdateReplcedHandler(entity, index, newcomponent);
+        }
+
+        private struct HandlerBox
+        {
+            public Action<IEntity, int, IComponent> UpdateReplcedHandler;
+            public Action UpdateHandler;
+            public Action UpdateClear;
         }
     }
 }

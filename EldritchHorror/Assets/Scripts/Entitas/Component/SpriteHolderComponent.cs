@@ -1,7 +1,7 @@
 #region
 
-using Entitas;
 using System;
+using Entitas;
 using UnityEngine;
 
 #endregion

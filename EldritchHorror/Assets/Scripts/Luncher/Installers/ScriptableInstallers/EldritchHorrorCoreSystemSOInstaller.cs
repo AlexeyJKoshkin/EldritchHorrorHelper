@@ -25,7 +25,6 @@ namespace EldritchHorror
  
                                                 typeof(SetClickedMythosCardToPreview),
                                                 typeof(SetClickedEncounterCardToPreview),
-                                                typeof(GameLoopUIUpdateSystem),
                                                 typeof(TurnPhaseStateSystem),
                                                 typeof(TurnPhaseSwitcherSystem),
                                                 typeof(MainLoopSwitcherSystem)

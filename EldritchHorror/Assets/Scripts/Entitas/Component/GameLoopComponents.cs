@@ -1,10 +1,11 @@
 #region
+
+using System.Collections.Generic;
 using EdlritchDefs.GamePlayDefs;
 using EldritchHorror.GameplayStateMachine;
 using EldritchHorror.UI;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
-using System.Collections.Generic;
 
 #endregion
 
@@ -13,7 +14,7 @@ namespace EldritchHorror.Entitas.Components
     public abstract class StateReadyComponent { }
 
     [GameLoop, Unique]
-    public class InGameMythosDeckComponent :EncounterDeckComponent, IComponent
+    public class InGameMythosDeckComponent : EncounterDeckComponent, IComponent
     {
         public Stack<EldritchCardEntity> History;
     }
@@ -91,10 +92,7 @@ namespace EldritchHorror.Entitas.Components
     ///     Текущая фаза хода
     /// </summary>
     [GameLoop]
-    public class CurrentGamePhaseComponent : StateHolderComponent<IGameRoundPhase, GameLoopEntity>,  IComponent
-    {
-
-    }
+    public class CurrentGamePhaseComponent : StateHolderComponent<IGameRoundPhase, GameLoopEntity>, IComponent { }
 
     [GameLoop, Unique]
     public class TurnCounterComponent : IComponent
@@ -103,13 +101,13 @@ namespace EldritchHorror.Entitas.Components
     }
 
     [GameLoop]
-    public class PhaseReadyComponent : StateReadyComponent,IComponent { }
+    public class PhaseReadyComponent : StateReadyComponent, IComponent { }
 
     public abstract class EncounterDeckComponent : CardDeckComponent<EldritchCardEntity>
     {
-//        public EncounterTypeSO EncounterType;
+        //        public EncounterTypeSO EncounterType;
     }
-    
+
     [GameLoop]
     public class AmericaCardDeckComponent : EncounterDeckComponent, IComponent { }
 

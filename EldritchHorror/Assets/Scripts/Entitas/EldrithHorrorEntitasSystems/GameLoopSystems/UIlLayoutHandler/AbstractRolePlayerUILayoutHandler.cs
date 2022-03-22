@@ -1,15 +1,13 @@
-using EldritchHorror.UI;
-using Entitas;
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Entitas;
+using JetBrains.Annotations;
 
 namespace EldritchHorror.EntitasSystems
 {
     public abstract class AbstractRolePlayerUILayoutHandler : IEnumerable<IUpdateUiReactionAdapter>
     {
-       
         private readonly List<IUpdateUiReactionAdapter> _uiHandler = new List<IUpdateUiReactionAdapter>();
         private readonly Contexts _contexts;
 
@@ -18,12 +16,8 @@ namespace EldritchHorror.EntitasSystems
             _contexts = context;
             CreateAdapters();
         }
-        
-        void CreateAdapters()
-        {
-        
 
-        }
+        private void CreateAdapters() { }
 
         private Builder<T> OnEntityChange<T>() where T : class, IEntity
         {
@@ -71,7 +65,7 @@ namespace EldritchHorror.EntitasSystems
                 _adapter = null;
             }
         }
-        
+
 
         public IEnumerator<IUpdateUiReactionAdapter> GetEnumerator()
         {

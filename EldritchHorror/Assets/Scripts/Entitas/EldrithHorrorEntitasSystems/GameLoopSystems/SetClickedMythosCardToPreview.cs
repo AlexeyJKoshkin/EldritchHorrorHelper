@@ -1,9 +1,9 @@
 #region
 
+using System.Collections.Generic;
 using EldritchHorror.Entitas.Components;
 using EldritchHorror.UI;
 using Entitas;
-using System.Collections.Generic;
 using UnityEngine;
 
 #endregion
@@ -13,11 +13,12 @@ namespace EldritchHorror.EntitasSystems
     internal class SetClickedMythosCardToPreview : ReactiveSystem<EldritchCardEntity>
     {
         private readonly Contexts _context;
+        private IEldritchWindowUIProvider _provider;
 
-        public SetClickedMythosCardToPreview(Contexts context) : base(context.eldritchCard)
+        public SetClickedMythosCardToPreview(Contexts context, IEldritchWindowUIProvider provider) : base(context.eldritchCard)
         {
             _context  = context;
-   
+            _provider = provider;
         }
 
         protected override ICollector<EldritchCardEntity> GetTrigger(IContext<EldritchCardEntity> context)
@@ -37,27 +38,30 @@ namespace EldritchHorror.EntitasSystems
             {
                 return;
             }
+
             SetPreviewIfPossible(entities[0]);
         }
 
         private void SetPreviewIfPossible(EldritchCardEntity fe)
         {
             Debug.LogError("SetPreviewIfPossible");
-            /*if (fe.mythosState.State != MythosStateCardType.Open)
+            if (fe.mythosState.State != MythosStateCardType.Open)
             {
                 return;
             }
 
-            if (_provider.Window.PreviewCardImage.Current == fe) // значит клик прошел по вревьюшке
+            var window = _provider.GetWindow<MainGameUIWindow>();
+
+            if (window.PreviewCardImage.Current == fe) // значит клик прошел по вревьюшке
             {
-                _provider.Window.PreviewCardImage.ClearView();
+                window.PreviewCardImage.ClearView();
                 return;
             }
 
-            _provider.Window.PreviewCardImage.Bind(fe);*/
+            window.PreviewCardImage.Bind(fe);
         }
     }
-    
+
     internal class SetClickedEncounterCardToPreview : ReactiveSystem<EldritchCardEntity>
     {
         private readonly Contexts _context;
@@ -65,8 +69,7 @@ namespace EldritchHorror.EntitasSystems
 
         public SetClickedEncounterCardToPreview(Contexts context) : base(context.eldritchCard)
         {
-            _context  = context;
-
+            _context = context;
         }
 
         protected override ICollector<EldritchCardEntity> GetTrigger(IContext<EldritchCardEntity> context)

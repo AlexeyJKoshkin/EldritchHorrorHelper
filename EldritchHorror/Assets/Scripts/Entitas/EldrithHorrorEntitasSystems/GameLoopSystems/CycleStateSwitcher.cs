@@ -1,11 +1,11 @@
-using EldritchHorror.Core;
-using Entitas;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using EldritchHorror.Core;
+using Entitas;
 
-namespace EldritchHorror.EntitasSystems {
-    public abstract class CycleStateSwitcher<T, TPhase> : ReactiveSystem<T> where T :class, IEntity  where TPhase:IStateMachineState<T>
+namespace EldritchHorror.EntitasSystems
+{
+    public abstract class CycleStateSwitcher<T, TPhase> : ReactiveSystem<T> where T : class, IEntity where TPhase : IStateMachineState<T>
     {
         protected readonly CycleStateBox StateBox;
 
@@ -20,7 +20,7 @@ namespace EldritchHorror.EntitasSystems {
         }
 
         protected abstract IMatcher<T> ReadyStateMatcher { get; }
-        
+
         protected override void Execute(List<T> entities)
         {
             var e = entities.SingleEntity();
@@ -28,15 +28,16 @@ namespace EldritchHorror.EntitasSystems {
         }
 
         protected abstract void HandleNextPhase(TPhase nextState, T entity);
-        
-      protected  class CycleStateBox
+
+        protected class CycleStateBox
         {
             private int _currentIndexPhase;
             private readonly List<TPhase> _phases;
 
             public CycleStateBox(TPhase[] phases)
             {
-                _phases = phases.ToList();_phases.Sort();
+                _phases = phases.ToList();
+                _phases.Sort();
             }
 
             public TPhase GetNext()
@@ -46,10 +47,8 @@ namespace EldritchHorror.EntitasSystems {
                 {
                     return default;
                 }
-                else
-                {
-                    return _phases[_currentIndexPhase];
-                }
+
+                return _phases[_currentIndexPhase];
             }
 
             public void Reset()

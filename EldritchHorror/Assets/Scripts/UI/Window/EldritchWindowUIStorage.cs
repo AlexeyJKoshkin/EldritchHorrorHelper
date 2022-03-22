@@ -1,11 +1,8 @@
-#region
-
-using GameKit;
 using System.Collections.Generic;
 using System.Linq;
+using GameKit;
 using UnityEngine;
 
-#endregion
 
 namespace EldritchHorror.UI
 {

@@ -31,12 +31,12 @@ namespace EldritchHorror.GameplayStateMachine
 
         protected override void OnEnter(GameLoopEntity stateEntity)
         {
-            HLogger.LogError($"Enter {GetType().Name}");
+            HLogger.LogInfo($"Enter {GetType().Name}");
         }
 
         protected override void OnExit(GameLoopEntity stateEntity)
         {
-            HLogger.LogError($"Exit {GetType().Name}");
+            HLogger.LogInfo($"Exit {GetType().Name}");
         }
 
     }

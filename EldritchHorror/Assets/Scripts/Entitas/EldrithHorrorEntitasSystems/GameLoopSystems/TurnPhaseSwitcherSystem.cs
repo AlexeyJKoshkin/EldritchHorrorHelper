@@ -2,8 +2,6 @@
 
 using EldritchHorror.GameplayStateMachine;
 using Entitas;
-using System;
-using System.Linq;
 
 #endregion
 
@@ -14,21 +12,20 @@ namespace EldritchHorror.EntitasSystems
         void NewTurn();
     }
 
-    public class TurnPhaseSwitcherSystem : CycleStateSwitcher<GameLoopEntity,IGameRoundPhase>, ITurnPhaseSwitcherSystem
+    public class TurnPhaseSwitcherSystem : CycleStateSwitcher<GameLoopEntity, IGameRoundPhase>, ITurnPhaseSwitcherSystem
     {
         private readonly GameLoopContext _context;
 
         public TurnPhaseSwitcherSystem(GameLoopContext context, IGameRoundPhase[] phases) : base(context, phases)
         {
             _context = context;
-
         }
 
         public void NewTurn()
         {
-            this.StateBox.Reset();
+            StateBox.Reset();
             var entity = _context.CreateEntity();
-            HandleNextPhase(this.StateBox.GetNext(), entity);
+            HandleNextPhase(StateBox.GetNext(), entity);
         }
 
         protected override IMatcher<GameLoopEntity> ReadyStateMatcher => Matcher<GameLoopEntity>.AllOf(GameLoopMatcher.PhaseReady, GameLoopMatcher.CurrentGamePhase);

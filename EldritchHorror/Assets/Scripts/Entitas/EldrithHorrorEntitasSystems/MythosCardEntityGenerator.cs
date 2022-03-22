@@ -1,10 +1,10 @@
 #region
 
+using System.Collections.Generic;
+using System.Linq;
 using EldritchHorror.Cards;
 using EldritchHorror.Data.Provider;
 using EldritchHorror.UserProfile;
-using System.Collections.Generic;
-using System.Linq;
 
 #endregion
 
@@ -12,8 +12,7 @@ namespace EldritchHorror.EntitasSystems
 {
     public interface IMythosCardEntityGenerator
     {
-
-        List<MythosCardDataDefinition> GenerateBySave(List<GameBoxDef> gameboxes, AncientCardDataDefinition ancientCard,MythosCardSaveSettings mythosCardSaveSettings);
+        List<MythosCardDataDefinition> GenerateBySave(List<GameBoxDef> gameboxes, AncientCardDataDefinition ancientCard, MythosCardSaveSettings mythosCardSaveSettings);
     }
 
     public class MythosCardEntityGenerator : IMythosCardEntityGenerator

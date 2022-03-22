@@ -1,5 +1,4 @@
 using EldritchHorror.Entitas.Components;
-using Entitas;
 using UnityEngine;
 
 namespace EldritchHorror.UI
@@ -9,15 +8,15 @@ namespace EldritchHorror.UI
         public CurrentCardDeckView AmericaDeckView;
         public CurrentCardDeckView AsiaAustraliaDeckView;
         public CurrentCardDeckView EuropeDeckView;
-        public CurrentCardDeckView OtherWorldDeckView;
-        public CurrentCardDeckView GeneralWorldDeckView;
-        public CurrentCardDeckView ResearchWorldDeckView;
         public CurrentCardDeckView ExpeditionDeckView;
-        public CurrentCardDeckView SpecialDeckView;
+        public CurrentCardDeckView GeneralWorldDeckView;
         /// <summary>
-        /// Колода мифов
+        ///     Колода мифов
         /// </summary>
         [SerializeField] public CurrentCardDeckView MythosDeckView;
+        public CurrentCardDeckView OtherWorldDeckView;
+        public CurrentCardDeckView ResearchWorldDeckView;
+        public CurrentCardDeckView SpecialDeckView;
 
 
         private CurrentCardDeckView GetDeck(int index)
@@ -29,17 +28,26 @@ namespace EldritchHorror.UI
                 case GameLoopComponentsLookup.EuropeCardDeck:        return EuropeDeckView;
                 case GameLoopComponentsLookup.OtherWorldCardDeck:    return OtherWorldDeckView;
                 case GameLoopComponentsLookup.GeneralCardDeck:       return GeneralWorldDeckView;
-                case GameLoopComponentsLookup.InGameMythosDeck: return MythosDeckView;
+                case GameLoopComponentsLookup.InGameMythosDeck:      return MythosDeckView;
             }
+
             return null;
         }
 
         public void TryUpdateDeckView(GameLoopEntity entity, int index)
         {
             var deck = GetDeck(index);
-            if(deck == null) return;
+            if (deck == null)
+            {
+                return;
+            }
+
             EncounterDeckComponent component = entity.GetComponent(index) as EncounterDeckComponent;
-            if(component == null) return;
+            if (component == null)
+            {
+                return;
+            }
+
             deck.CardCounter = component.Count;
         }
 
@@ -48,8 +56,10 @@ namespace EldritchHorror.UI
             foreach (var index in e.GetComponentIndices())
             {
                 var component = e.GetComponent(index);
-                if(component is EncounterDeckComponent)
+                if (component is EncounterDeckComponent)
+                {
                     TryUpdateDeckView(e, index);
+                }
             }
         }
     }

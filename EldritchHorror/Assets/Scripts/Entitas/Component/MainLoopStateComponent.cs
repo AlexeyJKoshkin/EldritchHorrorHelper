@@ -2,8 +2,6 @@
 
 using System.Collections.Generic;
 using EldritchHorror.Cards;
-using EldritchHorror.Core;
-using EldritchHorror.UI;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
@@ -16,12 +14,17 @@ namespace EldritchHorror.Entitas.Components
 
     [MainLoop, EldritchCard, GameLoop]
     public class IsReady : IComponent { }
-    
+
     [MainLoop]
     public class PlayerRoleComponent : IComponent
     {
         public bool IsMaster;
         public bool IsLeader;
+
+        public override string ToString()
+        {
+            return IsMaster ? $"Master Leader {IsLeader}" : $"Leader {IsLeader}";
+        }
     }
 
     [MainLoop]
@@ -35,5 +38,4 @@ namespace EldritchHorror.Entitas.Components
     {
         public AncientCardDataDefinition AncientCard;
     }
-
 }

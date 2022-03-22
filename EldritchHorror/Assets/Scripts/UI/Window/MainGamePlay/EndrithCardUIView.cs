@@ -46,10 +46,7 @@ namespace EldritchHorror.UI
             gameObject.SetActive(true);
         }
 
-        public override void UpdateView(IEntity e, int index, IComponent component)
-        {
-            
-        }
+        public override void UpdateView(IEntity e, int index, IComponent component) { }
 
         protected override void DoClear()
         {

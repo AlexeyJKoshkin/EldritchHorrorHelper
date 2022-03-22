@@ -2,7 +2,8 @@ using EldritchHorror.Core;
 using EldritchHorror.Entitas.Components;
 using Entitas;
 
-namespace EldritchHorror.EntitasSystems {
+namespace EldritchHorror.EntitasSystems
+{
     public abstract class BaseStateEnterExitSystem<TEntity, TState> : ITearDownSystem where TEntity : class, IEntity where TState : IStateMachineState<TEntity>
     {
         private readonly IUiHandleDispatcher _uiHandleDispatcher;
@@ -18,7 +19,7 @@ namespace EldritchHorror.EntitasSystems {
         protected abstract IMatcher<TEntity> StateComponentIndex { get; }
 
 
-        void Initialize()
+        private void Initialize()
         {
             _group.OnEntityAdded   += GroupOnOnEntityAdded;
             _group.OnEntityRemoved += GroupOnEntityRemoved;

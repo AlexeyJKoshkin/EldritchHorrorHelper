@@ -581,6 +581,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
+            <e p="CanGenerateAttribute.cs" t="Include" />
             <e p="CommonExtension.cs" t="Include" />
             <e p="DataStorage" t="Include">
               <e p="DataBox.cs" t="Include" />
@@ -602,6 +603,32 @@
             </e>
           </e>
           <e p="Editor" t="Include">
+            <e p="CodeGenerator" t="Include">
+              <e p="EnumGeneratorWindow" t="Include">
+                <e p="AdditionalInfoSettings.cs" t="Include" />
+                <e p="EditableEnumValuesCandidate.cs" t="Include" />
+                <e p="EnumGeneratorLayout.cs" t="Include" />
+                <e p="EnumGeneratorWindow.cs" t="Include" />
+                <e p="EnumValueMeta.cs" t="Include" />
+                <e p="EnumWindowArea.cs" t="Include" />
+                <e p="OldEnumFileParser.cs" t="Include" />
+              </e>
+              <e p="GeneratorAssembly" t="Include">
+                <e p="BaseCodeGenerator.cs" t="Include" />
+                <e p="ClassGenerator" t="Include">
+                  <e p="ClassGenerator.cs" t="Include" />
+                  <e p="EnumExtensionGenerator.cs" t="Include" />
+                </e>
+                <e p="CodeGeneratorConst.cs" t="Include" />
+                <e p="EnumGenerator.cs" t="Include" />
+                <e p="GeneratorUtils.cs" t="Include" />
+                <e p="Interfaces" t="Include">
+                  <e p="IAdditionalEnumInfo.cs" t="Include" />
+                  <e p="IEnumMetaData.cs" t="Include" />
+                  <e p="IEnumValueMeta.cs" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="Eldritch" t="Include">
               <e p="CustomInspectors" t="Include">
                 <e p="BaseCardDataSOEditor.cs" t="Include" />
@@ -698,9 +725,13 @@
             <e p="EldritchGameRound.cs" t="Include" />
             <e p="EldritchOmen.cs" t="Include" />
             <e p="GameplayStateMachine" t="Include">
+              <e p="ActionGamePhase.cs" t="Include" />
+              <e p="EncounterGamePhase.cs" t="Include" />
+              <e p="EndTurnGamePhase.cs" t="Include" />
               <e p="IMythosCardActionResolver.cs" t="Include" />
               <e p="MainGamePlayState.cs" t="Include" />
               <e p="MythosPhase.cs" t="Include" />
+              <e p="PrepareGamePhase.cs" t="Include" />
             </e>
             <e p="IGameLoopState.cs" t="Include" />
             <e p="IGameLoopStateMachine.cs" t="Include" />
@@ -736,7 +767,6 @@
               <e p="EldritchCardContextExtension.cs" t="Include" />
               <e p="GameLoopSystems" t="Include">
                 <e p="CycleStateSwitcher.cs" t="Include" />
-                <e p="GameLoopUIUpdateSystem.cs" t="Include" />
                 <e p="SetClickedMythosCardToPreview.cs" t="Include" />
                 <e p="TurnPhaseStateSystem.cs" t="Include" />
                 <e p="TurnPhaseSwitcherSystem.cs" t="Include" />
@@ -747,6 +777,7 @@
                 <e p="UpdateUIReactionAdapter.cs" t="Include" />
               </e>
               <e p="HelperExtensions.cs" t="Include" />
+              <e p="IUiHandleDispatcher.cs" t="Include" />
               <e p="MainLoopInitializeSystem.cs" t="Include" />
               <e p="MainLoopSwitcherSystem.cs" t="Include" />
               <e p="MythosCardEntityGenerator.cs" t="Include" />
@@ -858,6 +889,7 @@
             <e p="MainSceneContext.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="GameLoopGameStateUIHandler.cs" t="Include" />
             <e p="IStateUIHandler.cs" t="Include" />
             <e p="MainMenuUIHandler.cs" t="Include" />
             <e p="MoveableUIElement.cs" t="Include" />
@@ -865,6 +897,7 @@
             <e p="Window" t="Include">
               <e p="EldritchWindow.cs" t="Include" />
               <e p="EldritchWindowUIStorage.cs" t="Include" />
+              <e p="EldrtichUIComponent.cs" t="Include" />
               <e p="GameMasterCardDeckPanelView.cs" t="Include" />
               <e p="IEldritchWindow.cs" t="Include" />
               <e p="IEldritchWindowUIStorage.cs" t="Include" />
@@ -945,7 +978,6 @@
         <e p="GameKit" t="Include">
           <e p="Attributes" t="Include">
             <e p="AllowMultiItemsAttribute.cs" t="Include" />
-            <e p="CanGenerateAttribute.cs" t="Include" />
             <e p="CustomEnumNameAttribute.cs" t="Include" />
             <e p="CustomGUIContentAttribute.cs" t="Include" />
             <e p="ReadOnlyAttribute.cs" t="Include" />
@@ -954,33 +986,6 @@
           <e p="ColoredStyles.cs" t="Include" />
           <e p="CommonExtension.cs" t="Include" />
           <e p="Editor" t="Include">
-            <e p="CodeGenerator" t="Include">
-              <e p="EnumGeneratorWindow" t="Include">
-                <e p="AdditionalInfoSettings.cs" t="Include" />
-                <e p="EditableEnumValuesCandidate.cs" t="Include" />
-                <e p="EnumGeneratorLayout.cs" t="Include" />
-                <e p="EnumGeneratorWindow.cs" t="Include" />
-                <e p="EnumValueMeta.cs" t="Include" />
-                <e p="EnumWindowArea.cs" t="Include" />
-                <e p="OldEnumFileParser.cs" t="Include" />
-              </e>
-              <e p="GeneratorAssembly" t="Include">
-                <e p="BaseCodeGenerator.cs" t="Include" />
-                <e p="ClassGenerator" t="Include">
-                  <e p="ClassGenerator.cs" t="Include" />
-                  <e p="EnumExtensionGenerator.cs" t="Include" />
-                </e>
-                <e p="CodeGeneratorConst.cs" t="Include" />
-                <e p="EnumGenerator.cs" t="Include" />
-                <e p="GeneratorUtils.cs" t="Include" />
-                <e p="Interfaces" t="Include">
-                  <e p="IAdditionalEnumInfo.cs" t="Include" />
-                  <e p="IEnumMetaData.cs" t="Include" />
-                  <e p="IEnumValueMeta.cs" t="Include" />
-                </e>
-                <e p="Interfaces.cs" t="Include" />
-              </e>
-            </e>
             <e p="CollapseAll.cs" t="Include" />
             <e p="CustomEditorStyles.cs" t="Include" />
             <e p="CustomReordableList.cs" t="Include" />
@@ -1013,6 +1018,7 @@
             <e p="InputWindow" t="Include">
               <e p="BaseInputWindow.cs" t="Include" />
             </e>
+            <e p="Interfaces.cs" t="Include" />
             <e p="LightReordableList.cs" t="Include" />
             <e p="ObjectSelectionWindow" t="Include">
               <e p="CustomSelectionWindow.cs" t="Include" />
@@ -1082,6 +1088,7 @@
               <e p="ToolbarGUI.cs" t="Include" />
               <e p="UnityToolBarWindow.cs" t="Include" />
             </e>
+            <e p="TransformInspector.cs" t="Include" />
             <e p="TreeView" t="Include">
               <e p="TreeViewGUILayout.cs" t="Include" />
               <e p="TreeViewItem.cs" t="Include" />

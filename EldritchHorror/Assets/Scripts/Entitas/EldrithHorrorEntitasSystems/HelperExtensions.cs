@@ -1,9 +1,9 @@
 #region
 
-using EldritchHorror.Cards;
-using EldritchHorror.UserProfile;
 using System.Collections.Generic;
 using System.Linq;
+using EldritchHorror.Cards;
+using EldritchHorror.UserProfile;
 
 #endregion
 

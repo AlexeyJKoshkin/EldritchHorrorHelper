@@ -1,9 +1,6 @@
-#region
-
 using System.Collections.Generic;
 using System.Linq;
 
-#endregion
 
 namespace EldritchHorror.UI
 {
@@ -17,7 +14,7 @@ namespace EldritchHorror.UI
         T GetWindow<T>() where T : IEldritchWindow;
     }
 
-    
+
     public class EldritchWindowUIProvider : IEldritchWindowUIProvider
     {
         public IEldritchWindowUIStorage Storage;
@@ -28,6 +25,7 @@ namespace EldritchHorror.UI
             {
                 return default;
             }
+
             return (T) Storage.AllWindows.FirstOrDefault(o => o is T);
         }
     }

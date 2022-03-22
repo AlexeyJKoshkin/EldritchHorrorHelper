@@ -47,6 +47,9 @@ namespace EldritchHorror.GameplayStateMachine
             GameLoopContext.ReplaceInGameMythosDeck(GameLoopContext.inGameMythosDeck.History, GameLoopContext.inGameMythosDeck.CardOrder);
         }
 
+        /// <summary>
+        /// Обработкать действие карты мифа 
+        /// </summary>
         private void Handle(MythosCardDataDefinition def)
         {
             foreach (var influenceTypeSo in def.MythosCardType.InfluenceTypeSos)
@@ -87,59 +90,5 @@ namespace EldritchHorror.GameplayStateMachine
         {
             _omen = omen;
         }
-    }
-
-    //фейковый подготовительный стейт
-    public class PrepareGamePhase : MainGamePlayState
-    {
-        public override int Order => 10;
-
-        protected override void OnEnter(GameLoopEntity stateEntity)
-        {
-            base.OnEnter(stateEntity);
-            GameLoopContext.ReplaceTurnCounter(GameLoopContext.turnCounter.Turn +1);
-            stateEntity.isPhaseReady = true;
-        }
-
-
-        public PrepareGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
-    }
-
-    //фейковый окончательный стейт
-    public class EndTurnGamePhase : MainGamePlayState
-    {
-        public override int Order => 50;
-
-
-        public EndTurnGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
-    }
-
-    public class ActionGamePhase : MainGamePlayState {
-        public override int Order => 20;
-
-
-        public ActionGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
-    }
-
-    public class EncounterGamePhase : MainGamePlayState
-    {
-        public override int Order => 30;
-
-
-        protected override void OnEnter(GameLoopEntity stateEntity)
-        {
-            base.OnEnter(stateEntity);
-          
-            stateEntity.isPhaseReady = true;
-        }
-
-        protected override void OnExit(GameLoopEntity stateEntity)
-        {
-            base.OnExit(stateEntity);
-
-        }
-
-
-        public EncounterGamePhase(Contexts gameLoopContext) : base(gameLoopContext) { }
     }
 }

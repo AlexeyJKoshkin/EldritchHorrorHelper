@@ -1,10 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using EldritchHorror.Core;
 using EldritchHorror.UI;
 using Entitas;
-using System.Collections;
-using System.Collections.Generic;
 
-namespace EldritchHorror.Entitas.Components 
+namespace EldritchHorror.Entitas.Components
 {
     public interface IStatHolderComponent<out T, TEntity> where T : IStateMachineState<TEntity> where TEntity : class, IEntity
     {
@@ -21,7 +21,7 @@ namespace EldritchHorror.Entitas.Components
             return Current == null ? 0 : Current.CompareTo(obj);
         }
     }
-    
+
     public class BaseCollectionComponent<T> : IEnumerable<T>
     {
         public List<T> List;

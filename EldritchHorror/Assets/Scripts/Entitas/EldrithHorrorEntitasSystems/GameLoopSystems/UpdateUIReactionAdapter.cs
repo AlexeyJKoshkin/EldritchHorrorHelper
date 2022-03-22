@@ -1,10 +1,8 @@
 #region
 
-using Entitas;
-using GameKit.Editor;
-using JetBrains.Annotations;
-using System;
 using System.Collections.Generic;
+using Entitas;
+using JetBrains.Annotations;
 
 #endregion
 
@@ -26,7 +24,7 @@ namespace EldritchHorror.EntitasSystems
     {
         private readonly IGroup<T> _getGroup;
         private readonly IEntityUpdateHandlerUI<T> _handlerUi;
-        Bucket _bucket = new Bucket();
+        private Bucket _bucket = new Bucket();
 
         public UpdateUIReactionAdapter([NotNull] IGroup<T> group, [NotNull] IEntityUpdateHandlerUI<T> handlerUi)
         {
@@ -71,15 +69,9 @@ namespace EldritchHorror.EntitasSystems
 
         public void Execute()
         {
-            foreach ((int  index, T e) item in _bucket.AllUpdate())
-            {
-                _handlerUi.UpdateEntityUI(item.e, item.index, item.e.GetComponent(item.index));
-            }
-            
-            foreach ((int  index, T e) item in _bucket.AllRemoved())
-            {
-                _handlerUi.ClearFromEntity(item.e, item.index);
-            }
+            foreach ((int index, T e) item in _bucket.AllUpdate()) _handlerUi.UpdateEntityUI(item.e, item.index, item.e.GetComponent(item.index));
+
+            foreach ((int index, T e) item in _bucket.AllRemoved()) _handlerUi.ClearFromEntity(item.e, item.index);
         }
 
 
@@ -98,27 +90,29 @@ namespace EldritchHorror.EntitasSystems
         {
             _bucket.GetUpdateBucket(index).Add(entity);
         }
-        
+
         private class Bucket
         {
-            readonly Dictionary<int, HashSet<T>> _removeBucket = new Dictionary<int, HashSet<T>>();
-            readonly Dictionary<int, HashSet<T>> _updateBucket = new Dictionary<int, HashSet<T>>();
-            
+            private readonly Dictionary<int, HashSet<T>> _removeBucket = new Dictionary<int, HashSet<T>>();
+            private readonly Dictionary<int, HashSet<T>> _updateBucket = new Dictionary<int, HashSet<T>>();
+
             public HashSet<T> GetRemovedBucket(int index)
             {
                 return GetBucket(_removeBucket, index);
             }
+
             public HashSet<T> GetUpdateBucket(int index)
             {
                 return GetBucket(_updateBucket, index);
             }
-        
-            private HashSet<T> GetBucket(Dictionary<int, HashSet<T>> d,int index)
+
+            private HashSet<T> GetBucket(Dictionary<int, HashSet<T>> d, int index)
             {
                 if (!d.ContainsKey(index))
                 {
                     d.Add(index, new HashSet<T>());
                 }
+
                 return d[index];
             }
 
@@ -126,13 +120,13 @@ namespace EldritchHorror.EntitasSystems
             {
                 return GetAll(_updateBucket);
             }
-            
+
             public IEnumerable<(int index, T e)> AllRemoved()
             {
                 return GetAll(_removeBucket);
             }
-            
-            Queue<T> _queue = new Queue<T>();
+
+            private Queue<T> _queue = new Queue<T>();
 
             private IEnumerable<(int index, T e)> GetAll(Dictionary<int, HashSet<T>> updateBucket)
             {
@@ -140,23 +134,17 @@ namespace EldritchHorror.EntitasSystems
                 {
                     _queue = new Queue<T>(pair.Value);
                     pair.Value.Clear();
-                    while (_queue.Count > 0)
-                    {
-                        yield return (pair.Key, _queue.Dequeue());
-                    }
+                    while (_queue.Count > 0) yield return (pair.Key, _queue.Dequeue());
                 }
             }
-
-         
         }
-        
-      
+
 
         private class Mock : IEntityUpdateHandlerUI<T>
         {
             private readonly OnRemoveEntityUIHandler<T> _clear;
             private readonly OnUpdateEntityUIHandler<T> _update;
-            
+
 
             public Mock(OnRemoveEntityUIHandler<T> clear, OnUpdateEntityUIHandler<T> update)
             {

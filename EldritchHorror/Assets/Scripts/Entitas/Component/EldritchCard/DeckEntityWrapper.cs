@@ -1,6 +1,6 @@
-using Entitas;
 using System;
 using System.Collections.Generic;
+using Entitas;
 
 namespace EldritchHorror.Entitas.Components
 {
@@ -28,15 +28,16 @@ namespace EldritchHorror.Entitas.Components
         public void Next()
         {
             var queue = _componentGetter?.Invoke()?.CardOrder;
-            if (queue == null) return;
+            if (queue == null)
+            {
+                return;
+            }
+
             Draft.Push(queue.Dequeue());
             if (queue.Count == 0)
             {
                 List<EldritchCardEntity> list = new List<EldritchCardEntity>(Draft);
-                while (list.Count > 0)
-                {
-                    queue.Enqueue(list.GetRandom(true));
-                }
+                while (list.Count > 0) queue.Enqueue(list.GetRandom(true));
 
                 Draft.Clear();
             }
@@ -47,7 +48,11 @@ namespace EldritchHorror.Entitas.Components
         public void Back()
         {
             var queue = _componentGetter?.Invoke()?.CardOrder;
-            if (queue == null) return;
+            if (queue == null)
+            {
+                return;
+            }
+
             if (Draft.Count > 0)
             {
                 queue.Enqueue(Draft.Pop());

@@ -26,9 +26,7 @@ namespace EldritchHorror.Entitas.Components
 
     [EldritchCard]
     public class FrontSpriteComponent : SpriteComponent { }
+
     [EldritchCard]
     public class BackSpriteComponent : SpriteComponent { }
-
-
-
 }

@@ -52,24 +52,40 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\BaseCodeGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\StateMachineTypesProviderCodeGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorEcosystemInfrastructure.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\EcoSystemSettingsInstaller.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchMenu.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\GeneratorUtils.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\OldEnumFileParser.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\CustomEditorInstallersProviderInspector.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorPathProvider.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\AncientCardGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\EditorProjectPathSettings.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\ClassGenerator\EnumExtensionGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\EditableEnumValuesCandidate.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\EnumWindowArea.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\EnumGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\UserSaveProfileStorageTest.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\CodeGeneratorConst.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\Interfaces\IEnumValueMeta.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IDataProvider.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\ClassGenerator\ClassGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\Interfaces\IEnumMetaData.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\Settings\SingletonSettings.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\GameBoxDefenitionGenerators\MythosCardGenerator.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\EnumGeneratorLayout.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\AllCodeGeneratorWindow.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGenerator\IEldritchHorrorCodeGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\IEldritchHorrorEditorEcosystem.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\EnumGeneratorWindow.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\GeneratorAssembly\Interfaces\IAdditionalEnumInfo.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EldritchHorrorEditorEcosystemLauncher.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\EnumValueMeta.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\CodeGeneratorUnityMenu.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\EditorInstallers\BaseCustomEditorInstaller.cs" />
+     <Compile Include="Assets\Scripts\Editor\CodeGenerator\EnumGeneratorWindow\AdditionalInfoSettings.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\BaseDataBoxInspectorEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\Eldritch\CustomInspectors\EldritchHorrorEditorEcosystemLauncherEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EldritchHorrorEditorEcosystem\DiContainerWrapper.cs" />

@@ -1,7 +1,5 @@
-using EldritchHorror.UserProfile;
 using Entitas;
 using UnityEngine;
-
 
 namespace EldritchHorror.EntitasSystems
 {
@@ -9,7 +7,7 @@ namespace EldritchHorror.EntitasSystems
     ///     Инициализация главного игрового цикла
     ///     содержит список стейтов основного цикла игры (Загрузка профиля, Показ Меню, запуск игрового цикла и т.д)
     /// </summary>
-    public class MainLoopInitializeSystem :CycleStateSwitcher<MainLoopEntity,IGameLoopState>, IInitializeSystem
+    public class MainLoopInitializeSystem : CycleStateSwitcher<MainLoopEntity, IGameLoopState>, IInitializeSystem
     {
         private readonly IContext<MainLoopEntity> _mainLoop;
 
@@ -30,7 +28,7 @@ namespace EldritchHorror.EntitasSystems
         }
 
         protected override IMatcher<MainLoopEntity> ReadyStateMatcher => Matcher<MainLoopEntity>.AllOf(MainLoopComponentsLookup.IsReady, MainLoopComponentsLookup.MainLoopState);
-        
+
         protected override void HandleNextPhase(IGameLoopState nextState, MainLoopEntity entity)
         {
             if (nextState == null)

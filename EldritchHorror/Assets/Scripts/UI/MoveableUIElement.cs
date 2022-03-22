@@ -1,10 +1,7 @@
-#region
-
 using GameKit;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-#endregion
 
 public class MoveableUIElement : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
