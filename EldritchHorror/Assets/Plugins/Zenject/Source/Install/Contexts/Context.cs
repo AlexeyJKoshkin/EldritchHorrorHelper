@@ -109,8 +109,12 @@ namespace Zenject
                 Assert.IsNotNull(installer, "Found null installer in Context '{0}'", name);
 
 #if UNITY_EDITOR
-//                Assert.That(PrefabUtility.GetPrefabType(installer.gameObject) != PrefabType.Prefab,
-//                    "Found prefab with name '{0}' in the Installer property of Context '{1}'.  You should use the property 'InstallerPrefabs' for this instead.", installer.name, name);
+#if UNITY_2018_3_OR_NEWER
+                Assert.That(!PrefabUtility.IsPartOfPrefabAsset(installer.gameObject),
+#else
+                Assert.That(PrefabUtility.GetPrefabType(installer.gameObject) != PrefabType.Prefab,
+#endif
+                    "Found prefab with name '{0}' in the Installer property of Context '{1}'.  You should use the property 'InstallerPrefabs' for this instead.", installer.name, name);
 #endif
             }
 
@@ -163,9 +167,9 @@ namespace Zenject
             // ScriptableObjectInstallers are often used for settings (including settings
             // that are injected into other installers like MonoInstallers)
 
-            var allInstallers = normalInstallers
+            var allInstallers = normalInstallers.Cast<IInstaller>()
                 .Concat(scriptableObjectInstallers.Cast<IInstaller>())
-                .Concat(installers).ToList();
+                .Concat(installers.Cast<IInstaller>()).ToList();
 
             foreach (var installerPrefab in installerPrefabs)
             {

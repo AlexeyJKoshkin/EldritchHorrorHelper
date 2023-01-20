@@ -19,8 +19,8 @@ namespace EldritchHorror
         {
             base.OnEnable();
             EditorUtils.FixMissingScript(target);
-            ISubScriptableFactory factory = new DefaultSubScriptableFactory(((DataBox) target).ObjectType);
-            _defenitions = new SubConfigsEditorFacade<ScriptableObject>(serializedObject, serializedObject.FindProperty("_collection"), "Definition", factory);
+          //  ISubScriptableFactory factory = new DefaultSubScriptableFactory(((DataBox) target).ObjectType);
+            _defenitions = new SubConfigsEditorFacade<ScriptableObject>(serializedObject, serializedObject.FindProperty("_collection"), "Definition");
         }
 
         public override void OnInspectorGUI()

@@ -4,6 +4,11 @@ using UnityEditor;
 
 namespace CodeGenerator
 {
+    public interface ICodeGenerator
+    {
+        string Generate();
+    }
+
     /// <summary>
     ///     Вспомогательные методы для кодогенератора юнити
     /// </summary>

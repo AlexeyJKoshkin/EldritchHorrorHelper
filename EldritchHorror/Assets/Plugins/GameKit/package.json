@@ -1,0 +1,19 @@
+{
+  "name": "com.koshkin.gamekit",
+  "version": "0.9.23",
+  "description": "Helpers",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexeyJKoshkin/UnityGameKitHelpers.git"
+  },
+  "author": "Koshkin",
+  "keywords": [
+    "git",
+    "editor"
+  ],
+  "displayName": "GameKit",
+  "unity": "2020.3",
+  "type": "tool"
+  "dependencies": { "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.11.1"}
+}
